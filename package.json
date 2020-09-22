@@ -1,0 +1,20 @@
+{
+  "name": "cd-11ty",
+  "version": "1.0.0",
+  "description": "A personal site for Christina Dan",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "author": {
+    "name": "Christina Dan",
+    "email": "hello@christinadan.com",
+    "url": "https://christinadan.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
