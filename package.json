@@ -4,9 +4,11 @@
   "description": "A personal site for Christina Dan",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
-    "start": "npx eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* npx eleventy",
+    "format:": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
+    "lint": "eslint --ext .js"
   },
   "author": {
     "name": "Christina Dan",
@@ -15,6 +17,27 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   }
 }
