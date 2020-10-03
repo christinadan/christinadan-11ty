@@ -1,2 +1,3 @@
 # cd-11ty
-Personal website for Christina Dan
+
+A personal website for Christina Dan and figuring out static site generators.
