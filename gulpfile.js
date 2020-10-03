@@ -23,7 +23,7 @@ const cleanDest = (done) => {
 };
 
 const buildStyles = (done) => {
-  src(project.styles)
+  src('src/scss/main.scss')
     .pipe(
       sass({
         outputStyle: 'compressed',
@@ -34,7 +34,7 @@ const buildStyles = (done) => {
 };
 
 const watchSource = (done) => {
-  watch(project.styles, { ignoreInitial: true }, buildStyles);
+  watch(project.styles, { ignoreInitial: true }, parallel(buildStyles));
 
   done();
 };
