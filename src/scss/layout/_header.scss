@@ -1,0 +1,15 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+
+  @include screen-sm {
+    padding-top: 3rem;
+  }
+
+  .logo {
+    margin-right: $nav-spacing-between;
+  }
+}
