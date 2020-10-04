@@ -1,9 +1,55 @@
+const { DateTime } = require('luxon');
 const CleanCSS = require('clean-css');
+const fs = require('fs');
+const htmlMinifier = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
-  // Filter adds css minifier
+  // Layout alias
+  eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
+  eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
+
+  // Passthrough
+  eleventyConfig.addPassthroughCopy('css');
+
+  // Filters
   eleventyConfig.addFilter('cssmin', (code) => {
     return new CleanCSS({}).minify(code).styles;
+  });
+
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+  });
+
+  // HTML
+  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+    if (outputPath && outputPath.endsWith('.html')) {
+      let minified = htmlMinifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+
+      return minified;
+    }
+
+    return content;
+  });
+
+  // 404
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: (err, browserSync) => {
+        const content_404 = fs.readFileSync('dist/404.html');
+
+        browserSync.addMiddleware('*', (req, res) => {
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          res.end();
+        });
+      },
+    },
   });
 
   return {
@@ -11,16 +57,11 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     templateFormats: ['md', 'njk', 'html', 'liquid'],
-    // If your site lives in a different subdirectory, change this.
-    // Leading or trailing slashes are all normalized away, so don’t worry about it.
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for URLs (it does not affect your file structure)
-    pathPrefix: '/',
-    passthroughFileCopy: true,
     dir: {
       input: 'src',
-      includes: '_includes',
       output: 'dist',
+      includes: '_includes',
+      data: '_data',
     },
   };
 };

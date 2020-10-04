@@ -1,0 +1,20 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="description" content="{{ site.description }}">
+  {# TODO: add favicon #}
+  {# <link rel="icon" href="{{ site.favicon }}" type="image/png" /> #}
+  {% set css %}
+    {% include "css/main.css" %}
+  {% endset %}
+  <style type="text/css">
+    {{ css | cssmin | safe }}
+  </style>
+  <title>
+    {% if title %}
+      {{ title + " - " if title }}
+    {% endif %}
+    Christina Dan
+  </title>
+</head>
