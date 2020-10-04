@@ -1,0 +1,36 @@
+{
+  "header": [
+    {
+      "text": "Blog",
+      "url": "https://blog.christinadan.com",
+      "external": true
+    },
+    {
+      "text": "About",
+      "url": "/about",
+      "external": false
+    }
+  ],
+  "social": [
+    {
+      "text": "instagram",
+      "url": "https://instagram.com/_christinadan",
+      "external": true
+    },
+    {
+      "text": "twitter",
+      "url": "https://twitter.com/_christinadan",
+      "external": true
+    },
+    {
+      "text": "linkedin",
+      "url": "https://linkedin.com/_christinadan",
+      "external": true
+    },
+    {
+      "text": "github",
+      "url": "https://github.com/_christinadan",
+      "external": true
+    }
+  ]
+}

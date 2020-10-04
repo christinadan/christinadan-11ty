@@ -1,0 +1,21 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header>
+  <a href="/">Christina Dan</a>
+  <nav>
+    <ul class="nav-list">
+      {% set navItems = navigation.header %}
+      {% for item in navItems %}
+        {# {% set externalAttribute = '' %} #}
+        {% if item.external %}
+          {% set externalAttribute = ' rel="external"' %}
+        {% endif %}
+
+        <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+          <a href="{{ item.url }}" {{ externalAttribute | safe }}>
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+<header>

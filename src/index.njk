@@ -1,0 +1,23 @@
+---
+layout: layouts/home
+eleventyExcludeFromCollections: true
+---
+<h1>Christina Dan is a software engineer in the Dallas/Fort Worth area.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean est purus, aliquam et gravida et, convallis sit amet urna. Etiam dolor augue, commodo eu ornare in, rutrum id tortor. Quisque sit amet congue lorem. Suspendisse ut velit molestie, efficitur tortor sed, fringilla velit. Aliquam lorem arcu, aliquam non elementum eget, viverra vel risus. Cras in blandit magna. Donec et malesuada ipsum.</p>
+<p>
+  <ul class="nav-list">
+    {% set navItems = navigation.social %}
+    {% for item in navItems %}
+      {# {% set externalAttribute = '' %} #}
+      {% if item.external %}
+        {% set externalAttribute = ' rel="external"' %}
+      {% endif %}
+
+      <li>
+        <a href="{{ item.url }}" {{ externalAttribute | safe }}>
+          {{ item.text }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</p>
