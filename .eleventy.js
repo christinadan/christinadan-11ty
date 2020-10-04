@@ -4,6 +4,8 @@ const fs = require('fs');
 const htmlMinifier = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false);
+
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
