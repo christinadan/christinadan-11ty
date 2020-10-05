@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="light">
-  {% include "head.njk" %}
+  {% include "partials/head.njk" %}
   <body>
     <a class="visually-hidden skip-content" href="#main-content">Skip to content</a>
     <div class="container">
-      {% include "site-header.njk" %}
+      {% include "partials/site-header.njk" %}
     </div>
     <main id="main-content" class="container">
       {{ content | safe }}

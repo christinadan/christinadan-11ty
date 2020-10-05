@@ -4,6 +4,12 @@ body {
   padding: 0;
 }
 
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text-color);
   background-color: var(--background-color);
