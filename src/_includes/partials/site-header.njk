@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="logo">
+    <a href="/">
+    {% include "partials/logo.njk" %}
+    </a>
+  </div>
+  <nav>
+    <ul class="nav-list">
+      {% set navItems = navigation.header %}
+      {% for item in navItems %}
+        {% if item.external %}
+          {% set externalAttribute = ' rel="external"' %}
+        {% endif %}
+
+        <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+          <a href="{{ item.url }}" {{ externalAttribute | safe }}>
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+      <li class="nav-item">
+        <input type="checkbox" id="theme-toggle"/>
+        <label for="theme-toggle">
+          <div class="slider"></div>
+        </label>
+      </li>
+    </ul>
+  </nav>
+</header>
