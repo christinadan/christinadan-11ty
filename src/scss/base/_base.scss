@@ -2,20 +2,23 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
   color: var(--text-color);
   background-color: var(--background-color);
+}
 
-  .container {
-    padding: 0 1.5rem;
-    margin: 0 auto;
-    max-width: $screen-lg-width;
+.container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: $screen-lg-width;
 
-    @include screen-xs {
-      padding: 0 4rem;
-    }
+  @include screen-xs {
+    padding: 0 4rem;
   }
+}
 
-  .wrapper {
-    max-width: 42rem;
-  }
+.wrapper {
+  max-width: 42rem;
 }

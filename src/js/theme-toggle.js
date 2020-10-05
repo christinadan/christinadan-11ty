@@ -15,7 +15,6 @@ if (theme === 'dark-theme') {
 }
 
 toggle.addEventListener('change', (event) => {
-  console.log(event.target.checked);
   const { checked } = event.target;
 
   if (checked) {
