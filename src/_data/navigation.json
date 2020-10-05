@@ -2,8 +2,8 @@
   "header": [
     {
       "text": "Blog",
-      "url": "https://blog.christinadan.com",
-      "external": true
+      "url": "/blog",
+      "external": false
     },
     {
       "text": "About",

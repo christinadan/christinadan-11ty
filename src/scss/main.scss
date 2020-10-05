@@ -11,5 +11,8 @@
 @import 'base/typography';
 
 // Layout
-@import 'layout/grid';
 @import 'layout/header';
+
+// Themes
+@import 'themes/dark';
+@import 'themes/default';
