@@ -4,12 +4,19 @@ const fs = require('fs');
 const htmlMinifier = require('html-minifier');
 
 module.exports = function (eleventyConfig) {
+  // Allows the dev server to reload when css changes
+  // Use .eleventyignore for files you don't want eleventy to track
+  eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.addWatchTarget('src/js');
+
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
 
   // Passthrough
-  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Filters
   eleventyConfig.addFilter('cssmin', (code) => {

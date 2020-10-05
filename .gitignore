@@ -1,4 +1,4 @@
 node_modules
 dist
-src/_includes/css
 
+src/_includes/css/*

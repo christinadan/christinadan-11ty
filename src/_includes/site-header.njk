@@ -1,6 +1,7 @@
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header>
-  <a href="/">Christina Dan</a>
+<header class="site-header">
+  <div class="logo">
+    <a href="/">Christina Dan</a>
+  </div>
   <nav>
     <ul class="nav-list">
       {% set navItems = navigation.header %}
@@ -16,6 +17,12 @@
           </a>
         </li>
       {% endfor %}
+      <li class="nav-item">
+        <input type="checkbox" id="theme-toggle"/>
+        <label for="theme-toggle">
+          <div class="slider"></div>
+        </label>
+      </li>
     </ul>
   </nav>
-<header>
+</header>

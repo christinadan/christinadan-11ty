@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
   {% include "head.njk" %}
   <body>
-    {% include "site-header.njk" %}
-    {{ content | safe }}
+    <a class="visually-hidden skip-content" href="#main-content">Skip to content</a>
+    <div class="container">
+      {% include "site-header.njk" %}
+    </div>
+    <main id="main-content" class="container">
+      {{ content | safe }}
+    </main>
+    <script src="js/theme-toggle.js"></script>
   </body>
 </html>
