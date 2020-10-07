@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="logo">
-    <a href="/">
-    {% include "partials/logo.njk" %}
+    <a class="logo-link" href="/">
+      {% include "partials/logo.njk" %}
     </a>
   </div>
   <nav>
@@ -18,12 +18,10 @@
           </a>
         </li>
       {% endfor %}
-      <li class="nav-item">
-        <input type="checkbox" id="theme-toggle"/>
-        <label for="theme-toggle">
-          <div class="slider"></div>
-        </label>
-      </li>
     </ul>
   </nav>
+  <div class="toggle-container">
+    <input type="checkbox" id="theme-toggle"/>
+    <label for="theme-toggle"></label>
+  </div>
 </header>

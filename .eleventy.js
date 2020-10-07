@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   // Use .eleventyignore for files you don't want eleventy to track
   eleventyConfig.setUseGitIgnore(false);
 
+  // Watch targets
   eleventyConfig.addWatchTarget('src/js');
 
   // Layout alias
@@ -15,7 +16,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
 
   // Passthrough
+  eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Filters

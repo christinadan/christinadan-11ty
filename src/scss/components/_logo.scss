@@ -1,13 +1,15 @@
-.logo {
+.animated-logo {
   display: inline-block;
   letter-spacing: 0;
   font-weight: 700;
   font-size: 24px;
+  text-transform: lowercase;
+  color: var(--text-color);
 
   .expand {
     display: inline-block;
     max-width: 0;
-    transition: max-width .35s .2s cubic-bezier(0, 0, 0, 1);
+    transition: max-width .175s .2s cubic-bezier(0, 0, 0, 1);
 
     span {
       display: unset;
@@ -15,35 +17,35 @@
       transform: translate(0, -5px);
 
       &:nth-of-type(1) {
-        transition: all .2s .35s linear;
+        transition: all $logo-transition-duration .175s linear;
       }
 
       &:nth-of-type(2) {
-        transition: all .2s .3s linear;
+        transition: all $logo-transition-duration .15s linear;
       }
 
       &:nth-of-type(3) {
-        transition: all .2s .25s linear;
+        transition: all $logo-transition-duration .125s linear;
       }
 
       &:nth-of-type(4) {
-        transition: all .2s .2s linear;
+        transition: all $logo-transition-duration .1s linear;
       }
 
       &:nth-of-type(5) {
-        transition: all .2s .15s linear;
+        transition: all $logo-transition-duration .075s linear;
       }
 
       &:nth-of-type(6) {
-        transition: all .2s .1s linear;
+        transition: all $logo-transition-duration .05s linear;
       }
 
       &:nth-of-type(7) {
-        transition: all .2s .05s linear;
+        transition: all $logo-transition-duration .025s linear;
       }
 
       &:nth-of-type(8) {
-        transition: all .2s linear;
+        transition: all $logo-transition-duration linear;
       }
     }
   }
@@ -52,42 +54,54 @@
   &:focus {
     .expand {
       max-width: 300px;
-      transition: max-width .3s cubic-bezier(0, 0, 0, 1);
+      transition: max-width .175s cubic-bezier(0, 0, 0, 1);
 
       span {
         opacity: 1;
         transform: translate(0, 0);
 
         &:nth-of-type(1) {
-          transition: all .2s linear;
+          transition: all $logo-transition-duration linear;
         }
 
         &:nth-of-type(2) {
-          transition: all .2s .05s linear;
+          transition: all $logo-transition-duration .025s linear;
         }
 
         &:nth-of-type(3) {
-          transition: all .2s .1s linear;
+          transition: all $logo-transition-duration .05s linear;
         }
 
         &:nth-of-type(4) {
-          transition: all .2s .15s linear;
+          transition: all $logo-transition-duration .075s linear;
         }
 
         &:nth-of-type(5) {
-          transition: all .2s .2s linear;
+          transition: all $logo-transition-duration .1s linear;
         }
 
         &:nth-of-type(6) {
-          transition: all .2s .25s linear;
+          transition: all $logo-transition-duration .125s linear;
         }
 
         &:nth-of-type(7) {
-          transition: all .2s .3s linear;
+          transition: all $logo-transition-duration .150s linear;
         }
 
         &:nth-of-type(8) {
-          transition: all .2s .35s linear;
+          transition: all $logo-transition-duration .175s linear;
+        }
+      }
+
+      &.last {
+        span {
+          &:nth-of-type(1) {
+            transition: all $logo-transition-duration .175s linear;
+          }
+  
+          &:nth-of-type(2) {
+            transition: all $logo-transition-duration .2s linear;
+          }
         }
       }
     }

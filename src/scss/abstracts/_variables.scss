@@ -4,4 +4,32 @@ $screen-md-width: 1024px;
 $screen-lg-width: 1280px;
 $screen-xl-width: 1920px;
 
-$nav-spacing-between: 2rem;
+$logo-transition-duration: .2s;
+
+$greige: #f0ede1;
+$greige-shade-7-5: shade($greige, 7.5%);
+$greige-shade-25: shade($greige, 25%);
+$black: #221d17;
+$white: #ffffff;
+$beige: #F5F4EE;
+$dark-grey: #4F4F4F;
+$mid-grey: #767676; // the lightest shade of grey you can get away with, #a11y
+$light-grey: #eeeeee; // for backgrounds only
+
+body {
+  --background-1: #{$greige};
+  --background-2: #{$greige-shade-7-5};
+  --background-4: #{$greige-shade-25};
+  --text-color: #{$black};
+  --link-color: #{$black};
+  --background-border: #{$greige-shade-25};
+
+  &.dark-theme {
+    // Temp colors; need to come up with an actual theme...
+    --background-1: #{$black};
+    --background-2: #{$greige-shade-7-5};
+    --background-4: #{$greige-shade-25};
+    --text-color: #{$greige};
+    --link-color: #{$greige};
+  }
+}
