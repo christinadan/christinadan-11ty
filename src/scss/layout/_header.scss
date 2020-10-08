@@ -3,16 +3,16 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--background-4);
 
   @include screen-xs {
-    padding-top: 3rem;
+    padding: 3rem 0 1.5rem 0;
   }
 
   .logo {
     margin: 4px 0;
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
 
   .nav-container {
