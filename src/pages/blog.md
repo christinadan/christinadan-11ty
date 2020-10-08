@@ -3,9 +3,6 @@ layout: page
 title: Blog
 permalink: /blog/index.html
 ---
-<p>
-  Coming soon ❤️
-</p>
-<p>
-  I'm planning on migrating my WordPress blog over to this site. I'll get around to it eventually. You can see my old blog <a href="https://blog.christinadan.com" ref="external">here</a>.
-</p>
+Coming soon ❤️
+
+I'm planning on migrating my old WordPress blog content over to this new site. I'll get around to it eventually.

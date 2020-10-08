@@ -6,8 +6,8 @@
     {% endif %}
 
     <li class="nav-item">
-      <a href="{{ item.url }}" {{ externalAttribute | safe }} target="_blank">
-        {{ item.text }}
+      <a class="social-link" href="{{ item.url }}" {{ externalAttribute | safe }} target="_blank">
+        {% include item.icon %}
       </a>
     </li>
   {% endfor %}

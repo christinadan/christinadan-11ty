@@ -10,6 +10,7 @@ $logo-transition-duration: .2s;
 $greige: #f0ede1;
 $greige-shade-7-5: shade($greige, 7.5%);
 $greige-shade-25: shade($greige, 25%);
+$greige-shade-33: shade($greige, 33%);
 $black: #221d17;
 $black-tint-7-5: tint($black, 7.5%);
 $black-tint-25: tint($black, 25%);
@@ -22,7 +23,7 @@ $light-grey: #eeeeee; // for backgrounds only
 body {
   --background-1: #{$greige};
   --background-2: #{$greige-shade-7-5};
-  --background-4: #{$greige-shade-25};
+  --background-4: #{$greige-shade-33};
   --text-color: #{$black};
   --link-color: #{$black};
 

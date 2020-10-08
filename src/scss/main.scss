@@ -7,7 +7,6 @@
 
 // Base
 @import 'base/base';
-@import 'base/fonts';
 @import 'base/helpers';
 @import 'base/navigation';
 @import 'base/typography';
@@ -18,3 +17,6 @@
 
 // Layout
 @import 'layout/header';
+
+// Pages
+@import 'pages/home'

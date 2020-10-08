@@ -15,22 +15,32 @@
     {
       "text": "instagram",
       "url": "https://instagram.com/_christinadan",
-      "external": true
+      "external": true,
+      "icon": "icons/instagram.svg"
     },
     {
       "text": "twitter",
       "url": "https://twitter.com/_christinadan",
-      "external": true
+      "external": true,
+      "icon": "icons/twitter.svg"
     },
     {
       "text": "linkedin",
       "url": "https://linkedin.com/in/christinadan",
-      "external": true
+      "external": true,
+      "icon": "icons/linkedin.svg"
     },
     {
       "text": "github",
       "url": "https://github.com/christinadan",
-      "external": true
+      "external": true,
+      "icon": "icons/github.svg"
+    },
+    {
+      "text": "email",
+      "url": "mailto:hello@christinadan.com",
+      "external": true,
+      "icon": "icons/mail.svg"
     }
   ]
 }
