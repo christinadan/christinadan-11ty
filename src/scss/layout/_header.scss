@@ -1,8 +1,9 @@
 .site-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--background-4);
 
   @include screen-xs {
@@ -10,21 +11,26 @@
   }
 
   .logo {
-    margin-right: 2rem;
-    flex: 1
+    margin: 4px 0;
+    padding-right: 2rem;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
   }
 
   .nav-list {
     margin: 0;
+    min-height: 32px;
 
     .nav-item {
       display: flex;
       align-items: center;
-      line-height: 3rem;
+      margin: 4px 0;
 
       a {
         text-decoration: none;
-        font-size: 1rem;
       }
     }
   }

@@ -1,0 +1,31 @@
+input[type=checkbox]#theme-toggle {
+  display: none;
+}
+
+input[type=checkbox]#theme-toggle + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-2);
+  }
+
+  &:before {
+    content: url(/assets/img/contrast-fill.svg);
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+input[type=checkbox]#theme-toggle:checked + label {
+  &:before {
+    content: url(/assets/img/contrast-line.svg);
+  }
+}

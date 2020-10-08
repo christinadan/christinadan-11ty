@@ -1,3 +1,4 @@
+$screen-xx-width: 320px;
 $screen-xs-width: 640px;
 $screen-sm-width: 748px;
 $screen-md-width: 1024px;
@@ -10,6 +11,8 @@ $greige: #f0ede1;
 $greige-shade-7-5: shade($greige, 7.5%);
 $greige-shade-25: shade($greige, 25%);
 $black: #221d17;
+$black-tint-7-5: tint($black, 7.5%);
+$black-tint-25: tint($black, 25%);
 $white: #ffffff;
 $beige: #F5F4EE;
 $dark-grey: #4F4F4F;
@@ -22,13 +25,12 @@ body {
   --background-4: #{$greige-shade-25};
   --text-color: #{$black};
   --link-color: #{$black};
-  --background-border: #{$greige-shade-25};
 
   &.dark-theme {
     // Temp colors; need to come up with an actual theme...
     --background-1: #{$black};
-    --background-2: #{$greige-shade-7-5};
-    --background-4: #{$greige-shade-25};
+    --background-2: #{$black-tint-7-5};
+    --background-4: #{$black-tint-25};
     --text-color: #{$greige};
     --link-color: #{$greige};
   }
