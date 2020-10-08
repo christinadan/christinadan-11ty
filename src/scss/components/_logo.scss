@@ -51,7 +51,7 @@
     }
   }
 
-  @media screen and (min-width: 410px) { 
+  @media screen and (min-width: 400px) { 
     &:hover,
     &:focus {
       .expand {
@@ -104,6 +104,20 @@
             &:nth-of-type(2) {
               transition: all $logo-transition-duration .2s linear;
             }
+          }
+        }
+      }
+    }
+
+    @include hover-none {
+      &:hover,
+      &:focus {
+        .expand {
+          max-width: 0;
+          transition: none;
+
+          span {
+            opacity: 0;
           }
         }
       }
