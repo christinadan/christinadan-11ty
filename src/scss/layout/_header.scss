@@ -3,13 +3,35 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--background-4);
 
-  @include screen-sm {
-    padding-top: 3rem;
+  @include screen-xs {
+    padding: 3rem 0 1.5rem 0;
   }
 
   .logo {
-    margin-right: $nav-spacing-between;
+    margin: 4px 0;
+    padding-right: 1.5rem;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list {
+    margin: 0;
+    min-height: 32px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      margin: 4px 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }

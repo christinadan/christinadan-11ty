@@ -7,10 +7,6 @@ ul.nav-list {
   justify-content: flex-start;
 
   li.nav-item {
-    margin: 0 $nav-spacing-between 0 0;
-  }
-
-  li.nav-item:last-child {
-    margin: 0;
+    padding-right: 2rem;
   }
 }
