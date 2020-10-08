@@ -36,4 +36,15 @@ a {
     background-color: var(--text-color);
     box-shadow: 2px 0 0 2px var(--text-color), -2px 0 0 2px var(--text-color);
   }
+
+  // Check for hover: none so IE gets the default hover behavior
+  @include hover-none {
+    &:not([class]):hover,
+    &:not([class]):focus {
+      color: initial;
+      text-decoration: initial;
+      background-color: initial;
+      box-shadow: initial;
+    }
+  }
 }

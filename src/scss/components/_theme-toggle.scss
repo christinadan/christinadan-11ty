@@ -16,6 +16,13 @@ input[type=checkbox]#theme-toggle + label {
     background-color: var(--background-2);
   }
 
+  @include hover-none {
+    &:hover {
+      cursor: initial;
+      background-color: initial;
+    }
+  }
+
   &:before {
     content: url(/assets/img/contrast-fill.svg);
     display: block;

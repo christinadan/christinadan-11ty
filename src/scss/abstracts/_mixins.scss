@@ -53,3 +53,9 @@
     }
   }
 }
+
+@mixin hover-none() {
+  @media (hover: none) {
+    @content;
+  }
+}

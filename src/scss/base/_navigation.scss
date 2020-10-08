@@ -8,10 +8,18 @@ ul.nav-list {
 
   li.nav-item {
     padding-right: 2rem;
+  }
 
-    .social-links {
-      img {
-        stroke: var(--text-color);
+  &.social-links {
+    .nav-item {
+      padding: .5rem 1.5rem 0 0;
+    
+      .social-link { 
+        display: inline-block;
+
+        svg {
+          stroke: var(--text-color);
+        }
       }
     }
   }
