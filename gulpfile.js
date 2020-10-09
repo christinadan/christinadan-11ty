@@ -23,7 +23,8 @@ const paths = {
     output: 'dist/js/',
   },
   styles: {
-    input: 'src/scss/**/main.scss',
+    input: 'src/scss/main.scss',
+    watch: 'src/scss/**/*.scss',
     output: 'src/_includes/global/css',
   },
   svgs: {
@@ -38,11 +39,7 @@ const paths = {
 
 const banner = {
   main:
-    `${'/*!'
-    + ' <%= package.name %> v<%= package.version %>'
-    + ' | (c) '}${
-      new Date().getFullYear()
-    } <%= package.author.name %>`
+    `${'/*!<%= package.name %> v<%= package.version %> | (c) '}${new Date().getFullYear()} <%= package.author.name %>`
     + ' | <%= package.license %> License'
     + ' | <%= package.repository.url %>'
     + ' */\n',
@@ -107,7 +104,7 @@ const buildSVGs = () => src(paths.svgs.input).pipe(svgmin()).pipe(dest(paths.svg
 
 const watchSource = (done) => {
   watch(
-    paths.styles.input,
+    paths.styles.watch,
     { ignoreInitial: true },
     parallel(buildStyles, buildScripts, buildSVGs),
   );
