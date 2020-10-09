@@ -1,12 +1,8 @@
 <ul class="nav-list social-links">
   {% set navItems = navigation.social %}
   {% for item in navItems %}
-    {% if item.external %}
-      {% set externalAttribute = ' rel="external"' %}
-    {% endif %}
-
     <li class="nav-item">
-      <a href="{{ item.url }}" {{ externalAttribute | safe }} target="_blank">
+      <a href="{{ item.url }}" rel="noopener" target="_blank" aria-label="{{ item.text }}">
         {% include item.icon %}
       </a>
     </li>

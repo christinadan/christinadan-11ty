@@ -1,7 +1,3 @@
-input[type=checkbox]#theme-toggle {
-  display: none;
-}
-
 input[type=checkbox]#theme-toggle + label {
   display: flex;
   justify-content: center;
@@ -35,4 +31,9 @@ input[type=checkbox]#theme-toggle:checked + label {
   &:before {
     content: url(/assets/img/contrast-line.svg);
   }
+}
+
+input[type=checkbox]#theme-toggle:focus + label {
+  background-color: var(--background-2);
+  outline: dashed 1px var(--background-4);
 }
