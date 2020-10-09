@@ -13,31 +13,31 @@
   ],
   "social": [
     {
-      "text": "instagram",
+      "text": "Instagram (opens in new tab)",
       "url": "https://instagram.com/_christinadan",
       "external": true,
       "icon": "global/icons/instagram.svg"
     },
     {
-      "text": "twitter",
+      "text": "Twitter (opens in new tab)",
       "url": "https://twitter.com/_christinadan",
       "external": true,
       "icon": "global/icons/twitter.svg"
     },
     {
-      "text": "linkedin",
+      "text": "LinkedIn (opens in new tab)",
       "url": "https://linkedin.com/in/christinadan",
       "external": true,
       "icon": "global/icons/linkedin.svg"
     },
     {
-      "text": "github",
+      "text": "GitHub (opens in new tab",
       "url": "https://github.com/christinadan",
       "external": true,
       "icon": "global/icons/github.svg"
     },
     {
-      "text": "email",
+      "text": "Email Christina (opens email app)",
       "url": "mailto:hello@christinadan.com",
       "external": true,
       "icon": "global/icons/mail.svg"
