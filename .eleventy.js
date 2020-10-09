@@ -1,4 +1,5 @@
 const { DateTime } = require('luxon');
+const { minify } = require('terser');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const htmlMinifier = require('html-minifier');
@@ -17,7 +18,6 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
@@ -28,6 +28,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
+    try {
+      const minified = await minify(code);
+
+      callback(null, minified.code);
+    } catch (err) {
+      console.error('Terser error: ', err);
+      // Fail gracefully.
+      callback(null, code);
+    }
   });
 
   // HTML
