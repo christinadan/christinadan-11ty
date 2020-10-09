@@ -6,7 +6,7 @@
     {% endif %}
 
     <li class="nav-item">
-      <a href="{{ item.url }}" {{ externalAttribute | safe }} target="_blank">
+      <a href="{{ item.url }}" {{ externalAttribute | safe }} target="_blank" aria-label="{{ item.text }}">
         {% include item.icon %}
       </a>
     </li>
