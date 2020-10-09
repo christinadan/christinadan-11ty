@@ -20,14 +20,14 @@ $dark-grey: #4F4F4F;
 $mid-grey: #767676; // the lightest shade of grey you can get away with, #a11y
 $light-grey: #eeeeee; // for backgrounds only
 
-body {
+:root {
   --background-1: #{$greige};
   --background-2: #{$greige-shade-7-5};
   --background-4: #{$greige-shade-33};
   --text-color: #{$black};
   --link-color: #{$black};
 
-  &.dark-theme {
+  &.dark {
     // Temp colors; need to come up with an actual theme...
     --background-1: #{$black};
     --background-2: #{$black-tint-7-5};

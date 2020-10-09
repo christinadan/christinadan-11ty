@@ -1,5 +1,5 @@
 {
-  "name": "cd-11ty",
+  "name": "christinadan-11ty",
   "version": "1.0.0",
   "description": "A personal site for Christina Dan",
   "main": "index.js",
@@ -16,6 +16,10 @@
     "url": "https://christinadan.com"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christinadan/christinadan-11ty"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "concurrently": "^5.3.0",
@@ -24,12 +28,20 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-terser": "^1.4.0",
     "html-minifier": "^4.0.0",
     "husky": "^4.3.0",
+    "lazypipe": "^1.0.2",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
-    "sass": "^1.26.11"
+    "sass": "^1.26.11",
+    "terser": "^5.3.4"
   },
   "husky": {
     "hooks": {
