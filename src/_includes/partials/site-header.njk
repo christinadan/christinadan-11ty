@@ -1,29 +1,31 @@
-<header class="site-header">
-  <div class="logo">
-    <a class="logo-link" href="/">
-      {% include "partials/logo.njk" %}
-    </a>
-  </div>
-  <div class="nav-container">
-    <nav>
-      <ul class="nav-list">
-        {% set navItems = navigation.header %}
-        {% for item in navItems %}
-          {% if item.external %}
-            {% set externalAttribute = ' rel="external"' %}
-          {% endif %}
+<header class="site-header container">
+  <div class="header-content">
+    <div class="logo">
+      <a class="logo-link" href="/">
+        {% include "partials/logo.njk" %}
+      </a>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-list">
+          {% set navItems = navigation.header %}
+          {% for item in navItems %}
+            {% if item.external %}
+              {% set externalAttribute = ' rel="external"' %}
+            {% endif %}
 
-          <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
-            <a href="{{ item.url }}" {{ externalAttribute | safe }}>
-              {{ item.text }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <input type="checkbox" id="theme-toggle" class="visually-hidden" />
-    <label for="theme-toggle">
-      <span class="visually-hidden">Toggle dark color scheme</span>
-    </label>
+            <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+              <a href="{{ item.url }}" {{ externalAttribute | safe }}>
+                {{ item.text }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <input type="checkbox" id="theme-toggle" class="visually-hidden" />
+      <label for="theme-toggle">
+        <span class="visually-hidden">Toggle dark color scheme</span>
+      </label>
+    </div>
   </div>
 </header>

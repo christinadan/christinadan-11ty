@@ -35,5 +35,4 @@ input[type=checkbox]#theme-toggle:checked + label {
 
 input[type=checkbox]#theme-toggle:focus + label {
   background-color: var(--background-2);
-  outline: dashed 1px var(--background-4);
 }

@@ -3,12 +3,13 @@
   {% include "partials/head.njk" %}
   <body>
     <a class="visually-hidden skip-content" href="#main-content">Skip to content</a>
-    <div class="container">
-      {% include "partials/site-header.njk" %}
-    </div>
-    <main id="main-content" class="container">
+    {% include "partials/site-header.njk" %}
+    <main id="site-main" class="container">
       {{ content | safe }}
     </main>
+    {% if "/" != page.url %}
+      {% include "partials/site-footer.njk" %}
+    {% endif %}
     <script src="/js/main.min.js"></script>
   </body>
 </html>
