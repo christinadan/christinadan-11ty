@@ -24,6 +24,7 @@ h1 {
 
 *+h2 {
   margin-top: 2rem;
+  position: relative;
 }
 
 p {
@@ -58,5 +59,28 @@ a {
       background-color: initial;
       box-shadow: initial;
     }
+  }
+}
+
+.heading-anchor {
+  color: var(--text-color-2);
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  padding-right: .65rem;
+  display: none;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.heading-anchor:hover,
+.heading-anchor:focus {
+  text-decoration: underline;
+}
+
+h2:hover .heading-anchor,
+h2:focus .heading-anchor {
+  @include screen-sm {
+    display: block;
   }
 }

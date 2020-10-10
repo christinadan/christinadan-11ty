@@ -3,6 +3,9 @@ const { minify } = require('terser');
 const CleanCSS = require('clean-css');
 const fs = require('fs');
 const htmlMinifier = require('html-minifier');
+const markdownIt = require('markdown-it');
+const mdLinkAttributes = require('markdown-it-link-attributes');
+const mdAnchor = require('markdown-it-anchor');
 
 module.exports = function (eleventyConfig) {
   // Allows the dev server to reload when css changes
@@ -73,6 +76,31 @@ module.exports = function (eleventyConfig) {
       },
     },
   });
+
+  // Markdown configuration
+  const mdOpts = {
+    html: true,
+  };
+
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+    })
+      .use(mdLinkAttributes, {
+        pattern: /^https{0,1}\:\/\//gi,
+        attrs: {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+      })
+      .use(mdAnchor, {
+        level: [2, 3],
+        permalink: true,
+        permalinkClass: 'heading-anchor',
+        permalinkSymbol: '#',
+      })
+  );
 
   return {
     markdownTemplateEngine: 'njk',
