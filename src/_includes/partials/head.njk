@@ -3,8 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ site.author.name }}">
   <meta name="description" content="{{ site.description }}">
-  {# TODO: add favicon #}
-  {# <link rel="icon" href="{{ site.favicon }}" type="image/png" /> #}
+  <link rel="icon" type="image/png" href="{{ site.favicon.large }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.favicon.small }}" sizes="16x16" />
   {% set css %}
     {% include "global/css/main.css" %}
   {% endset %}
