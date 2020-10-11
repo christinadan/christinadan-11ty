@@ -79,8 +79,34 @@ a {
 }
 
 h2:hover .heading-anchor,
-h2:focus .heading-anchor {
+h2:focus .heading-anchor,
+h3:hover .heading-anchor,
+h3:focus .heading-anchor {
   @include screen-sm {
     display: block;
+  }
+}
+
+.button-link {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+  border: 1px solid var(--text-color);
+  font-weight: inherit;
+  text-decoration: none;
+  background: 0 0;
+
+  &[download] {
+    padding-left: .9rem;
+  }
+
+  &[download]:before {
+    content: "↓ ";
+  }
+
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--background-1);
   }
 }
