@@ -1,26 +1,47 @@
 <head>
+  {% set pageTitle %}{{ title + " - " if title }}Christina Dan{% endset %}
+  {% set pageDescription %}{{ description or site.description }}{% endset %}
+  {% set css %}{% include "global/css/main.css" %}{% endset %}
+  {% set js %}{% include "global/js/inline.js" %}{% endset %}
+  {% set url %}{{ site.url + page.url }}{% endset %}
+  {% set pageImage %}{{ image or site.author.image }}{% endset %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="{{ site.author.name }}">
-  <meta name="description" content="{{ site.description }}">
+
+  <title>
+    {{ pageTitle }}
+  </title>
+  <meta name="description" content="{{ pageDescription }}">
+
+  {% if type == 'post' %}
+    <meta name="author" content="{{ site.author.name }}">
+  {% endif %}
+
+  {# Open Graph #}
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:image" content="{{ pageImage }}">
+  <meta property="og:url" content="{{ url }}" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:type" content="{{ 'article' if type == 'post' else 'website' }}" />
+  <meta property="article:published_time" content="" />
+  <meta property="article:modified_time" content="" />
+
+  {# Twitter #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.author.twitter }}">
+  <meta name="twitter:creator" content="{{ site.author.twitter }}" />
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:url" content="{{ url }}">
+  <meta name="twitter:image" content="{{ pageImage }}">
+
   <link rel="icon" type="image/png" href="{{ site.favicon.large }}" sizes="32x32" />
   <link rel="icon" type="image/png" href="{{ site.favicon.small }}" sizes="16x16" />
-  {% set css %}
-    {% include "global/css/main.css" %}
-  {% endset %}
   <style type="text/css">
     {{ css | cssmin | safe }}
   </style>
-  <title>
-    {% if title %}
-      {{ title + " - " if title }}
-    {% endif %}
-    Christina Dan
-  </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  {% set js %}
-    {% include "global/js/inline.js" %}
-  {% endset %}
   <script>
     {{ js | jsmin | safe }}
   </script>
