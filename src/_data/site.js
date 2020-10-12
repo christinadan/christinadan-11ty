@@ -4,7 +4,7 @@ const url = CONTEXT === 'deploy-preview' ? DEPLOY_PRIME_URL : prodUrl;
 
 module.exports = {
   name: 'Christina Dan',
-  description: 'Personal corner of the web for Christina Dan, a software engineer in Dallas, TX.',
+  description: 'A little corner of the web for Christina Dan, a software engineer in Dallas, TX.',
   url,
   favicon: {
     small: '/assets/img/favicon-16x16.png',
