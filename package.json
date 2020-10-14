@@ -41,6 +41,7 @@
     "lint-staged": "^10.4.0",
     "markdown-it": "^11.0.1",
     "markdown-it-anchor": "^6.0.0",
+    "markdown-it-attrs": "^3.0.3",
     "markdown-it-link-attributes": "^3.0.0",
     "prettier": "^2.1.2",
     "sass": "^1.26.11",
