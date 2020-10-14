@@ -26,6 +26,7 @@ $light-grey: #eeeeee; // for backgrounds only
   --background-4: #{$greige-shade-33};
   --text-color: #{$black};
   --text-color-2: #{$black-tint-25};
+  --text-color-muted: #{$black-tint-7-5};
   --link-color: #{$black};
 
   &.dark {

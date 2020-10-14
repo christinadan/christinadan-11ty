@@ -27,6 +27,16 @@ h1 {
   position: relative;
 }
 
+time {
+  font-family: 'Courier Prime', monospace;
+  color: var(--text-color-2);
+}
+
+small {
+  font-size: .825rem;
+  line-height: 1.25;
+}
+
 p {
   margin: 1rem 0;
 }

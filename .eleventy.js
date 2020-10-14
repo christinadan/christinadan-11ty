@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
 
   // Watch targets
   eleventyConfig.addWatchTarget('src/js');
+  eleventyConfig.addWatchTarget('.eleventy');
 
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
