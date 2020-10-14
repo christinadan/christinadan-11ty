@@ -1,0 +1,10 @@
+<ul class="tag-links">
+  {% for tag in tagList %}
+    {%- if tag != "post" -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <li>
+        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+      </li>
+    {%- endif -%}
+  {% endfor %}
+</ul>

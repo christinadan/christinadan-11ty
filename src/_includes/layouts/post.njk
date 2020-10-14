@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<article class="wrapper blog-post">
+  
+  <header class="post-header">
+    {% if tags %}
+      {% set tagList = tags %}
+      {% include "partials/post-tags.njk" %}
+    {% endif %}
+    <h1 class="post-title">{{ title }}</h1>
+    {% set postDate = page.date %}
+    {% include "partials/post-date.njk" %}
+  </header>
+  {{ content | safe }}
+</article>
