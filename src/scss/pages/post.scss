@@ -1,0 +1,147 @@
+.blog-post {
+  padding-bottom: 2.5rem;
+
+  .post-header {
+    .category-links {
+      display: flex;
+      flex-direction: row;
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      list-style-type: none;
+      padding: 0;
+      margin: .75em 0;
+
+      li {
+        a {
+          text-decoration: none;
+        }
+        
+        &:not(:last-of-type):after {
+          content: '/';
+          padding: 0 .5em;
+        }
+
+        // https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+        &:before {
+          content: '\200B'; /* add zero-width space */
+        }
+      }
+    }
+
+    .post-title {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .post-date {
+      margin: .25em 0;
+    }
+  }
+
+  .post-content {
+    margin-top: 2.5rem;
+  }
+
+  .tag-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span:first-of-type {
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: .075em;
+      margin-right: 1em;
+      font-weight: 500;
+    }
+    
+    .tag-list {
+      margin: 0;
+
+      a {
+        font-size: .625rem;
+      }
+    }
+  }
+}
+
+.next-previous {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--background-4);
+
+  .post-nav-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    
+    li {
+      margin-top: 1.5rem;
+
+      &:before {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .075em;
+        font-weight: 500;
+        font-size: .75rem;
+      }
+
+      &.previous-post:before {
+        content: 'Previous';
+      }
+
+      &.next-post:before {
+        content: 'Next';
+      }
+    }
+
+    @include screen-sm {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        width: calc(48% - 1rem);
+
+        &.previous-post {
+          margin-right: 2rem;
+        }
+  
+        &.next-post {
+          text-align: right;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.post-list {
+  margin-top: 2rem;
+
+  .blog-post {
+    a.read-more:after {
+      content: ' →';
+    }
+
+    .excerpt {
+      &:after {
+        content: '...';
+      }
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--background-4);
+      padding-bottom: 1.5rem;
+    }
+  
+    &:not(:first-of-type) {
+      padding-top: 1.25rem;
+    }
+  }
+}

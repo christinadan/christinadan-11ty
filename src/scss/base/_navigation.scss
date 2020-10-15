@@ -10,6 +10,11 @@ ul.nav-list {
     padding-right: 2rem;
   }
 
+  // https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+  li:before {
+    content: '\200B'; /* add zero-width space */
+  }
+
   &.social-links {
     justify-content: space-between;
     width: 21ch;
@@ -23,5 +28,24 @@ ul.nav-list {
         align-items: center;
       }
     }
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-right: .5rem;
+    display: inherit;
+  }
+
+  // https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+  li:before {
+    content: '\200B'; /* add zero-width space */
+    height: 1px;
   }
 }

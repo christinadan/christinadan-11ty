@@ -22,14 +22,18 @@ h1 {
   margin: 1.25rem 0;
 }
 
-*+h2 {
+h2 {
+  font-size: 1.5rem;
+}
+
+*+h2,
+*+h3 {
   margin-top: 2rem;
   position: relative;
 }
 
 time {
   font-family: 'Courier Prime', monospace;
-  color: var(--text-color-2);
 }
 
 small {
@@ -112,10 +116,29 @@ h3:focus .heading-anchor {
   }
 
   &[download]:before {
-    content: "↓ ";
+    content: '↓ ';
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    background-color: var(--text-color);
+    color: var(--background-1);
+  }
+}
+
+.badge-link {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .125em .35em .0875em;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  font-size: .75rem;
+
+  &:hover,
+  &:focus {
     background-color: var(--text-color);
     color: var(--background-1);
   }

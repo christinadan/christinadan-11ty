@@ -2,15 +2,41 @@
 layout: base
 ---
 <article class="wrapper blog-post">
-  
   <header class="post-header">
-    {% if tags %}
-      {% set tagList = tags %}
-      {% include "partials/post-tags.njk" %}
+    {% if categories %}
+      {% set categoryList = categories %}
+      {% include "partials/post-categories.njk" %}
     {% endif %}
     <h1 class="post-title">{{ title }}</h1>
     {% set postDate = page.date %}
     {% include "partials/post-date.njk" %}
   </header>
-  {{ content | safe }}
+  <section class="post-content">
+    {{ content | safe }}
+  </section>
+  <section class="tag-section margin-top">
+    <span>Filed under </span>
+    {% if tags %}
+      {% set tagList = tags %}
+      {% include "partials/post-tags.njk" %}
+    {% endif %}
+  </section>
 </article>
+<div class="wrapper next-previous">
+  <nav>
+    <ol class="post-nav-list">
+    {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
+      {%- if previousPost %}
+      <li class="previous-post">
+        ← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+      </li>
+      {% endif %}
+    {%- set nextPost = collections.post | getNextCollectionItem(page) %}
+      {%- if nextPost %}
+      <li class="next-post">
+        <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> →
+      </li>
+      {% endif %}
+    </ol>
+  </nav>
+</div>

@@ -1,9 +1,9 @@
-<ul class="tag-links">
+<ul class="tag-list">
   {% for tag in tagList %}
     {%- if tag != "post" -%}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      {% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}
       <li>
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" rel="tag" class="badge-link">{{ tag }}</a>
       </li>
     {%- endif -%}
   {% endfor %}

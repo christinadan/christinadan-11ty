@@ -10,6 +10,9 @@ Personal website for Christina Dan and figuring out static site generators.
 
 ## Resources
 * [11ty Recipes](https://www.11ty.recipes)
-* [Tatiana Mac](https://tatianamac.com/posts/beginner-eleventy-tutorial-parti/)
+* [Tatiana Mac's Beginner Eleventy Tutorial](https://tatianamac.com/posts/beginner-eleventy-tutorial-parti/)
 * [Hylia Starter Kit](https://github.com/hankchizljaw/hylia)
 * [Supermaya Starter Kit](https://github.com/MadeByMike/supermaya)
+* Post categories
+  * [Post on pborenstein.com](https://www.pborenstein.com/posts/categories/)
+  * [Post on webstoemp.com](https://www.webstoemp.com/blog/basic-custom-taxonomies-with-eleventy/)

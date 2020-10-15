@@ -1,9 +1,9 @@
 {% for post in postList | reverse %}
   <article{% if post.url == url %} aria-current="page"{% endif %} class="blog-post">
     <header class="post-header">
-      {% if post.data.tags %}
-        {% set tagList = post.data.tags %}
-        {% include "partials/post-tags.njk" %}
+      {% if post.data.categories %}
+        {% set categoryList = post.data.categories %}
+        {% include "partials/post-categories.njk" %}
       {% endif %}
       <h2 class="post-title">
         <a href="{{ post.url | url }}">
@@ -17,7 +17,7 @@
       <p class="excerpt">
         {{ post.data.excerpt }}
       </p>
-      <p class="margin-top margin-bottom">
+      <p class="margin-top">
         <a href="{{ post.url | url }}" class="button-link read-more">
           Read more
         </a>

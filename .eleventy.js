@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { tagList, categoryList, categories } = require('./.eleventy/collections');
 const { cssmin, htmlDateString, md, jsmin, readableDate } = require('./.eleventy/filters');
 const { mdIt } = require('./.eleventy/libraries');
 const { htmlmin } = require('./.eleventy/transforms');
@@ -42,8 +43,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('md', md);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
 
-  // HTML
+  // Transforms
   eleventyConfig.addTransform('htmlmin', htmlmin);
+
+  // Collections
+  eleventyConfig.addCollection('tagList', tagList);
+  eleventyConfig.addCollection('categoryList', categoryList);
+  eleventyConfig.addCollection('categories', categories);
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
