@@ -1,0 +1,11 @@
+---
+title: Categories
+permalink: blog/category/
+layout: home
+---
+<h1>{{ title }}</h1>
+<div>
+  {% set categoryList = collections.categoryList %}
+  {% set linkClass = "badge-link" %}
+  {% include "partials/category-list.njk" %}
+</div>
