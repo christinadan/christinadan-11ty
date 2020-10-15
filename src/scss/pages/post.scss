@@ -1,15 +1,20 @@
 .blog-post {
   padding-bottom: 2.5rem;
 
-  .post-header {
-    .category-links {
-      display: flex;
-      flex-direction: row;
-      list-style-type: none;
-      padding: 0;
+  .post-header {    
+    .category-list {
       margin-top: 1.25rem;
+      margin-bottom: .75rem;
+      text-transform: uppercase;
+      font-size: .75rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      margin-bottom: .375rem;
 
       li {
+        margin-right: 0;
+        display: list-item;
+
         a {
           text-decoration: none;
         }
@@ -35,7 +40,7 @@
     }
 
     .post-date {
-      margin: .25em 0;
+      margin: .5em 0;
     }
   }
 
@@ -44,18 +49,7 @@
   }
 
   .tag-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-
-    span:first-of-type {
-      text-transform: uppercase;
-      font-size: .75rem;
-      letter-spacing: .075em;
-      margin-right: 1em;
-      font-weight: 500;
-    }
     
     .tag-list {
       margin: 0;
@@ -65,6 +59,15 @@
       }
     }
   }
+}
+
+.post-meta-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .075em;
+  margin-right: 1em;
+  font-weight: 500;
 }
 
 .next-previous {
@@ -79,28 +82,9 @@
     
     li {
       margin-top: 1.5rem;
-
-      &:before {
-        display: block;
-        text-transform: uppercase;
-        letter-spacing: .075em;
-        font-weight: 500;
-        font-size: .75rem;
-      }
-
-      &.previous-post:before {
-        content: 'Previous';
-      }
-
-      &.next-post:before {
-        content: 'Next';
-      }
     }
 
     @include screen-sm {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
       justify-content: space-between;
 
       li {

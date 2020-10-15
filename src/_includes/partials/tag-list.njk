@@ -1,8 +1,10 @@
-<ul class="tag-list">
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}
-    <li>
-      <a href="{{ tagUrl | url }}" class="badge-link">{{ tag }}</a>
-    </li>
+<ul class="tag-list flex-row">
+  {% for tag in tagList %}
+    {%- if tag != "post" -%}
+      {% set url %}{% tagUrl tag %}{% endset %}
+      <li>
+        <a href="{{ url | url }}" rel="tag" class="badge-link">{{ tag }}</a>
+      </li>
+    {%- endif -%}
   {% endfor %}
 </ul>

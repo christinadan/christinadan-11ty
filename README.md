@@ -8,6 +8,12 @@ Personal website for Christina Dan and figuring out static site generators.
 * [Eleventy](https://11ty.dev)
 * [Netlify](https://netlify.com)
 
+## To Do
+- [ ] Pagination
+- [ ] Responsive images
+- [ ] Image minification
+- [ ] Structured data
+
 ## Resources
 * [11ty Recipes](https://www.11ty.recipes)
 * [Tatiana Mac's Beginner Eleventy Tutorial](https://tatianamac.com/posts/beginner-eleventy-tutorial-parti/)

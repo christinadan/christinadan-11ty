@@ -13,16 +13,15 @@ pagination:
     - categoryList
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Posts filed under "{{ tag }}"
+  title: Tagged "{{ tag }}"
 permalink: /blog/tags/{{ tag | slug }}/
 ---
-<h1 class="header-md">Blog</h1>
-<h2 class="h1">{{ title }}</h2>
-<p>
-  See <a href="{{ '/blog/tags/' | url }}">all tags</a>.
+<h1>{{ title }}</h1>
+<p class="padding-bottom">
+  <a href="{{ '/blog/tags/' | url }}">Explore all tags</a>
 </p>
 <div class="post-list">
   {% set postList = collections[ tag ] %}
-  {% set headingLevel = "h3" %}
+  {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
 </div>

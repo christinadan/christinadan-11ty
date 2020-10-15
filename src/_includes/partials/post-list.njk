@@ -1,13 +1,14 @@
 {% for post in postList | reverse %}
+  {% set pageTitle = post.data.title if post.data.title else "Untitled" %}
   <article{% if post.url == url %} aria-current="page"{% endif %} class="blog-post">
     <header class="post-header">
       {% if post.data.categories %}
         {% set categoryList = post.data.categories %}
-        {% include "partials/post-categories.njk" %}
+        {% include "partials/category-list.njk" %}
       {% endif %}
       <{{ headingLevel }} class="post-title">
         <a href="{{ post.url | url }}">
-        {{ post.data.title if post.data.title else "Untitled" }}
+        {{ pageTitle }}
         </a>
       </{{ headingLevel }}>
       {% set postDate = post.date %}
@@ -18,8 +19,8 @@
         {{ post.data.excerpt }}
       </p>
       <p class="margin-top">
-        <a href="{{ post.url | url }}" class="button-link read-more">
-          Read more
+        <a href="{{ post.url | url }}" title="{{ pageTitle }}" class="button-link read-more">
+          Read this post
         </a>
       </p>
     {% endif %}

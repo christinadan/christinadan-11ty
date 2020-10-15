@@ -4,6 +4,7 @@ description: A description of this blog post
 lastModifiedDate: 2020-10-15
 categories:
   - beauty
+  - life
 tags:
   - reviews of
   - skincare

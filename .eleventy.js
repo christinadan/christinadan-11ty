@@ -2,6 +2,7 @@ const fs = require('fs');
 const { tagList, categoryList, categories } = require('./.eleventy/collections');
 const { cssmin, htmlDateString, md, jsmin, readableDate } = require('./.eleventy/filters');
 const { mdIt } = require('./.eleventy/libraries');
+const { tagUrl, categoryUrl } = require('./.eleventy/shortcodes');
 const { htmlmin } = require('./.eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
@@ -50,6 +51,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('tagList', tagList);
   eleventyConfig.addCollection('categoryList', categoryList);
   eleventyConfig.addCollection('categories', categories);
+
+  // Shortcodes
+  eleventyConfig.addShortcode('tagUrl', tagUrl);
+  eleventyConfig.addShortcode('categoryUrl', categoryUrl);
 
   // 404
   eleventyConfig.setBrowserSyncConfig({

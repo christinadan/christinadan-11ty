@@ -1,9 +1,5 @@
 ul.nav-list {
   list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
 
   li.nav-item {
@@ -21,6 +17,7 @@ ul.nav-list {
 
     li.nav-item {
       padding: 0;
+      display: inherit;
     
       a { 
         display: flex;
@@ -32,11 +29,7 @@ ul.nav-list {
 }
 
 .tag-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   list-style: none;
-  padding: 0;
 
   li {
     margin-right: .5rem;
@@ -47,5 +40,14 @@ ul.nav-list {
   li:before {
     content: '\200B'; /* add zero-width space */
     height: 1px;
+  }
+}
+
+.category-list {
+  list-style-type: none;
+
+  li {
+    margin-right: .5rem;
+    display: inherit;
   }
 }

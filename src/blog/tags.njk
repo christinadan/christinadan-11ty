@@ -3,8 +3,8 @@ title: Tags
 permalink: blog/tags/
 layout: home
 ---
-<h1 class="header-md">Blog</h1>
-<h2 class="h1">{{ title }}</h2>
+<h1>{{ title }}</h1>
 <div>
+  {% set tagList = collections.tagList %}
   {% include "partials/tag-list.njk" %}
 </div>
