@@ -1,4 +1,4 @@
-<ul class="category-links">
+<ul class="category-links header-sm">
   {% for cat in categoryList %}
     {%- if cat != "post" -%}
       {% set catUrl %}/blog/category/{{ cat | slug }}/{% endset %}

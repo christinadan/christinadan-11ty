@@ -6,14 +6,16 @@ pagination:
   alias: category
   addAllPagesToCollections: true
 eleventyComputed:
-  title: "{{ category | title }} Posts"
+  title: "{{ category | title }}"
 permalink: blog/category/{{ category | slug }}/
 ---
-<h1>{{ title }}</h1>
+<h1 class="header-md">Blog</h1>
+<h2 class="h1">Category: {{ title }}</h2>
 <p>
   See <a href="{{ '/blog/category/' | url }}">all categories</a>.
 </p>
 <div class="post-list">
   {% set postList = collections.categories[ category ] %}
+  {% set headingLevel = "h3" %}
   {% include "partials/post-list.njk" %}
 </div>

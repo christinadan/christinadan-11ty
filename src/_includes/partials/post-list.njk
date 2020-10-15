@@ -5,11 +5,11 @@
         {% set categoryList = post.data.categories %}
         {% include "partials/post-categories.njk" %}
       {% endif %}
-      <h2 class="post-title">
+      <{{ headingLevel }} class="post-title">
         <a href="{{ post.url | url }}">
         {{ post.data.title if post.data.title else "Untitled" }}
         </a>
-      </h2>
+      </{{ headingLevel }}>
       {% set postDate = post.date %}
       {% include "partials/post-date.njk" %}
     </header>
