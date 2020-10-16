@@ -2,7 +2,7 @@
 title: About
 permalink: /about/index.html
 ---
-Christina is a software engineer living in Dallas, Texas working at a Fortune 500 financial services company in Plano, Texas. She currently builds enterprise web and mobile applications for their workforce. In previous roles, she worked on developer tooling and developed business management applications. 
+Christina is a software engineer living in Dallas, Texas working at a Fortune 100 financial services company in Plano, Texas. She currently builds enterprise web and mobile applications for their workforce. In previous roles, she worked on developer tooling and developed business management applications. 
 
 She graduated with honors from the University of Texas at Arlington with a Bachelor of Science in Computer Science in 2016.
 
