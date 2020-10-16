@@ -23,11 +23,11 @@
 
   {% if type == 'post' %}
     <meta name="author" content="{{ site.author.name }}">
-    {% if publishedTime %}
-      <meta property="article:published_time" content="{{ publishedTime }}" />
+    {% if date %}
+      <meta property="article:published_time" content="{{ date.toISOString() }}" />
     {% endif %}
-    {% if modifiedTime %}
-      <meta property="article:modified_time" content="{{ modifiedTime }}" />
+    {% if lastModifiedDate %}
+      <meta property="article:modified_time" content="{{ lastModifiedDate.toISOString() }}" />
     {% endif %}
   {% endif %}
 

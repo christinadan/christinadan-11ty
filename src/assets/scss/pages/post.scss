@@ -1,5 +1,5 @@
 .blog-post {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 
   .post-header {    
     .category-list {
@@ -41,11 +41,13 @@
 
     .post-date {
       margin: .5em 0;
+      color: var(--text-color-2);
     }
   }
 
   .post-content {
     margin-top: 2.5rem;
+    padding-bottom: 1rem;
   }
 
   .tag-section {
@@ -117,13 +119,11 @@
       }
     }
 
-    a.read-more:after {
-      content: ' →';
-    }
+    a.read-more {
+      font-size: .875rem;
 
-    .excerpt {
-      &:after {
-        content: '...';
+      &.read-more:after {
+        content: ' →';
       }
     }
 

@@ -15,34 +15,36 @@ layout: base
     {{ content | safe }}
   </section>
   <section class="tag-section margin-top flex-row">
-    <span class="post-meta-label">Filed under </span>
+    <span class="post-meta-label">Tags </span>
     {% if tags %}
       {% set tagList = tags %}
       {% include "partials/tag-list.njk" %}
     {% endif %}
   </section>
 </article>
-<div class="wrapper next-previous">
-  <nav>
-    <ol class="post-nav-list flex-row">
-    {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
-      {%- if previousPost %}
-      <li class="previous-post">
-        <span class="post-meta-label">
-          Previous
-        </span>
-        ← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-      </li>
-      {% endif %}
-    {%- set nextPost = collections.post | getNextCollectionItem(page) %}
-      {%- if nextPost %}
-      <li class="next-post">
-        <span class="post-meta-label">
-          Next
-        </span>
-        <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> →
-      </li>
-      {% endif %}
-    </ol>
-  </nav>
-</div>
+{%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
+{%- set nextPost = collections.post | getNextCollectionItem(page) %}
+{%- if previousPost or nextPost %}
+  <div class="wrapper next-previous">
+    <nav>
+      <ol class="post-nav-list flex-row">
+        {%- if previousPost %}
+        <li class="previous-post">
+          <span class="post-meta-label">
+            Previous
+          </span>
+          ← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+        </li>
+        {% endif %}
+        {%- if nextPost %}
+        <li class="next-post">
+          <span class="post-meta-label">
+            Next
+          </span>
+          <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> →
+        </li>
+        {% endif %}
+      </ol>
+    </nav>
+  </div>
+{% endif %}

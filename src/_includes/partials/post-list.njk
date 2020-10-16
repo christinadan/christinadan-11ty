@@ -15,12 +15,10 @@
       {% include "partials/post-date.njk" %}
     </header>
     {% if post.data.excerpt %}
-      <p class="excerpt">
-        {{ post.data.excerpt }}
-      </p>
+      {{ post.data.excerpt | md | safe }}
       <p class="margin-top">
         <a href="{{ post.url | url }}" title="{{ pageTitle }}" class="button-link read-more">
-          Read this post
+          Read more
         </a>
       </p>
     {% endif %}
