@@ -23,7 +23,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // Watch targets
-  eleventyConfig.addWatchTarget('src/js');
+  eleventyConfig.addWatchTarget('src/assets/js');
+  eleventyConfig.addWatchTarget('src/assets/img');
   eleventyConfig.addWatchTarget('.eleventy');
 
   // Layout alias
@@ -33,8 +34,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   // Passthrough
-  eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy('src/static');
+  eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Filters

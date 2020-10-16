@@ -18,9 +18,9 @@ const paths = {
   input: 'src/',
   output: 'dist/',
   scripts: {
-    input: 'src/js/**/*.js',
+    input: 'src/assets/js/**/*.js',
     polyfills: '.polyfill.js',
-    output: 'dist/js/',
+    output: 'dist/assets/js/',
   },
   styles: {
     input: 'src/scss/main.scss',
