@@ -9,7 +9,7 @@ eleventyComputed:
   title: "{{ category | title }}"
 permalink: blog/category/{{ category | slug }}/
 ---
-<h1>Category: {{ title }}</h1>
+<h1>{{ title }}</h1>
 <p class="padding-bottom">
   <a href="{{ '/blog/category/' | url }}">Explore all categories</a>
 </p>
