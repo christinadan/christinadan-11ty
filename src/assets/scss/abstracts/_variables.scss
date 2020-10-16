@@ -1,0 +1,41 @@
+$screen-xx-width: 320px;
+$screen-xs-width: 640px;
+$screen-sm-width: 748px;
+$screen-md-width: 1024px;
+$screen-lg-width: 1280px;
+$screen-xl-width: 1920px;
+
+$logo-transition-duration: .2s;
+
+$greige: #f0ede1;
+$greige-shade-7-5: shade($greige, 7.5%);
+$greige-shade-25: shade($greige, 25%);
+$greige-shade-33: shade($greige, 33%);
+$black: #221d17;
+$black-tint-7-5: tint($black, 7.5%);
+$black-tint-25: tint($black, 25%);
+$white: #ffffff;
+$beige: #F5F4EE;
+$dark-grey: #4F4F4F;
+$mid-grey: #767676; // the lightest shade of grey you can get away with, #a11y
+$light-grey: #eeeeee; // for backgrounds only
+
+:root {
+  --background-1: #{$greige};
+  --background-2: #{$greige-shade-7-5};
+  --background-4: #{$greige-shade-33};
+  --text-color: #{$black};
+  --text-color-2: #{$black-tint-25};
+  --text-color-muted: #{$black-tint-7-5};
+  --link-color: #{$black};
+
+  &.dark {
+    // Temp colors; need to come up with an actual theme...
+    --background-1: #{$black};
+    --background-2: #{$black-tint-7-5};
+    --background-4: #{$black-tint-25};
+    --text-color: #{$greige};
+    --text-color-2: #{$greige-shade-33};
+    --link-color: #{$greige};
+  }
+}

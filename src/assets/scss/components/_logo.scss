@@ -1,0 +1,126 @@
+.animated-logo {
+  display: inline-block;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  color: var(--text-color);
+  white-space: nowrap;
+
+  .expand {
+    display: inline-block;
+    max-width: 0;
+    transition: max-width .175s .2s cubic-bezier(0, 0, 0, 1);
+
+    span {
+      display: unset;
+      opacity: 0;
+      transform: translate(0, -5px);
+
+      &:nth-of-type(1) {
+        transition: all $logo-transition-duration .175s linear;
+      }
+
+      &:nth-of-type(2) {
+        transition: all $logo-transition-duration .15s linear;
+      }
+
+      &:nth-of-type(3) {
+        transition: all $logo-transition-duration .125s linear;
+      }
+
+      &:nth-of-type(4) {
+        transition: all $logo-transition-duration .1s linear;
+      }
+
+      &:nth-of-type(5) {
+        transition: all $logo-transition-duration .075s linear;
+      }
+
+      &:nth-of-type(6) {
+        transition: all $logo-transition-duration .05s linear;
+      }
+
+      &:nth-of-type(7) {
+        transition: all $logo-transition-duration .025s linear;
+      }
+
+      &:nth-of-type(8) {
+        transition: all $logo-transition-duration linear;
+      }
+    }
+  }
+
+  @media screen and (min-width: 400px) { 
+    &:hover,
+    &:focus {
+      .expand {
+        max-width: 13rem;
+        transition: max-width .175s cubic-bezier(0, 0, 0, 1);
+  
+        span {
+          opacity: 1;
+          transform: translate(0, 0);
+  
+          &:nth-of-type(1) {
+            transition: all $logo-transition-duration linear;
+          }
+  
+          &:nth-of-type(2) {
+            transition: all $logo-transition-duration .025s linear;
+          }
+  
+          &:nth-of-type(3) {
+            transition: all $logo-transition-duration .05s linear;
+          }
+  
+          &:nth-of-type(4) {
+            transition: all $logo-transition-duration .075s linear;
+          }
+  
+          &:nth-of-type(5) {
+            transition: all $logo-transition-duration .1s linear;
+          }
+  
+          &:nth-of-type(6) {
+            transition: all $logo-transition-duration .125s linear;
+          }
+  
+          &:nth-of-type(7) {
+            transition: all $logo-transition-duration .150s linear;
+          }
+  
+          &:nth-of-type(8) {
+            transition: all $logo-transition-duration .175s linear;
+          }
+        }
+  
+        &.last {
+          span {
+            &:nth-of-type(1) {
+              transition: all $logo-transition-duration .175s linear;
+            }
+    
+            &:nth-of-type(2) {
+              transition: all $logo-transition-duration .2s linear;
+            }
+          }
+        }
+      }
+    }
+
+    @include hover-none {
+      &:hover,
+      &:focus {
+        .expand {
+          max-width: 0;
+          transition: none;
+
+          span {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

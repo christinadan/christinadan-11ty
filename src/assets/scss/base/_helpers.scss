@@ -1,0 +1,37 @@
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.wrapper {
+  max-width: 42rem;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.padding-top {
+  padding-top: 2rem;
+}
+
+.padding-bottom {
+  padding-bottom: 2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
