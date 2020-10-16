@@ -1,3 +1,6 @@
 {
-  "type": "post"
+  "type": "post",
+  "layout": "layouts/post.njk",
+  "permalink": "blog/{% if slug %}{{ slug | slug }}{% else %}{{ title | slug }}{% endif %}/index.html",
+  "tags": ["post"]
 }

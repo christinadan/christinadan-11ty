@@ -18,13 +18,13 @@ const paths = {
   input: 'src/',
   output: 'dist/',
   scripts: {
-    input: 'src/js/**/*.js',
+    input: 'src/assets/js/**/*.js',
     polyfills: '.polyfill.js',
-    output: 'dist/js/',
+    output: 'dist/assets/js/',
   },
   styles: {
-    input: 'src/scss/main.scss',
-    watch: 'src/scss/**/*.scss',
+    input: 'src/assets/scss/main.scss',
+    watch: 'src/assets/scss/**/*.scss',
     output: 'src/_includes/global/css',
   },
   svgs: {
@@ -56,7 +56,6 @@ const cleanDest = (done) => {
 
 // Repeated JavaScript tasks
 const jsTasks = lazypipe()
-  .pipe(header, banner.main, { package: packageJson })
   .pipe(dest, paths.scripts.output)
   .pipe(rename, { suffix: '.min' })
   .pipe(uglify)

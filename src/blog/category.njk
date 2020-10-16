@@ -1,0 +1,20 @@
+---
+layout: home
+pagination:
+  data: collections.categoryList
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "{{ category | title }}"
+permalink: blog/category/{{ category | slug }}/
+---
+<h1>{{ title }}</h1>
+<p class="padding-bottom">
+  <a href="{{ '/blog/category/' | url }}">Explore all categories</a>
+</p>
+<div class="post-list">
+  {% set postList = collections.categories[ category ] %}
+  {% set headingLevel = "h2" %}
+  {% include "partials/post-list.njk" %}
+</div>

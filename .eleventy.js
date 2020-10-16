@@ -1,66 +1,61 @@
-const { DateTime } = require('luxon');
-const { minify } = require('terser');
-const CleanCSS = require('clean-css');
 const fs = require('fs');
-const htmlMinifier = require('html-minifier');
-const markdownIt = require('markdown-it');
-const mdLinkAttributes = require('markdown-it-link-attributes');
-const mdAnchor = require('markdown-it-anchor');
+const { tagList, categoryList, categories } = require('./.eleventy/collections');
+const { cssmin, htmlDateString, md, jsmin, readableDate } = require('./.eleventy/filters');
+const { mdIt } = require('./.eleventy/libraries');
+const { tagUrl, categoryUrl } = require('./.eleventy/shortcodes');
+const { htmlmin } = require('./.eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
+  // Libraries
+  eleventyConfig.setLibrary('md', mdIt);
+
+  // Front matter
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: '<!-- excerpt -->',
+    excerpt_alias: 'excerpt',
+  });
+
   // Allows the dev server to reload when css changes
   // Use .eleventyignore for files you don't want eleventy to track
   eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setDataDeepMerge(true);
 
   // Watch targets
-  eleventyConfig.addWatchTarget('src/js');
+  eleventyConfig.addWatchTarget('src/assets/js');
+  eleventyConfig.addWatchTarget('src/assets/img');
+  eleventyConfig.addWatchTarget('.eleventy');
 
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
+  eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   // Passthrough
-  eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy('src/static');
+  eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Filters
-  eleventyConfig.addFilter('cssmin', (code) => {
-    return new CleanCSS({}).minify(code).styles;
-  });
+  eleventyConfig.addFilter('cssmin', cssmin);
+  eleventyConfig.addFilter('readableDate', readableDate);
+  eleventyConfig.addFilter('htmlDateString', htmlDateString);
+  eleventyConfig.addFilter('md', md);
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
 
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-  });
+  // Transforms
+  eleventyConfig.addTransform('htmlmin', htmlmin);
 
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
-    try {
-      const minified = await minify(code);
+  // Collections
+  eleventyConfig.addCollection('tagList', tagList);
+  eleventyConfig.addCollection('categoryList', categoryList);
+  eleventyConfig.addCollection('categories', categories);
 
-      callback(null, minified.code);
-    } catch (err) {
-      console.error('Terser error: ', err);
-      // Fail gracefully.
-      callback(null, code);
-    }
-  });
-
-  // HTML
-  eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
-    if (outputPath && outputPath.endsWith('.html')) {
-      let minified = htmlMinifier.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-        minifyCSS: true,
-        minifyJS: true,
-      });
-
-      return minified;
-    }
-
-    return content;
-  });
+  // Shortcodes
+  eleventyConfig.addShortcode('tagUrl', tagUrl);
+  eleventyConfig.addShortcode('categoryUrl', categoryUrl);
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
@@ -76,31 +71,6 @@ module.exports = function (eleventyConfig) {
       },
     },
   });
-
-  // Markdown configuration
-  const mdOpts = {
-    html: true,
-  };
-
-  eleventyConfig.setLibrary(
-    'md',
-    markdownIt({
-      html: true,
-    })
-      .use(mdLinkAttributes, {
-        pattern: /^https{0,1}\:\/\//gi,
-        attrs: {
-          target: '_blank',
-          rel: 'noopener noreferrer',
-        },
-      })
-      .use(mdAnchor, {
-        level: [2, 3],
-        permalink: true,
-        permalinkClass: 'heading-anchor',
-        permalinkSymbol: '#',
-      })
-  );
 
   return {
     markdownTemplateEngine: 'njk',

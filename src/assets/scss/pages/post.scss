@@ -1,0 +1,140 @@
+.blog-post {
+  padding-bottom: 2rem;
+
+  .post-header {    
+    .category-list {
+      margin-top: 1.25rem;
+      margin-bottom: .75rem;
+      text-transform: uppercase;
+      font-size: .75rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      margin-bottom: .375rem;
+
+      li {
+        margin-right: 0;
+        display: list-item;
+
+        a {
+          text-decoration: none;
+        }
+        
+        &:not(:last-of-type):after {
+          content: '/';
+          padding: 0 .5em;
+        }
+
+        // https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+        &:before {
+          content: '\200B'; /* add zero-width space */
+        }
+      }
+    }
+
+    .post-title {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .post-date {
+      margin: .5em 0;
+      color: var(--text-color-2);
+    }
+  }
+
+  .post-content {
+    margin-top: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .tag-section {
+    align-items: center;
+    margin-top: 1.5rem;
+    
+    .tag-list {
+      margin: 0;
+
+      a {
+        font-size: .625rem;
+      }
+    }
+  }
+}
+
+.post-meta-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .075em;
+  margin-right: 1em;
+  font-weight: 500;
+}
+
+.next-previous {
+  padding-top: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid var(--background-4);
+
+  .post-nav-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    
+    li {
+      margin-top: 1.5rem;
+    }
+
+    @include screen-sm {
+      justify-content: space-between;
+
+      li {
+        width: calc(48% - 1rem);
+
+        &.previous-post {
+          margin-right: 2rem;
+        }
+  
+        &.next-post {
+          text-align: right;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.post-list {
+  margin-top: 2rem;
+
+  .blog-post {
+    header {
+      .category-links {
+        margin-top: 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    a.read-more {
+      font-size: .875rem;
+
+      &.read-more:after {
+        content: ' →';
+      }
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--background-4);
+      padding-bottom: 1.5rem;
+    }
+  
+    &:not(:first-of-type) {
+      padding-top: 2rem;
+    }
+  }
+}

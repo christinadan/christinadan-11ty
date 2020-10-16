@@ -7,7 +7,7 @@ var toggle = document.getElementById('theme-toggle');
 
 toggle.checked = isDarkColorScheme;
 
-toggle.addEventListener('change', function (event) {
+toggle.addEventListener('change', (event) => {
   const { checked } = event.target;
 
   if (checked) {

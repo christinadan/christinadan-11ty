@@ -1,0 +1,26 @@
+{% for post in postList | reverse %}
+  {% set pageTitle = post.data.title if post.data.title else "Untitled" %}
+  <article{% if post.url == url %} aria-current="page"{% endif %} class="blog-post">
+    <header class="post-header">
+      {% if post.data.categories %}
+        {% set categoryList = post.data.categories %}
+        {% include "partials/category-list.njk" %}
+      {% endif %}
+      <{{ headingLevel }} class="post-title">
+        <a href="{{ post.url | url }}">
+        {{ pageTitle }}
+        </a>
+      </{{ headingLevel }}>
+      {% set postDate = post.date %}
+      {% include "partials/post-date.njk" %}
+    </header>
+    {% if post.data.excerpt %}
+      {{ post.data.excerpt | md | safe }}
+      <p class="margin-top">
+        <a href="{{ post.url | url }}" title="{{ pageTitle }}" class="button-link read-more">
+          Read more
+        </a>
+      </p>
+    {% endif %}
+  </article>
+{% endfor %}

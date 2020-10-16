@@ -19,22 +19,19 @@
     }
   
     .nav-container {
-      display: flex;
-      flex-direction: row;
-    }
-  
-    .nav-list {
-      margin: 0;
-      min-height: 32px;
-  
-      .nav-item {
-        display: flex;
-        align-items: center;
-        margin: 4px 0;
-  
-        a {
-          font-size: 1rem;
-          text-decoration: none;
+      .nav-list {
+        margin: 0;
+        min-height: 32px;
+    
+        .nav-item {
+          display: flex;
+          align-items: center;
+          margin: 4px 0;
+    
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+          }
         }
       }
     }

@@ -1,0 +1,15 @@
+---
+layout: home
+title: Blog
+permalink: /blog/index.html
+---
+<h1>{{ title }}</h1>
+<div class="post-list">
+  {% if collections.post %}
+    {% set postList = collections.post %}
+    {% set headingLevel = "h2" %}
+    {% include "partials/post-list.njk" %}
+  {% else %}
+    <i>There are no blog posts yet. ❤️</i>
+  {% endif %}
+</div>

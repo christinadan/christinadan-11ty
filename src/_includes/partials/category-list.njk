@@ -1,0 +1,8 @@
+<ul class="category-list flex-row">
+  {% for cat in categoryList %}
+    {% set catUrl %}{% categoryUrl cat %}{% endset %}
+    <li>
+      <a href="{{ catUrl | url }}"{% if linkClass %} class="{{ linkClass }}"{% endif%}>{{ cat }}</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -17,17 +17,44 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.25rem;
   margin: 1.25rem 0;
 }
 
-*+h2 {
-  margin-top: 2rem;
+h2, .h2 {
+  font-size: 1.5rem;
+  margin: 1.15rem 0;
+}
+
+h3, .h3 {
+  font-size: 1.125rem;
+  margin: 1rem 0;
+}
+
+*+h1,
+*+.h1 {
+  margin-top: 0;
+}
+
+*+h2,
+*+.h2,
+*+h3,
+*+.h3 {
+  margin-top: 1.25em;
   position: relative;
 }
 
-p {
+time {
+  font-family: 'Courier Prime', monospace;
+}
+
+small {
+  font-size: .825rem;
+  line-height: 1.25;
+}
+
+p, ul {
   margin: 1rem 0;
 }
 
@@ -66,7 +93,7 @@ a {
   color: var(--text-color-2);
   position: absolute;
   top: 0;
-  left: -1.5rem;
+  left: -1em;
   padding-right: .65rem;
   display: none;
   font-weight: 400;
@@ -91,7 +118,7 @@ h3:focus .heading-anchor {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: .5rem 1rem;
+  padding: .5rem 1rem .4rem;
   border: 1px solid var(--text-color);
   font-weight: inherit;
   text-decoration: none;
@@ -102,10 +129,29 @@ h3:focus .heading-anchor {
   }
 
   &[download]:before {
-    content: "↓ ";
+    content: '↓ ';
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    background-color: var(--text-color);
+    color: var(--background-1);
+  }
+}
+
+.badge-link {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .125em .35em .0875em;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  font-size: .75rem;
+
+  &:hover,
+  &:focus {
     background-color: var(--text-color);
     color: var(--background-1);
   }
