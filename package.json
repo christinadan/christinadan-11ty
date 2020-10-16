@@ -45,7 +45,7 @@
     "markdown-it-link-attributes": "^3.0.0",
     "prettier": "^2.1.2",
     "sass": "^1.27.0",
-    "terser": "^5.3.4"
+    "terser": "^5.3.5"
   },
   "husky": {
     "hooks": {
