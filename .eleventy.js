@@ -1,26 +1,15 @@
 const fs = require('fs');
 const { tagList, categoryList, categories } = require('./.eleventy/collections');
-const { cssmin, htmlDateString, md, jsmin, readableDate } = require('./.eleventy/filters');
+const { cssmin, htmlDateString, md, jsmin, readableDate, media } = require('./.eleventy/filters');
 const { mdIt } = require('./.eleventy/libraries');
-const { tagUrl, categoryUrl } = require('./.eleventy/shortcodes');
+const { tagUrl, categoryUrl, responsiveImage } = require('./.eleventy/shortcodes');
 const { htmlmin } = require('./.eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
-  // Libraries
-  eleventyConfig.setLibrary('md', mdIt);
-
-  // Front matter
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    // Optional, default is "---"
-    excerpt_separator: '<!-- excerpt -->',
-    excerpt_alias: 'excerpt',
-  });
-
-  // Allows the dev server to reload when css changes
-  // Use .eleventyignore for files you don't want eleventy to track
-  eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.setDataDeepMerge(true);
+  // Passthrough
+  eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/static');
+  eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Watch targets
   eleventyConfig.addWatchTarget('src/assets/js');
@@ -33,29 +22,26 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
-  // Passthrough
-  eleventyConfig.addPassthroughCopy('src/assets/img');
-  eleventyConfig.addPassthroughCopy('src/assets/static');
-  eleventyConfig.addPassthroughCopy('src/robots.txt');
-
   // Filters
   eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('readableDate', readableDate);
   eleventyConfig.addFilter('htmlDateString', htmlDateString);
   eleventyConfig.addFilter('md', md);
+  eleventyConfig.addFilter('media', media);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
 
   // Transforms
   eleventyConfig.addTransform('htmlmin', htmlmin);
 
+  // Shortcodes
+  eleventyConfig.addShortcode('tagUrl', tagUrl);
+  eleventyConfig.addShortcode('categoryUrl', categoryUrl);
+  eleventyConfig.addNunjucksAsyncShortcode('responsiveImage', responsiveImage);
+
   // Collections
   eleventyConfig.addCollection('tagList', tagList);
   eleventyConfig.addCollection('categoryList', categoryList);
   eleventyConfig.addCollection('categories', categories);
-
-  // Shortcodes
-  eleventyConfig.addShortcode('tagUrl', tagUrl);
-  eleventyConfig.addShortcode('categoryUrl', categoryUrl);
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
@@ -71,6 +57,22 @@ module.exports = function (eleventyConfig) {
       },
     },
   });
+
+  // Front matter
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: '<!-- excerpt -->',
+    excerpt_alias: 'excerpt',
+  });
+
+  // Allows the dev server to reload when css changes
+  // Use .eleventyignore for files you don't want eleventy to track
+  eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.setDataDeepMerge(true);
+
+  // Libraries
+  eleventyConfig.setLibrary('md', mdIt);
 
   return {
     markdownTemplateEngine: 'njk',

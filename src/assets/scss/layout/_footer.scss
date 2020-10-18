@@ -1,24 +1,30 @@
 .site-footer {  
   .footer-content {
     border-top: 1px solid var(--background-4);
-    padding-top: 1.125rem;
-    padding-bottom: 1rem;
+    padding-top: 1.25rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   
     @include screen-xs {
+      justify-content: space-between;
       padding-top: 1.5rem;
-      padding-bottom: 1.75rem;
-    }
+      padding-bottom: 1.5rem;
 
-    .social-links {
-      margin-right: 2rem;
+      .social-links {
+        margin-right: 2rem;
+      }
     }
 
     .copyright {
       font-size: .875rem;
+      text-align: center;
+      width: 100%;
+      
+      @include screen-xs {
+        width: unset;
+      }
     }
   }
 }

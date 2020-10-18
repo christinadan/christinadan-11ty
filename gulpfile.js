@@ -31,6 +31,10 @@ const paths = {
     input: 'src/assets/img/*.svg',
     output: 'dist/assets/img/',
   },
+  copy: {
+    input: 'src/posts/**/*.{jpg,jpeg,png,gif,webp,mp3,mp4,webm,ogg}',
+    output: 'dist/media',
+  },
 };
 
 /**
@@ -101,16 +105,22 @@ const buildStyles = (done) => {
 // Optimize SVG files
 const buildSVGs = () => src(paths.svgs.input).pipe(svgmin()).pipe(dest(paths.svgs.output));
 
+const copy = (done) => {
+  src(paths.copy.input).pipe(dest(paths.copy.output));
+
+  done();
+};
+
 const watchSource = (done) => {
   watch(
     paths.styles.watch,
     { ignoreInitial: true },
-    parallel(buildStyles, buildScripts, buildSVGs),
+    parallel(buildStyles, buildScripts, buildSVGs, copy),
   );
 
   done();
 };
 
 // Build task
-exports.default = series(cleanDest, parallel(buildStyles, buildScripts, buildSVGs));
+exports.default = series(cleanDest, parallel(buildStyles, buildScripts, buildSVGs, copy));
 exports.watch = series(watchSource);
