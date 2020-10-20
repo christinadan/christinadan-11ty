@@ -1,4 +1,4 @@
-.blog-post {
+.post {
   padding-bottom: 2rem;
 
   .post-header {    
@@ -31,9 +31,11 @@
       }
     }
 
-    .post-title {
+    *+.post-title {
       margin: 0;
+    }
 
+    .post-title {
       a {
         text-decoration: none;
       }
@@ -66,6 +68,10 @@
       }
     }
   }
+
+  figure {
+    margin: 2rem auto;
+  }
 }
 
 .post-meta-label {
@@ -78,8 +84,8 @@
 }
 
 .next-previous {
-  padding-top: 1.75rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 1px solid var(--background-4);
 
   .post-nav-list {
@@ -88,7 +94,7 @@
     margin: 0;
     
     li {
-      margin-top: 1.5rem;
+      margin-top: 1.25rem;
     }
 
     @include screen-sm {
@@ -113,14 +119,14 @@
 .post-list {
   margin-top: 2rem;
 
-  .blog-post {
-    header {
-      .category-links {
+  .post {
+    .post-header {
+      .category-list {
         margin-top: 0;
       }
 
-      h3 {
-        font-size: 1.5rem;
+      .post-title {
+        margin: 0;
       }
     }
 
@@ -134,7 +140,7 @@
 
     &:not(:last-of-type) {
       border-bottom: 1px solid var(--background-4);
-      padding-bottom: 1.5rem;
+      padding-bottom: 1rem;
     }
   
     &:not(:first-of-type) {

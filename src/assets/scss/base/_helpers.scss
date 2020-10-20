@@ -10,7 +10,15 @@
 }
 
 .wrapper {
-  max-width: 42rem;
+  max-width: 100%;
+
+  @include screen-sm {
+    max-width: 40rem;
+  }
+
+  @include screen-lg {
+    max-width: 42rem;
+  }
 }
 
 .margin-top {

@@ -33,7 +33,7 @@ module.exports = {
 
     if (path.length && path.includes('posts')) {
       const subdir = path[path.length - 2];
-      return `/media/${subdir}/${filename}`;
+      return `/media/posts/${subdir}/${filename}`;
     }
 
     return filename;

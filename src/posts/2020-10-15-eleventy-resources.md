@@ -2,17 +2,15 @@
 title: Resources I Found Helpful While Building My First Static Site with Eleventy
 slug: Helpful Eleventy Resources
 description: A list of resources (mainly links) I found helpful while building this site using Eleventy
-# eleventyComputed:
-#   excerpt: "{{ description }}"
 lastModifiedDate: 2020-10-16
 categories:
   - code
 tags:
   - eleventy
   - resources
-  - website updates
+  - site updates
 ---
-A few days ago, I "officially" took the redesign and rewrite of this site live. And by that, I mean I made this domain name, christinadan.com, point to this site deployed on Netlify instead of my WordPress blog, with little more than a home page and an About page. As of writing this, there's still not much more than that. I got a little overwhelmed thinking about all the features I want to add to this site. Pagination, tags, categories, pages for tags and categories, responsive images, and something I'm really excited about, [Webmentions](https://indieweb.org/Webmention). The list goes on.<!-- excerpt -->
+A few days ago, I "officially" took the redesign and rewrite of this site live. And by that, I mean I made this domain name, christinadan.com, point to this site deployed on Netlify instead of my WordPress blog, with little more than a home page and an About page.<!-- excerpt --> As of writing this, there's still not much more than that. I got a little overwhelmed thinking about all the features I want to add to this site. Pagination, tags, categories, pages for tags and categories, responsive images, and something I'm really excited about, [Webmentions](https://indieweb.org/Webmention). The list goes on.
 
 But I was really just putting off migrating the little content I had on my Wordpress here. And writing new content. I hadn't written anything since 2018. I wanted everything to be perfect first. Admittedly, all of my old posts featured things like life updates, travel posts, beauty reviews - all image-heavy content. And I knew I would have to take sometime to work through the export I have and all the images and make sure everything looks *right*. I just didn't want to deal with that yet.
 

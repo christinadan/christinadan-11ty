@@ -2,7 +2,13 @@ const fs = require('fs');
 const { tagList, categoryList, categories } = require('./.eleventy/collections');
 const { cssmin, htmlDateString, md, jsmin, readableDate, media } = require('./.eleventy/filters');
 const { mdIt } = require('./.eleventy/libraries');
-const { tagUrl, categoryUrl, responsiveImage } = require('./.eleventy/shortcodes');
+const {
+  tagUrl,
+  categoryUrl,
+  imageMulti,
+  imageMin,
+  photoGallery,
+} = require('./.eleventy/shortcodes');
 const { htmlmin } = require('./.eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
@@ -36,7 +42,9 @@ module.exports = function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode('tagUrl', tagUrl);
   eleventyConfig.addShortcode('categoryUrl', categoryUrl);
-  eleventyConfig.addNunjucksAsyncShortcode('responsiveImage', responsiveImage);
+  eleventyConfig.addNunjucksAsyncShortcode('imageMulti', imageMulti);
+  eleventyConfig.addNunjucksAsyncShortcode('imageMin', imageMin);
+  eleventyConfig.addNunjucksAsyncShortcode('photoGallery', photoGallery);
 
   // Collections
   eleventyConfig.addCollection('tagList', tagList);
