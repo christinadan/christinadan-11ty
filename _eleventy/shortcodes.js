@@ -1,5 +1,4 @@
 const slugify = require('slugify');
-const fs = require('fs');
 const Image = require('@11ty/eleventy-img');
 
 const getPathToSrc = (src) => {
@@ -21,51 +20,8 @@ const getImageFormat = (src) => {
 };
 
 module.exports = {
-  tagUrl: (tag) => {
-    return `/blog/tags/${slugify(tag)}/`;
-  },
-  categoryUrl: (cat) => {
-    return `/blog/category/${slugify(cat)}/`;
-  },
-  responsiveImage: (src, alt, page) => {
-    // if (!alt) {
-    //   // You bet we throw an error on missing alt (alt="" works okay)
-    //   throw new Error(`Missing \`alt\` on imageMulti from: ${src}`);
-    // }
-
-    // // Update this in gulpfile
-    // const widths = [320, 640, 960, 1280, 1600, null];
-    // const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
-    // const srcSet = [];
-    // const webpSrcSet = [];
-
-    // widths.forEach((width) => {
-    //   const imgPath = `./dist/media/${pathToSrc}`;
-    //   const imgExt = getImageFormat(src);
-    //   const srcBase = `${src.slice(0, src.length - imgExt.length - 1)}`;
-    //   const webpSrc = `${srcBase}.webp`;
-
-    //   if (fs.existsSync(`${imgPath}/${srcBase}-${width}.${imgExt}`)) {
-    //     srcSet.push(`/media/${pathToSrc}/${src} ${width}w`);
-    //   }
-
-    //   if (fs.existsSync(`${imgPath}/${webpSrcBase}-${width}.webp`)) {
-    //     webpSrcSet.push(`/media/${pathToSrc}/${webpSrc} ${width}w`);
-    //   }
-    // });
-
-    // const sizes =
-    //   '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
-    // const source = `<source type="image/webp" srcset="${srcSet.join(', ')}" sizes="${sizes}">`;
-    // const img = `<img src="${lowestSrc.url}" srcset="${webpSrc.join(', ')}" 
-    //   sizes="${sizes}"
-    //   width="${lowestSrc.width}"
-    //   height="${lowestSrc.height}"
-    //   loading="lazy"
-    //   alt="${alt}">`;
-    // // Iterate over formats and widths
-    // return `<picture>${source}${img}</picture>`;
-  },
+  tagUrl: (tag) => `/blog/tags/${slugify(tag)}/`,
+  categoryUrl: (cat) => `/blog/category/${slugify(cat)}/`,
   imageMin: async (src, alt, page) => {
     if (!alt) {
       // You bet we throw an error on missing alt (alt="" works okay)
@@ -101,9 +57,8 @@ module.exports = {
     });
 
     const lowestSrc = stats[format][0];
-    const sizes =
-      '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
-    const source = `<source type="image/webp" srcset="${stats['webp']
+    const sizes = '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
+    const source = `<source type="image/webp" srcset="${stats.webp
       .map((entry) => `${entry.url} ${entry.width}w`)
       .join(', ')}" sizes="${sizes}">`;
     const img = `<img src="${lowestSrc.url}" srcset="${stats[format]
@@ -119,8 +74,8 @@ module.exports = {
   },
   photoGallery: async (photos, page) => {
     const photoList = photos.map(async (photo) => {
-      const src = photo.src;
-      const alt = photo.alt;
+      const { src } = photo;
+      const { alt } = photo;
       const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
       const format = getImageFormat(src);
       const stats = await Image(`./src/${pathToSrc}/${src}`, {

@@ -2,7 +2,6 @@
 const {
   parallel, series, watch, src, dest,
 } = require('gulp');
-const { resizeImage, imageDiff } = require('./_gulp/resize-image');
 const sass = require('gulp-sass');
 const del = require('del');
 const flatmap = require('gulp-flatmap');
@@ -12,7 +11,6 @@ const header = require('gulp-header');
 const concat = require('gulp-concat');
 const uglify = require('gulp-terser');
 const svgmin = require('gulp-svgmin');
-const merge = require('merge2');
 const packageJson = require('./package.json');
 
 // Paths to project folders ///////////////////////////////////////////////////
@@ -37,17 +35,17 @@ const paths = {
     input: ['src/posts/*/*.{jpg,jpeg,png,gif,webp}'],
     output: 'dist/media',
     widths: [320, 640, 960, 1280, 1600, null],
-    formats: [null, 'webp']
+    formats: [null, 'webp'],
   },
   galleryImages: {
     input: ['src/posts/*/gallery/*.{jpg,jpeg,png,gif,webp}'],
     output: 'dist/media',
     widths: [150, 300, 425, 550, 675, null],
-    formats: [null]
+    formats: [null],
   },
   imageDiff: {
-    input: ['src/media/**/*.{jpg,jpeg,png,gif,webp}']
-  }
+    input: ['src/media/**/*.{jpg,jpeg,png,gif,webp}'],
+  },
 };
 
 /**
@@ -101,9 +99,9 @@ const buildScripts = () =>
 
       // Otherwise, process the file
       return stream.pipe(jsTasks());
-    })
+    }),
   );
-  
+
 const buildStyles = (done) => {
   src(paths.styles.input)
     .pipe(
@@ -118,15 +116,6 @@ const buildStyles = (done) => {
 
 // Optimize SVG files
 const buildSVGs = () => src(paths.svgs.input).pipe(svgmin()).pipe(dest(paths.svgs.output));
-
-const resizeImages = () => {
-  const postImages = resizeImage(paths.postImages.input, paths.postImages.output, paths.postImages.widths, paths.postImages.formats);
-  const galleryImages = resizeImage(paths.galleryImages.input, paths.galleryImages.output, paths.galleryImages.widths, paths.galleryImages.formats);
-
-  return merge(postImages, galleryImages);
-};
-
-const diff = async () => imageDiff(paths.imageDiff.input, [].concat(paths.postImages.widths, paths.galleryImages.widths));
 
 const watchSource = (done) => {
   watch(
