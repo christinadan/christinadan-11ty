@@ -1,6 +1,6 @@
 const slugify = require('slugify');
+const fs = require('fs');
 const Image = require('@11ty/eleventy-img');
-const { media } = require('./filters');
 
 const getPathToSrc = (src) => {
   const path = src.split('/');
@@ -27,6 +27,45 @@ module.exports = {
   categoryUrl: (cat) => {
     return `/blog/category/${slugify(cat)}/`;
   },
+  responsiveImage: (src, alt, page) => {
+    // if (!alt) {
+    //   // You bet we throw an error on missing alt (alt="" works okay)
+    //   throw new Error(`Missing \`alt\` on imageMulti from: ${src}`);
+    // }
+
+    // // Update this in gulpfile
+    // const widths = [320, 640, 960, 1280, 1600, null];
+    // const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
+    // const srcSet = [];
+    // const webpSrcSet = [];
+
+    // widths.forEach((width) => {
+    //   const imgPath = `./dist/media/${pathToSrc}`;
+    //   const imgExt = getImageFormat(src);
+    //   const srcBase = `${src.slice(0, src.length - imgExt.length - 1)}`;
+    //   const webpSrc = `${srcBase}.webp`;
+
+    //   if (fs.existsSync(`${imgPath}/${srcBase}-${width}.${imgExt}`)) {
+    //     srcSet.push(`/media/${pathToSrc}/${src} ${width}w`);
+    //   }
+
+    //   if (fs.existsSync(`${imgPath}/${webpSrcBase}-${width}.webp`)) {
+    //     webpSrcSet.push(`/media/${pathToSrc}/${webpSrc} ${width}w`);
+    //   }
+    // });
+
+    // const sizes =
+    //   '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
+    // const source = `<source type="image/webp" srcset="${srcSet.join(', ')}" sizes="${sizes}">`;
+    // const img = `<img src="${lowestSrc.url}" srcset="${webpSrc.join(', ')}" 
+    //   sizes="${sizes}"
+    //   width="${lowestSrc.width}"
+    //   height="${lowestSrc.height}"
+    //   loading="lazy"
+    //   alt="${alt}">`;
+    // // Iterate over formats and widths
+    // return `<picture>${source}${img}</picture>`;
+  },
   imageMin: async (src, alt, page) => {
     if (!alt) {
       // You bet we throw an error on missing alt (alt="" works okay)
@@ -46,7 +85,7 @@ module.exports = {
 
     return `<img src="${props.url}" width="${props.width}" height="${props.height}" alt="${alt}" loading="lazy">`;
   },
-  imageMulti: async (src, alt) => {
+  imageMulti: async (src, alt, page) => {
     if (!alt) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on imageMulti from: ${src}`);
@@ -55,7 +94,7 @@ module.exports = {
     const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
     const format = getImageFormat(src);
     const stats = await Image(`./src/${pathToSrc}/${src}`, {
-      widths: [320, 640, 960, 1280, 1600, 2000],
+      widths: [320, 640, 960, 1280, 1600, null],
       formats: [format, 'webp'],
       urlPath: `/media/${pathToSrc}`,
       outputDir: `./dist/media/${pathToSrc}`,
@@ -67,7 +106,7 @@ module.exports = {
     const source = `<source type="image/webp" srcset="${stats['webp']
       .map((entry) => `${entry.url} ${entry.width}w`)
       .join(', ')}" sizes="${sizes}">`;
-    const img = `<img src="${lowestSrc.url}" srcset="${stats[outputFormat]
+    const img = `<img src="${lowestSrc.url}" srcset="${stats[format]
       .map((entry) => `${entry.url} ${entry.width}w`)
       .join(', ')}" 
       sizes="${sizes}"

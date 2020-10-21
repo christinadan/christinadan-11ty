@@ -13,6 +13,13 @@ module.exports = {
   htmlDateString: (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   },
+  sitemapDate: (dateObj) => {
+    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    if (!dt.isValid) {
+      return "";
+    }
+    return dt.toISO();
+  },
   md: (content = '') => {
     return mdIt.render(content);
   },

@@ -1,20 +1,20 @@
 const fs = require('fs');
-const { tagList, categoryList, categories } = require('./.eleventy/collections');
-const { cssmin, htmlDateString, md, jsmin, readableDate, media } = require('./.eleventy/filters');
-const { mdIt } = require('./.eleventy/libraries');
+const { tagList, categoryList, categories } = require('./_eleventy/collections');
+const { cssmin, htmlDateString, md, jsmin, readableDate, media, sitemapDate } = require('./_eleventy/filters');
+const { mdIt } = require('./_eleventy/libraries');
 const {
   tagUrl,
   categoryUrl,
   imageMulti,
   imageMin,
   photoGallery,
-} = require('./.eleventy/shortcodes');
-const { htmlmin } = require('./.eleventy/transforms');
+} = require('./_eleventy/shortcodes');
+const { htmlmin } = require('./_eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
   // Passthrough
-  eleventyConfig.addPassthroughCopy('src/assets/img');
-  eleventyConfig.addPassthroughCopy('src/assets/static');
+  eleventyConfig.addPassthroughCopy('assets/img');
+  eleventyConfig.addPassthroughCopy('assets/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Watch targets
@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('readableDate', readableDate);
   eleventyConfig.addFilter('htmlDateString', htmlDateString);
+  eleventyConfig.addFilter('sitemapDate', sitemapDate);
   eleventyConfig.addFilter('md', md);
   eleventyConfig.addFilter('media', media);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);

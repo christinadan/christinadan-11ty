@@ -34,7 +34,7 @@ Quite frankly, I get tired of being told the importance of networking. But it's 
 
 ![](images/0277e803-a7da-47dc-bebe-315c3fac0446_560_420.jpg)
 
-## 4\. Have an online presence
+## 4. Have an online presence
 
 This is probably the thing that has helped me the most. I have a confession - I have never been to the career fair (except once to help recruit candidates for a company I interned for!). I know it helps a lot of people, but I've had a lot of success just applying online. Make a LinkedIn and utilize your school's job board. UTA has [HireAMaverick](http://www.uta.edu/careers/students/index.php), plus [HireAnEngineer](https://www.myinterfase.com/utaeng/Account/LogOn?ReturnUrl=%2futaeng%2fstudent) specifically for engineers. You don't need a personal website, though I have mine just so I can have this domain. In addition to just applying on job listings on the companies' website, I receive emails and phone calls every month from hiring personnel asking me if I'm interested in interviewing because they found me on LinkedIn. You don't even have to perfect what you have on your LinkedIn. I literally just copied what I already wrote on my resume. Using HireAMaverick also got me noticed by companies like AT&T, Google, and Amazon - they contacted me and I didn't even have to apply. Large organizations like those typically have university recruiting teams who are on the look out for resumes, so having your updated resume on your school-specific job site helps tremendously.
 
