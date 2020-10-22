@@ -3,7 +3,8 @@ title: "New York City (January 2016) - Part 2: The Trip"
 date: 2016-02-17
 slug: nyc-jan-2016-part-2-the-trip
 lastModifiedDate: 2020-10-18
-image: '/media/posts/2016-02-11-nyc-jan-2016-part-1-planning/nyc-plane.jpg'
+eleventyComputed:
+  image: "{{ 'chelsea.jpg' | media(page) }}"
 categories:
   - travel
 tags:

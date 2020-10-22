@@ -43,3 +43,13 @@
   flex-wrap: wrap;
   padding: 0;
 }
+
+.width-sm {
+  @include screen-sm {
+    text-align: center;
+
+    img {  
+      width: 22rem !important;
+    }
+  }
+}

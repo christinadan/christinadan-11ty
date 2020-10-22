@@ -1,7 +1,6 @@
 ---
 title: Hello World
 date: 2016-02-05
-image: '/media/posts/2016-02-05-hello-world/me-in-nyc.jpg'
 categories:
   - life
 tags:

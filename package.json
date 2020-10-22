@@ -67,7 +67,7 @@
     ]
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.3.0",
+    "@11ty/eleventy-img": "git+https://github.com/lmammino/eleventy-img.git#feature/configurable-filename",
     "slugify": "^1.4.5"
   }
 }

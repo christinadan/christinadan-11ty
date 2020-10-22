@@ -1,9 +1,10 @@
 const slugify = require('slugify');
 const Image = require('@11ty/eleventy-img');
+const path = require('path');
 
 const getPathToSrc = (src) => {
-  const path = src.split('/');
-  const filenameLength = path[path.length - 1].length;
+  const sub = src.split('/');
+  const filenameLength = sub[sub.length - 1].length;
 
   return src.slice(1, src.length - filenameLength - 1);
 };
@@ -19,29 +20,25 @@ const getImageFormat = (src) => {
   return fileExt;
 };
 
+const getUrlPath = (pathToSrc) => `/media/${pathToSrc}`;
+
+const getOutputDir = (pathToSrc) => `./dist/media/${pathToSrc}`;
+
+const imgFilenameFormat = (id, src, width, format) => {
+  const ext = path.extname(src);
+  const name = path.basename(src, ext);
+
+  if (width) {
+    return `${name}-${width}.${format}`;
+  }
+
+  return `${name}.${format}`;
+};
+
 module.exports = {
   tagUrl: (tag) => `/blog/tags/${slugify(tag)}/`,
   categoryUrl: (cat) => `/blog/category/${slugify(cat)}/`,
-  imageMin: async (src, alt, page) => {
-    if (!alt) {
-      // You bet we throw an error on missing alt (alt="" works okay)
-      throw new Error(`Missing \`alt\` on imageMin from: ${src}`);
-    }
-
-    const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
-    const format = getImageFormat(src);
-    const stats = await Image(`./src/${pathToSrc}/${src}`, {
-      widths: [null],
-      formats: [format],
-      urlPath: `/media/${pathToSrc}`,
-      outputDir: `./dist/media/${pathToSrc}`,
-    });
-
-    const props = stats[format].pop();
-
-    return `<img src="${props.url}" width="${props.width}" height="${props.height}" alt="${alt}" loading="lazy">`;
-  },
-  imageMulti: async (src, alt, page) => {
+  responsiveImage: async (src, alt, page) => {
     if (!alt) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on imageMulti from: ${src}`);
@@ -50,10 +47,11 @@ module.exports = {
     const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
     const format = getImageFormat(src);
     const stats = await Image(`./src/${pathToSrc}/${src}`, {
-      widths: [320, 640, 960, 1280, 1600, null],
+      widths: [320, 640, 960, 1280, 1680],
       formats: [format, 'webp'],
-      urlPath: `/media/${pathToSrc}`,
-      outputDir: `./dist/media/${pathToSrc}`,
+      urlPath: getUrlPath(pathToSrc),
+      outputDir: getOutputDir(pathToSrc),
+      filenameFormat: imgFilenameFormat,
     });
 
     const lowestSrc = stats[format][0];
@@ -68,39 +66,46 @@ module.exports = {
       width="${lowestSrc.width}"
       height="${lowestSrc.height}"
       loading="lazy"
+      decoding="async"
       alt="${alt}">`;
     // Iterate over formats and widths
     return `<picture>${source}${img}</picture>`;
   },
   photoGallery: async (photos, page) => {
     const photoList = photos.map(async (photo) => {
-      const { src } = photo;
-      const { alt } = photo;
+      const { src, alt } = photo;
       const pathToSrc = getPathToSrc(page ? page.filePathStem : src);
       const format = getImageFormat(src);
+
       const stats = await Image(`./src/${pathToSrc}/${src}`, {
-        widths: [150, 300, 425, 550, 675, null],
-        formats: [format],
-        urlPath: `/media/${pathToSrc}`,
-        outputDir: `./dist/media/${pathToSrc}`,
+        widths: [150, 300, 425, 550, 675],
+        formats: [format, 'webp'],
+        urlPath: getUrlPath(pathToSrc),
+        outputDir: getOutputDir(pathToSrc),
+        filenameFormat: imgFilenameFormat,
       });
+
       const lowestSrc = stats[format][0];
-      const highestSrc = stats[format][stats[format].length - 1];
-      const url = photo.url ? photo.url : highestSrc.url;
+      const url = photo.url ? photo.url : `/media/${pathToSrc}/${src}`;
       const sizes = '(min-width: 748px) calc(40rem / 3), calc((100vw - 3rem) / 2)';
-      // Height = width because it's a square
+
+      const source = `<source type="image/webp" srcset="${stats.webp
+        .map((entry) => `${entry.url} ${entry.width}w`)
+        .join(', ')}" sizes="${sizes}">`;
+
       const img = `<img src="${lowestSrc.url}" srcset="${stats[format]
         .map((entry) => `${entry.url} ${entry.width}w`)
         .join(', ')}" 
         sizes="${sizes}"
         width="${lowestSrc.width}"
-        height="${lowestSrc.width}"
+        height="${lowestSrc.height}"
         loading="lazy"
+        decoding="async"
         alt="${alt}">`;
 
       return `<li class="photo-thumbnail">
       <a class="photo-link" href="${url}">
-        ${img}
+        <picture>${source}${img}</picture>
       </a>
       </li>`;
     });

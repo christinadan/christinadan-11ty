@@ -2,15 +2,14 @@
 title: "Securing a Job or Internship - Part 2: Personal Tips for Interview Success"
 slug: 'securing-a-job-internship-part-2-interview-success'
 date: 2016-03-04
-lastModifiedDate: 2020-10-19
+lastModifiedDate: 2020-10-21
 categories:
   - career
 tags:
   - advice
-image: "tumblr_nqx8pj7h531tubinno1_1280.jpg"
 ---
 
-So you've managed to land that interview you've been wanting (perhaps with the help of [my last post](http://christinadan.com/2016/03/02/securing-a-jobinternship-part-1-landing-an-interview/) in this series?). Now what?<!-- excerpt --> This will be your make it or break it moment. You're very close to securing a that job you want, but the interview process can be long and honestly very nerve-wracking. You can find multiple guides online about how to carry yourself in a professional manner. I think it's fair to say at this point, we all know how to be professional. But being professional isn't necessarily going to guarantee you'll nail your interview. While I wouldn't claim to know every "industry secret" to getting hired, I think it's fair to say that we've progressed past "just be professional". Every person interviewing has something they can bring to the table and beyond professionalism, the only thing you can do be as genuine and sincere as you can.
+So you've managed to land that interview you've been wanting (perhaps with the help of [my last post](/securing-a-job-internship-part-1-landing-an-interview) in this series). Now what?<!-- excerpt --> This will be your make it or break it moment. You're very close to securing a that job you want, but the interview process can be long and honestly very nerve-wracking. You can find multiple guides online about how to carry yourself in a professional manner. I think it's fair to say at this point, we all know how to be professional. But being professional isn't necessarily going to guarantee you'll nail your interview. While I wouldn't claim to know every "industry secret" to getting hired, I think it's fair to say that we've progressed past "just be professional". Every person interviewing has something they can bring to the table and beyond professionalism, the only thing you can do be as genuine and sincere as you can.
 
 Personally, I hate interviewing. Like in most situations where attention is placed on me, I get incredibly nervous, anxious, and well, sweaty. I don't consider myself to be a smooth-talking person. If I had to admit one thing, it's that I'm honestly very surprised I manage to perform well enough in interviews to receive a job offer. If you're the type of person who thrives during these types of situations, I'm truly envious. Otherwise, if you're anything like me, there are a few things you can do to ensure your success in interviews!
 
@@ -30,7 +29,7 @@ Here's a personal anecdote: In an interview for the internship I had last summer
 
 Anyway, back to the point. Assuming you've got the technical abilities required for a particular position, it is so, so important to let the interviewers know who you are. Make yourself memorable. Behavioral questions show your character, but what is it like to be around you? It's a given that they want to hire you for the technical value you can bring to the company, but it's vital that you fit in with the culture of the company and its current employees. In most cases, you might be a technical wizard, but if you can't get along with the people you work with, you will only hurt whatever team your on and ultimately the company. Interviews not only help determine if you're qualified for a job, but help determine whether or not you'll be a good fit, as well.
 
-![tumblr_nqx8kfFxJO1tubinno1_1280](images/tumblr_nqx8kfFxJO1tubinno1_1280-1024x682.jpg)
+{% responsiveImage 'woman-computer.jpg', 'Woman working on a computer', page %}
 
 ## 3\. Remember - the interview goes both ways
 
@@ -50,7 +49,7 @@ You can be prepare all you want for those interview questions, but sometimes the
 
 If in the end you really don't know or you're unsure of your answer, just say so! Explain why you're unsure. Sure, you'll be be admitting there are gaps in your knowledge, but it's better to admit you're mistaken then to go on explaining something that's completely wrong. Think about a project you'd be working on. Would you continue on coding something you don't even know is right? No! You'd ask and make sure you're producing quality results. Talk about the steps you'd take to figuring out the problem and what you would do fill those gaps in your knowledge. We all learn from mistakes, but it sure does save time and money when we can prevent those mistakes to begin with.
 
-#### ![saw-a-pigeon-having-a-job-interview-earlier-i-hope-he-got-it-1435070378](images/saw-a-pigeon-having-a-job-interview-earlier-i-hope-he-got-it-1435070378-1.jpg)
+{% responsiveImage 'saw-a-pigeon-having-a-job-interview-earlier-i-hope-he-got-it.jpg', 'Screenshot of a tweet: Saw a pigeon having a job interview earlier, I hope he got it', page %}
 
 ## 5\. Don't be nervous
 
@@ -59,6 +58,7 @@ You'll hear this time and time again, but it's honestly the best advice you can 
 Chances are, nobody notices that you're a nervous wreck on the inside. The best advice I received from a former manager is to "fake it 'til you make it". One of my personal self-improvement goals was to be less introverted and anxious. I admitted this, along with the fact that I was extremely nervous during my interview and my former manager said she couldn't even tell, and that I seemed like a very friendly and out-going person! I had no idea and I was just beating myself up the whole time. I apologize in advance for all the cliches, but you are honestly your worst critic. As life advice in general, learn to take compliments to heart and gain some self-confidence. You will learn to loosen up and be more comfortable interviewing (or in my case, talking to people in general).
 
 The way I see it, you're either qualified for a position, or you're not. If you're not, you don't belong in that position, but you shouldn't beat yourself up over it. It just might not be the right time or place. If you are qualified, it's just a matter of whether or not you'd be a good fit for a company. Being honest, sincere, and genuine - basically, being yourself - will help ensure that both you and the company will be happy with your potential employment there.
+
 
 Thanks for reading,
 
