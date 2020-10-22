@@ -54,6 +54,8 @@ module.exports = {
       filenameFormat: imgFilenameFormat,
     });
 
+    console.log(stats);
+
     const lowestSrc = stats[format][0];
     const sizes = '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
     const source = `<source type="image/webp" srcset="${stats.webp
@@ -62,12 +64,12 @@ module.exports = {
     const img = `<img src="${lowestSrc.url}" srcset="${stats[format]
       .map((entry) => `${entry.url} ${entry.width}w`)
       .join(', ')}" 
-      sizes="${sizes}"
-      width="${lowestSrc.width}"
-      height="${lowestSrc.height}"
-      loading="lazy"
-      decoding="async"
-      alt="${alt}">`;
+    sizes="${sizes}"
+    width="${lowestSrc.width}"
+    height="${lowestSrc.height}"
+    loading="lazy"
+    decoding="async"
+    alt="${alt}">`;
     // Iterate over formats and widths
     return `<picture>${source}${img}</picture>`;
   },
@@ -96,12 +98,12 @@ module.exports = {
       const img = `<img src="${lowestSrc.url}" srcset="${stats[format]
         .map((entry) => `${entry.url} ${entry.width}w`)
         .join(', ')}" 
-        sizes="${sizes}"
-        width="${lowestSrc.width}"
-        height="${lowestSrc.height}"
-        loading="lazy"
-        decoding="async"
-        alt="${alt}">`;
+      sizes="${sizes}"
+      width="${lowestSrc.width}"
+      height="${lowestSrc.height}"
+      loading="lazy"
+      decoding="async"
+      alt="${alt}">`;
 
       return `<li class="photo-thumbnail">
       <a class="photo-link" href="${url}">

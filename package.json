@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp && eleventy",
-    "start": "gulp && concurrently \"gulp watch\" \"eleventy --serve\"",
+    "start": "gulp && eleventy && concurrently \"gulp watch\" \"ELEVENTY_ENV=dev eleventy --serve --incremental\"",
     "debug": "DEBUG=* eleventy",
     "format:": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
     "lint": "eslint --ext .js"

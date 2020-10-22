@@ -1,8 +1,9 @@
-const { CONTEXT, DEPLOY_PRIME_URL } = process.env;
+const { CONTEXT, DEPLOY_PRIME_URL, ELEVENTY_ENV } = process.env;
 const prodUrl = 'https://christinadan.com';
 const url = CONTEXT === 'deploy-preview' ? DEPLOY_PRIME_URL : prodUrl;
 
 module.exports = {
+  environment: ELEVENTY_ENV,
   name: 'Christina Dan',
   description: 'A little corner of the web for Christina Dan, a software engineer in Dallas, TX.',
   url,

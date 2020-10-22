@@ -20,9 +20,7 @@ I'd hate to break this up into parts again, but it turns out I have a lot to say
 
 Most of the time, job listings will have a list of requirements the company would like candidates to have. Even if you feel like you don't meet every single requirement, my suggestion is to apply anyway. I'm completely serious when I say that those requirements are just a guideline. What I've come to find with companies hiring college students for internships or even entry level jobs is that you're not expected to be an expert in _anything_. As long as you have good programming practices and a solid base of knowledge, you will be able to learn on the job. For example, if a requirement for a position is "experience with C++", but you only have experience with C, don't count yourself out, because learning C++ when you already know C isn't too much of a leap (yes, I know C and C++ aren't the same :P).
 
-![Dog using a computer and saying "I have no idea what I'm doing"](../../img/doener.jpg)
-
-{% responsiveImage 'no-idea-what.jpg', 'Dog using a computer saying \'I have no idea what I\'m doing\'', page %}{.width-sm}
+{% responsiveImage 'no-idea-what.jpg', 'Dog using a computer saying "I have no idea what I\'m doing"' %}{.width-sm}
 
 People are often afraid they don't have enough experience to get the job they want. You just can't let that stop you from applying. In some ways, having little relevant work experience just means a company has the opportunity to mold you into the developer or engineer they want. You won't have any "bad habits" you may have learned from another job that they have to break, so to speak. Even if you're not sure if you would be able or even want to work somewhere, it's better to apply and try get an interview so you can practice and be more comfortable interviewing in the future.
 
