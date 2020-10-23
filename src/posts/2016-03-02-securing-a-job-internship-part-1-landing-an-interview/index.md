@@ -25,7 +25,7 @@ People are often afraid they don't have enough experience to get the job they wa
 
 ## 2\. Be persistent
 
-![Cat using a computer](https://media.giphy.com/media/3o6vY7kb1ySy3G2i08/giphy.gif){.width-sm}
+![Cat using a computer](https://media.giphy.com/media/3o6vY7kb1ySy3G2i08/giphy.gif) {.width-sm}
 
 Stephen suggested I add this one. If there's a company you really want to work for and you don't hear anything back the first (or third...) time, don't give up!  He had to apply and interview two or three times to a certain company before they finally extended him a job offer. This includes attending job fairs and browsing job sites like Indeed or Monster. It's especially true if you're only a freshman or sophomore looking for an internship. There are typically more openings for juniors or seniors in college simply because they tend to have more experience, but it's entirely possible to get an internship early on, too. Don't focus too much on _what_ company and whether or not that company has a big name - even if a bigger company is your "end goal". There are a lot of great opportunities with companies locally, especially in the DFW, where you can gain a lot of hands-on experience.  Finding a job utilizing your field of study isn't limited to just the summer, either. While summer internships are great because you get to work full-time, often in a new city, it's even better sometimes if you're able to find a co-op position near where your university is so you can work in a relevant position during the school year. At least in IT, internships or co-op positions are paid (and paid _well_), so it's great if your part-time job is related to your major - what's better than getting paid to learn?
 
