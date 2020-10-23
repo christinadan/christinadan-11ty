@@ -17,8 +17,9 @@ if (process.env.ELEVENTY_ENV === 'dev') {
 async function responsiveImage(src, alt) {
   if (!alt) {
     // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on imageMulti from: ${src}`);
+    throw new Error(`Missing "alt" on responsiveImage from: ${src}`);
   }
+
   const pathToSrc = getPathToSrc(src.includes('/') ? src : this.page.filePathStem);
   const format = getImageFormat(src);
   const stats = await Image(`./src/${pathToSrc}/${src}`, {
@@ -51,6 +52,12 @@ async function responsiveImage(src, alt) {
 async function photoGallery(photos) {
   const photoList = photos.map(async (photo) => {
     const { src, alt } = photo;
+
+    if (!alt) {
+      // You bet we throw an error on missing alt (alt="" works okay)
+      throw new Error(`Missing "alt" on photoGallery from: ${src}`);
+    }
+
     const pathToSrc = getPathToSrc(src.startsWith('/') ? src : this.page.filePathStem);
     const srcPath = `./src/${pathToSrc}/${src}`;
     const format = getImageFormat(src);

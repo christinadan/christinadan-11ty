@@ -1,3 +1,9 @@
+/**
+ * This basically spits out mock @11ty/eleventy-img output that can be used
+ * when serving with ELEVENTY_ENV=dev so we don't have to process images every
+ * time we serve. It assumes the images were already processed and dumped into
+ * ./dist/...
+ */
 const path = require('path');
 const sizeOf = require('image-size');
 

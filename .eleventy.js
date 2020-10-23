@@ -1,5 +1,9 @@
 const fs = require('fs');
+const images = require('./_eleventy/plugins/images');
 const { tagList, categoryList, categories } = require('./_eleventy/collections');
+const { mdIt } = require('./_eleventy/libraries');
+const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
+const { htmlmin } = require('./_eleventy/transforms');
 const {
   cssmin,
   htmlDateString,
@@ -9,10 +13,6 @@ const {
   media,
   sitemapDate,
 } = require('./_eleventy/filters');
-const { mdIt } = require('./_eleventy/libraries');
-const images = require('./_eleventy/plugins/images');
-const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
-const { htmlmin } = require('./_eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(images);
