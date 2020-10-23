@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   {% for page in collections.all %}
     <url>
       <loc>{{ site.url }}{{ page.url | url }}</loc>
-      <lastmod>{{ page.date | htmlDateString }}</lastmod>
+      <lastmod>{{ page.date | sitemapDate }}</lastmod>
     </url>
   {% endfor %}
 </urlset>

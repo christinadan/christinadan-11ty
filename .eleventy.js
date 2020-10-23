@@ -1,11 +1,22 @@
 const fs = require('fs');
-const { tagList, categoryList, categories } = require('./.eleventy/collections');
-const { cssmin, htmlDateString, md, jsmin, readableDate, media } = require('./.eleventy/filters');
-const { mdIt } = require('./.eleventy/libraries');
-const { tagUrl, categoryUrl, responsiveImage } = require('./.eleventy/shortcodes');
-const { htmlmin } = require('./.eleventy/transforms');
+const images = require('./_eleventy/plugins/images');
+const { tagList, categoryList, categories } = require('./_eleventy/collections');
+const { mdIt } = require('./_eleventy/libraries');
+const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
+const { htmlmin } = require('./_eleventy/transforms');
+const {
+  cssmin,
+  htmlDateString,
+  md,
+  jsmin,
+  readableDate,
+  media,
+  sitemapDate,
+} = require('./_eleventy/filters');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(images);
+
   // Passthrough
   eleventyConfig.addPassthroughCopy('src/assets/img');
   eleventyConfig.addPassthroughCopy('src/assets/static');
@@ -14,7 +25,7 @@ module.exports = function (eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget('src/assets/js');
   eleventyConfig.addWatchTarget('src/assets/img');
-  eleventyConfig.addWatchTarget('.eleventy');
+  eleventyConfig.addWatchTarget('_eleventy');
 
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
@@ -26,6 +37,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('readableDate', readableDate);
   eleventyConfig.addFilter('htmlDateString', htmlDateString);
+  eleventyConfig.addFilter('sitemapDate', sitemapDate);
   eleventyConfig.addFilter('md', md);
   eleventyConfig.addFilter('media', media);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
@@ -36,7 +48,6 @@ module.exports = function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode('tagUrl', tagUrl);
   eleventyConfig.addShortcode('categoryUrl', categoryUrl);
-  eleventyConfig.addNunjucksAsyncShortcode('responsiveImage', responsiveImage);
 
   // Collections
   eleventyConfig.addCollection('tagList', tagList);

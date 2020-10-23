@@ -10,7 +10,15 @@
 }
 
 .wrapper {
-  max-width: 42rem;
+  max-width: 100%;
+
+  @include screen-sm {
+    max-width: 40rem;
+  }
+
+  @include screen-lg {
+    max-width: 42rem;
+  }
 }
 
 .margin-top {
@@ -34,4 +42,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
+}
+
+.width-sm {
+  @include screen-sm {
+    text-align: center;
+
+    img {  
+      width: 22rem !important;
+    }
+  }
 }

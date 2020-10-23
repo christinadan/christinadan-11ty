@@ -1,9 +1,9 @@
 // See /_includes/global/js/inline.js for additional theme code
-var darkClass = 'dark';
-var lightClass = 'light';
-var colorSchemeKey = 'color-scheme';
-var isDarkColorScheme = document.documentElement.classList.contains('dark');
-var toggle = document.getElementById('theme-toggle');
+const darkClass = 'dark';
+const lightClass = 'light';
+const colorSchemeKey = 'color-scheme';
+const isDarkColorScheme = document.documentElement.classList.contains('dark');
+const toggle = document.getElementById('theme-toggle');
 
 toggle.checked = isDarkColorScheme;
 

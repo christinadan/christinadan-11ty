@@ -25,7 +25,7 @@ video {
 	max-width: 100%;
   border: none;
 	height: auto;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .container {
@@ -40,6 +40,10 @@ video {
   }
 
   @include screen-sm {
+    padding: 1.25rem 4rem;
+  }
+
+  @include screen-md {
     padding: 1.25rem 5.5rem;
   }
 }

@@ -4,7 +4,7 @@
   {% set css %}{% include "global/css/main.css" %}{% endset %}
   {% set js %}{% include "global/js/inline.js" %}{% endset %}
   {% set url %}{{ site.url + page.url }}{% endset %}
-  {% set pageImage %}{{ image or site.author.image }}{% endset %}
+  {% set pageImage %}{{(site.url + (image | media(page)) if type == 'post' and image else image) or site.author.image }}{% endset %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

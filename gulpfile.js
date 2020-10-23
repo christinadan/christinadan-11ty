@@ -19,6 +19,7 @@ const paths = {
   output: 'dist/',
   scripts: {
     input: 'src/assets/js/**/*.js',
+    watch: 'src/assets/js/**/*.js',
     polyfills: '.polyfill.js',
     output: 'dist/assets/js/',
   },
@@ -33,7 +34,7 @@ const paths = {
   },
   copy: {
     input: 'src/posts/**/*.{jpg,jpeg,png,gif,webp,mp3,mp4,webm,ogg}',
-    output: 'dist/media',
+    output: 'dist/media/posts',
   },
 };
 
@@ -55,7 +56,7 @@ const cleanDest = (done) => {
   del.sync([paths.output]);
 
   // Signal completion
-  return done();
+  done();
 };
 
 // Repeated JavaScript tasks
@@ -90,6 +91,7 @@ const buildScripts = () =>
       return stream.pipe(jsTasks());
     }),
   );
+
 const buildStyles = (done) => {
   src(paths.styles.input)
     .pipe(
@@ -113,8 +115,7 @@ const copy = (done) => {
 
 const watchSource = (done) => {
   watch(
-    paths.styles.watch,
-    { ignoreInitial: true },
+    [paths.styles.watch, paths.scripts.watch],
     parallel(buildStyles, buildScripts, buildSVGs, copy),
   );
 
