@@ -25,6 +25,7 @@ module.exports = function (eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget('src/assets/js');
   eleventyConfig.addWatchTarget('src/assets/img');
+  eleventyConfig.addWatchTarget('src/assets/scss');
   eleventyConfig.addWatchTarget('_eleventy');
 
   // Layout alias
