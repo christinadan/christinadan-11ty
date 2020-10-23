@@ -18,14 +18,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(images);
 
   // Passthrough
-  eleventyConfig.addPassthroughCopy('assets/img');
-  eleventyConfig.addPassthroughCopy('assets/static');
+  eleventyConfig.addPassthroughCopy('src/assets/img');
+  eleventyConfig.addPassthroughCopy('src/assets/static');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   // Watch targets
   eleventyConfig.addWatchTarget('src/assets/js');
   eleventyConfig.addWatchTarget('src/assets/img');
-  eleventyConfig.addWatchTarget('.eleventy');
+  eleventyConfig.addWatchTarget('_eleventy');
 
   // Layout alias
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
