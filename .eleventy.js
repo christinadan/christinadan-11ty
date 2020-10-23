@@ -10,10 +10,13 @@ const {
   sitemapDate,
 } = require('./_eleventy/filters');
 const { mdIt } = require('./_eleventy/libraries');
-const { tagUrl, categoryUrl, photoGallery, responsiveImage } = require('./_eleventy/shortcodes');
+const images = require('./_eleventy/plugins/images');
+const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
 const { htmlmin } = require('./_eleventy/transforms');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(images);
+
   // Passthrough
   eleventyConfig.addPassthroughCopy('assets/img');
   eleventyConfig.addPassthroughCopy('assets/static');
@@ -45,8 +48,6 @@ module.exports = function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode('tagUrl', tagUrl);
   eleventyConfig.addShortcode('categoryUrl', categoryUrl);
-  eleventyConfig.addNunjucksAsyncShortcode('responsiveImage', responsiveImage);
-  eleventyConfig.addNunjucksAsyncShortcode('photoGallery', photoGallery);
 
   // Collections
   eleventyConfig.addCollection('tagList', tagList);
