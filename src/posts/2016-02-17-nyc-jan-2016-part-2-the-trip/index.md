@@ -3,8 +3,7 @@ title: "New York City (January 2016) - Part 2: The Trip"
 date: 2016-02-17
 slug: nyc-jan-2016-part-2-the-trip
 lastModifiedDate: 2020-10-18
-eleventyComputed:
-  image: "{{ 'chelsea.jpg' | media(page) }}"
+image: chelsea.jpg
 categories:
   - travel
 tags:

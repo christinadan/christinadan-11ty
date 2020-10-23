@@ -2,10 +2,10 @@ module.exports = {
   tagList: (collection) => {
     const tagSet = new Set();
 
-    collection.getAllSorted().forEach((item) => {
-      if ('tags' in item.data) {
-        const tags = item.data.tags.filter((item) => {
-          switch (item) {
+    collection.getAllSorted().forEach((collectionItem) => {
+      if ('tags' in collectionItem.data) {
+        const tags = collectionItem.data.tags.filter((tagItem) => {
+          switch (tagItem) {
             // this list should match the `filter` list in tag.njk
             case 'all':
             case 'nav':
@@ -14,14 +14,12 @@ module.exports = {
             case 'categoryList':
             case 'categories':
               return false;
+            default:
+              return true;
           }
-
-          return true;
         });
 
-        for (const tag of tags) {
-          tagSet.add(tag);
-        }
+        tags.forEach((tag) => tagSet.add(tag));
       }
     });
 
@@ -34,7 +32,7 @@ module.exports = {
     collection
       .getAllSorted()
       .filter(
-        (item) => typeof item.data.categories === 'string' || Array.isArray(item.data.categories)
+        (item) => typeof item.data.categories === 'string' || Array.isArray(item.data.categories),
       )
       .forEach((item) => {
         if (Array.isArray(item.data.categories)) {
@@ -52,22 +50,27 @@ module.exports = {
     collection
       .getAllSorted()
       .filter(
-        (item) => typeof item.data.categories === 'string' || Array.isArray(item.data.categories)
+        (item) => typeof item.data.categories === 'string' || Array.isArray(item.data.categories),
       )
       .forEach((item) => {
         if (Array.isArray(item.data.categories)) {
           item.data.categories.forEach((category) => {
-            category = category.toLowerCase();
+            const cat = category.toLowerCase();
 
-            Array.isArray(categories[category])
-              ? categories[category].push(item)
-              : (categories[category] = [item]);
+            if (Array.isArray(categories[cat])) {
+              categories[cat].push(item);
+            } else {
+              categories[cat] = [item];
+            }
           });
         } else {
           const category = item.data.categories.toLowerCase();
-          Array.isArray(categories[category])
-            ? categories[category].push(item)
-            : (categories[category] = [item]);
+
+          if (Array.isArray(categories[category])) {
+            categories[category].push(item);
+          } else {
+            categories[category] = [item];
+          }
         }
       });
 

@@ -8,7 +8,7 @@ module.exports = {
     html: true,
   })
     .use(mdLinkAttributes, {
-      pattern: /^https{0,1}\:\/\//gi,
+      pattern: /^https{0,1}:\/\//gi,
       attrs: {
         target: '_blank',
         rel: 'noopener noreferrer',

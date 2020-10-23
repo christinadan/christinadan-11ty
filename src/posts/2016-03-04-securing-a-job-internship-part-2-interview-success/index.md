@@ -29,7 +29,7 @@ Here's a personal anecdote: In an interview for the internship I had last summer
 
 Anyway, back to the point. Assuming you've got the technical abilities required for a particular position, it is so, so important to let the interviewers know who you are. Make yourself memorable. Behavioral questions show your character, but what is it like to be around you? It's a given that they want to hire you for the technical value you can bring to the company, but it's vital that you fit in with the culture of the company and its current employees. In most cases, you might be a technical wizard, but if you can't get along with the people you work with, you will only hurt whatever team your on and ultimately the company. Interviews not only help determine if you're qualified for a job, but help determine whether or not you'll be a good fit, as well.
 
-{% responsiveImage 'woman-computer.jpg', 'Woman working on a computer', page %}
+{% responsiveImage 'woman-computer.jpg', 'Woman working on a computer' %}
 
 ## 3\. Remember - the interview goes both ways
 
@@ -49,7 +49,7 @@ You can be prepare all you want for those interview questions, but sometimes the
 
 If in the end you really don't know or you're unsure of your answer, just say so! Explain why you're unsure. Sure, you'll be be admitting there are gaps in your knowledge, but it's better to admit you're mistaken then to go on explaining something that's completely wrong. Think about a project you'd be working on. Would you continue on coding something you don't even know is right? No! You'd ask and make sure you're producing quality results. Talk about the steps you'd take to figuring out the problem and what you would do fill those gaps in your knowledge. We all learn from mistakes, but it sure does save time and money when we can prevent those mistakes to begin with.
 
-{% responsiveImage 'saw-a-pigeon-having-a-job-interview-earlier-i-hope-he-got-it.jpg', 'Screenshot of a tweet: Saw a pigeon having a job interview earlier, I hope he got it', page %}
+{% responsiveImage 'saw-a-pigeon-having-a-job-interview-earlier-i-hope-he-got-it.jpg', 'Screenshot of a tweet: &quot;Saw a pigeon having a job interview earlier, I hope he got it&quot;' %}
 
 ## 5\. Don't be nervous
 

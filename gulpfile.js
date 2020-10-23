@@ -19,6 +19,7 @@ const paths = {
   output: 'dist/',
   scripts: {
     input: 'src/assets/js/**/*.js',
+    watch: 'src/assets/js/**/*.js',
     polyfills: '.polyfill.js',
     output: 'dist/assets/js/',
   },
@@ -52,7 +53,7 @@ const banner = {
 // Remove pre-existing content from output folders
 const cleanDest = (done) => {
   // Clean the dist folder
-  del.sync([paths.scripts.output, paths.scripts.output, paths.svgs.output]);
+  del.sync([paths.output]);
 
   // Signal completion
   done();
@@ -114,8 +115,7 @@ const copy = (done) => {
 
 const watchSource = (done) => {
   watch(
-    paths.styles.watch,
-    { ignoreInitial: true },
+    [paths.styles.watch, paths.scripts.watch],
     parallel(buildStyles, buildScripts, buildSVGs, copy),
   );
 

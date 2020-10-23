@@ -3,7 +3,7 @@ const htmlMinifier = require('html-minifier');
 module.exports = {
   htmlmin: (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
-      let minified = htmlMinifier.minify(content, {
+      const minified = htmlMinifier.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,

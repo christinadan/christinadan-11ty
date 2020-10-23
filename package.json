@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp && eleventy",
-    "start": "gulp && eleventy && concurrently \"gulp watch\" \"ELEVENTY_ENV=dev eleventy --serve --incremental\"",
+    "start": "gulp && eleventy && concurrently \"gulp watch\" \"eleventy --serve --incremental\"",
+    "start:dev": "concurrently \"gulp watch\" \"ELEVENTY_ENV=dev eleventy --serve --incremental\"",
     "debug": "DEBUG=* eleventy",
-    "format:": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
-    "lint": "eslint --ext .js"
+    "format": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
+    "lint": "eslint **/*.js --fix"
   },
   "author": {
     "name": "Christina Dan",
@@ -20,8 +21,25 @@
     "type": "git",
     "url": "https://github.com/christinadan/christinadan-11ty"
   },
+  "dependencies": {
+    "@11ty/eleventy-img": "git+https://github.com/christinadan/eleventy-img.git",
+    "clean-css": "^4.2.3",
+    "html-minifier": "^4.0.0",
+    "image-size": "^0.9.2",
+    "luxon": "^1.25.0",
+    "markdown-it": "^11.0.1",
+    "markdown-it-anchor": "^6.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-link-attributes": "^3.0.0",
+    "path": "^0.12.7",
+    "sharp": "^0.26.2",
+    "slugify": "^1.4.5",
+    "smartcrop": "^2.0.3",
+    "smartcrop-sharp": "^2.0.3",
+    "terser": "^5.3.8"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "concurrently": "^5.3.0",
     "del": "^5.1.0",
     "eslint": "^7.11.0",
@@ -31,25 +49,16 @@
     "gulp-concat": "^2.6.1",
     "gulp-flatmap": "^1.0.2",
     "gulp-header": "^2.0.9",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-newer": "^1.4.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-svgmin": "^3.0.0",
     "gulp-terser": "^1.4.0",
-    "html-minifier": "^4.0.0",
     "husky": "^4.3.0",
     "lazypipe": "^1.0.2",
-    "lint-staged": "^10.4.1",
-    "markdown-it": "^11.0.1",
-    "markdown-it-anchor": "^6.0.0",
-    "markdown-it-attrs": "^3.0.3",
-    "markdown-it-link-attributes": "^3.0.0",
-    "merge2": "^1.4.1",
+    "lint-staged": "^10.4.2",
+    "path": "^0.12.7",
     "prettier": "^2.1.2",
-    "sass": "^1.27.0",
-    "sharp": "^0.26.2",
-    "terser": "^5.3.5"
+    "sass": "^1.27.0"
   },
   "husky": {
     "hooks": {
@@ -65,9 +74,5 @@
     "*.json": [
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "@11ty/eleventy-img": "git+https://github.com/lmammino/eleventy-img.git#feature/configurable-filename",
-    "slugify": "^1.4.5"
   }
 }

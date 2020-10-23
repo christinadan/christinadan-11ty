@@ -4,25 +4,17 @@ const { minify } = require('terser');
 const { mdIt } = require('./libraries');
 
 module.exports = {
-  cssmin: (code) => {
-    return new CleanCSS({}).minify(code).styles;
-  },
-  readableDate: (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLL dd, yyyy');
-  },
-  htmlDateString: (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-  },
+  cssmin: (code) => new CleanCSS({}).minify(code).styles,
+  readableDate: (dateObj) => DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLL dd, yyyy'),
+  htmlDateString: (dateObj) => DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd'),
   sitemapDate: (dateObj) => {
-    const dt = DateTime.fromJSDate(dateObj, { zone: "utc" });
+    const dt = DateTime.fromJSDate(dateObj, { zone: 'utc' });
     if (!dt.isValid) {
-      return "";
+      return '';
     }
     return dt.toISO();
   },
-  md: (content = '') => {
-    return mdIt.render(content);
-  },
+  md: (content = '') => mdIt.render(content),
   jsmin: async (code, callback) => {
     try {
       const minified = await minify(code);
