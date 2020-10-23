@@ -96,10 +96,10 @@ a {
   @include hover-none {
     &:not([class]):hover,
     &:not([class]):focus {
-      color: initial;
-      text-decoration: initial;
-      background-color: initial;
-      box-shadow: initial;
+      color: var(--text-color);
+      text-decoration: none;
+      background-color: unset;
+      box-shadow: none;
     }
   }
 }
