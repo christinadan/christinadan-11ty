@@ -10,7 +10,9 @@ Personal website for Christina Dan and figuring out static site generators.
 
 ## To Do
 - [ ] Pagination
-- [ ] Responsive images
-- [ ] Image minification
+- [x] Responsive images
+- [x] Image minification
 - [ ] Structured data
 - [ ] Fetch Instagram posts?
+- [ ] Webmentions
+- [ ] Social sharing images
