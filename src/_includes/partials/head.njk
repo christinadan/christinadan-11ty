@@ -1,6 +1,6 @@
 <head>
   {% set pageTitle %}{{ title + " | " if title }}Christina Dan{% endset %}
-  {% set pageDescription %}{{ description or site.description }}{% endset %}
+  {% set pageDescription %}{{ description or excerpt or site.description }}{% endset %}
   {% set css %}{% include "global/css/main.css" %}{% endset %}
   {% set js %}{% include "global/js/inline.js" %}{% endset %}
   {% set url %}{{ site.url + page.url }}{% endset %}

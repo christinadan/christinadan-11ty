@@ -1,7 +1,7 @@
 ---
 title: Resources I Found Helpful While Building My First Static Site with Eleventy
 slug: Helpful Eleventy Resources
-description: A list of resources (mainly links) I found helpful while building this site using Eleventy
+description: "A list of resources (re: links) I found helpful while building this site using Eleventy"
 lastModifiedDate: 2020-10-16
 categories:
   - code

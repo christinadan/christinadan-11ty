@@ -1,6 +1,7 @@
 ---
 title: "Securing a Job or Internship - Part 2: Personal Tips for Interview Success"
 slug: 'securing-a-job-internship-part-2-interview-success'
+description: Things to keep in mind as you prepare for your interview from a (almost) college grad
 date: 2016-03-04
 lastModifiedDate: 2020-10-21
 categories:

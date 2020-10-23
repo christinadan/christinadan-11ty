@@ -11,7 +11,7 @@ tags:
   - travel guide
 ---
 
-It's been pretty much exactly a month since we went on our NYC trip. Although this post is probably suuuper late, I still wanted to share some of the things we did, since what would a Part 1 be without a Part 2?
+It's been pretty much exactly a month since we went on our NYC trip. Although this post is probably suuuper late, I still wanted to share some of the things we did, since what would a Part 1 be without a Part 2?
 <!-- excerpt -->
 
 I feel like I have to add a disclaimer and say that all of these photos were taken with an iPhone 6S. It's by no means DSLR quality, but for phone pictures, it suits my purpose! Plus, I am definitely the type of person who tries to carry as little as possible when exploring a new city or place. During our trip, I literally carried my wallet, my phone, and a portable phone charger in the pockets of my jacket. It made everything no fuss since I didn't have to keep up with anything, so it was really nice.
