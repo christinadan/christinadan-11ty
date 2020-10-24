@@ -3,6 +3,7 @@
   {% set pageDescription %}{{ description or excerpt or site.description }}{% endset %}
   {% set css %}{% include "global/css/main.css" %}{% endset %}
   {% set js %}{% include "global/js/inline.js" %}{% endset %}
+  {% set fonts %}{% include "./fonts.njk" %}{% endset %}
   {% set url %}{{ site.url + page.url }}{% endset %}
   {% set pageImage %}{{(site.url + (image | media(page)) if type == 'post' and image else image) or site.author.image }}{% endset %}
   <meta charset="UTF-8">
@@ -42,11 +43,11 @@
 
   <link rel="icon" type="image/png" href="{{ site.favicon.large }}" sizes="32x32" />
   <link rel="icon" type="image/png" href="{{ site.favicon.small }}" sizes="16x16" />
+  {{ fonts | safe }}
   <style type="text/css">
     {{ css | cssmin | safe }}
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400&display=swap" rel="stylesheet">
+  <script src="/assets/js/vendor/fontfaceobserver.js"></script>
   <script>
     {{ js | jsmin | safe }}
   </script>
