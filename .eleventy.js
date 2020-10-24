@@ -83,6 +83,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.setWatchThrottleWaitTime(100); // in milliseconds
+
   // Libraries
   eleventyConfig.setLibrary('md', mdIt);
 

@@ -35,7 +35,7 @@
 }
 
 // https://css-tricks.com/snippets/css/fluid-typography/
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $min-letter-spacing: null, $max-letter-spacing: null, $min-word-spacing: null, $max-word-spacing: null) {
   $u1: unit($min-vw);
   $u2: unit($max-vw);
   $u3: unit($min-font-size);
@@ -44,11 +44,35 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
       font-size: $min-font-size;
+
       @media screen and (min-width: $min-vw) {
         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
+
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
+      }
+
+      @if $min-letter-spacing and $min-word-spacing {
+        $u5: unit($min-letter-spacing);
+        $u6: unit($max-letter-spacing);
+        $u7: unit($min-word-spacing);
+        $u8: unit($max-word-spacing);
+
+        @if $u1 == $u5 and $u1 == $u6 and $u1 == $u7 and $u1 == $u8 {
+          letter-spacing: $min-letter-spacing;
+          word-spacing: $min-word-spacing;
+
+          @media screen and (min-width: $min-vw) {
+            letter-spacing: calc(#{$min-letter-spacing} + #{strip-unit($max-letter-spacing - $min-letter-spacing)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            word-spacing: calc(#{$min-word-spacing} + #{strip-unit($max-word-spacing - $min-word-spacing)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+          }
+
+          @media screen and (min-width: $max-vw) {
+            letter-spacing: $max-letter-spacing;
+            word-spacing: $max-word-spacing;
+          }
+        }
       }
     }
   }
@@ -57,5 +81,17 @@
 @mixin hover-none() {
   @media (hover: none) {
     @content;
+  }
+}
+
+@mixin fontless {
+  @if is-superselector('html', &) {
+    &:not(.wf-active) {
+      @content;
+    }
+  } @else {
+    html:not(.wf-active) & {
+      @content;
+    }
   }
 }
