@@ -1,7 +1,7 @@
 ---
 title: "Post-Grad Life (mainly, What's in My Carry-On?)"
 slug: 'post-grad-life-whats-in-my-carry-on'
-description: A small life update and what I'm packing in my carry-on backpack on our trip to Seoul and Tokyo
+excerpt: A small life update and what I'm packing in my carry-on backpack on our trip to Seoul and Tokyo.
 date: 2016-07-10
 lastModifiedDate: 2020-10-24
 image: carry-on-title.jpg
@@ -13,7 +13,7 @@ tags:
   - travel tips
 ---
 
-Hey y'all! It's been a while and although I wanna say I've been super busy, I've actually just been enjoying my free time.<!-- excerpt --> Stephen and I moved into our new apartment in Plano at the end of June. I applied for (and was offered!) a position as a Codecademy Pro Advisor. Seeing everyone at their internships and jobs makes me eager to start working. But first! I am beyond excited to travel to Seoul and Tokyo.
+Hey y'all! It's been a while and although I wanna say I've been super busy, I've actually just been enjoying my free time. Stephen and I moved into our new apartment in Plano at the end of June. I applied for (and was offered!) a position as a Codecademy Pro Advisor. Seeing everyone at their internships and jobs makes me eager to start working. But first! I am beyond excited to travel to Seoul and Tokyo.
 
 In 10 hours, our 14-hour flight takes off to Seoul. We'll be in Seoul and Tokyo for 3 weeks. Although I'm looking forward to being there, I can't say I feel the same about the flight. I've done my best to prepare for the long haul. I've done my share of watching "What's in My Carry-on?" videos on YouTube (they're up there with apartment tours and DIY videos when it comes to things I like watching on YouTube) and I think I've got a good selection of things to a) keep myself entertained and b) keep my skin hydrated in the dry air at that altitude. I was inspired by those "What's in My Carry-On" videos, so I decided to do my own version!
 
@@ -49,7 +49,7 @@ As for checked luggage, we have one large suitcase that we're sharing for the re
 
 If you're interested in following along with our trip at all, I will be sharing on Instagram, so feel free to follow me!
 
-Instagram: [@_christinadan_](https://instagram.com/_christinadan)
+Instagram: [@_christinadan](https://instagram.com/_christinadan)
 
 \
 Thanks for reading,
