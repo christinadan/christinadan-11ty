@@ -5,6 +5,7 @@ categories:
   - life
 tags:
   - site updates
+  - personal
 ---
 
 First of all, if you're reading this, thanks! It means the various sharing I did on social media at least reached someone and I know there are probably far more interesting things you could be reading.
@@ -18,6 +19,7 @@ Aside from my work and school life, I have a variety of other interests. I like 
 
 This is getting kind of long-winded for an introduction, so I'll wrap it up. It isn't my intention to try to be a technical writer, a beauty blogger, or even a 'blogger' in general. I just want to share things that someone might find interesting!
 
+\
 Thanks again for reading,
 
 Christina

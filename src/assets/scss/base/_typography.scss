@@ -58,7 +58,7 @@ p, ul {
   margin: 1rem 0;
 }
 
-ul {
+ol, ul {
   padding-left: 2rem;
 
   li {
@@ -70,7 +70,6 @@ figcaption {
   text-align: center;
   font-size: .875rem;
   font-style: italic;
-  margin-top: .25rem;
 }
 
 a {
