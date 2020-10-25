@@ -45,7 +45,7 @@ async function responsiveImage(src, alt, className, page) {
   (min-width: 1024px) ${67 * width}vw, 
   (min-width: 748px) ${82 * width}vw, 
   (min-width: 640px) ${87 * width}vw, 
-  ${92 * width}vw`;
+  92vw`;
   const source = `<source type="image/webp" srcset="${stats.webp
     .map((entry) => `${entry.url} ${entry.width}w`)
     .join(', ')}" sizes="${sizes}">`;

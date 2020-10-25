@@ -41,9 +41,13 @@
 }
 
 .width-half {
-  width: 50% !important;
+  @include screen-xs {
+    width: 50% !important;
+  }
 }
 
 .width-qtr {
-  width: 25% !important;
+  @include screen-xs {
+    width: 25% !important;
+  }
 }
