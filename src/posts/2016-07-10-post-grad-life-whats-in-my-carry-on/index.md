@@ -19,21 +19,11 @@ In 10 hours, our 14-hour flight takes off to Seoul. We'll be in Seoul and Tokyo 
 
 Usually, I would take a backpack big enough to fit my MacBook and a suitcase. This time I opted for a smaller leather (and frankly, cuter) backpack as my personal item,  which I plan on using while we're out and about exploring, and a smaller suitcase with a front compartment for my laptop that I can easily access during the flight.
 
-<figure>
-  {% responsiveImage 'carry-on-backpack.jpg', 'My carry-on backpack' %}
-  <figcaption>
-    Slightly overpriced backpack from Urban Outfitters. But it's simple, which I like.
-  </figcaption>
-</figure>
+{% imageFigure 'carry-on-backpack.jpg', 'My carry-on backpack', "Slightly overpriced backpack from Urban Outfitters. But it's simple, which I like." %}
 
 Despite it's size, the backpack surprisingly fits everything I need besides my computer. Of course there are the essentials like my **passport**, **wallet**, a **pen**, and **portable phone charger**. I also threw in the **fish-eye** and wide **angle lens** for my phone. For entertainment, I packed my **Nintendo** **3DS** and **iPad** for games, a succulent **coloring book** with fine-tip coloring pens, and **headphones** I can use to listen to music on my phone (using **Spotify offline** mode).
 
-<figure>
-  {% responsiveImage 'carry-on-inside.jpg', 'Items inside my carry-on backpack' %}
-  <figcaption>
-    Look at this nice flatlay
-  </figcaption>
-</figure>
+{% imageFigure 'carry-on-inside.jpg', 'Items inside my carry-on backpack', 'Look at this nice flatlay' %}
 
 I also included some **Dramamine**, **ibuprofen**, and **melatonin**, because we'll need all the pain and sleep relief we can get. And because I want to look and smell at least a little human when we land, I packed my **oil blotting sheets**, **sheet masks**, **pressed powder**, **bronzer** and **highlight** compact, a tiny **face palette** from The Balm, an **eyelash curler**, my **brow pencil**, some **chapstick**, and **deodorant**. Some might think this is overkill, but it all fits neatly in the little pouch so it's not a hassle at all.
 
