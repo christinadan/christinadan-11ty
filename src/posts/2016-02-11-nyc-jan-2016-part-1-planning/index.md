@@ -10,6 +10,7 @@ categories:
 tags:
   - new york city
   - travel guide
+  - travel tips
 ---
 
 If you follow me on [Instagram](http://instagram.com/_christinadan), you'd probably know that Stephen and I spontaneously decided to take a trip to New York City to celebrate our 2nd anniversary. Well, it was as spontaneous as I could allow it.<!-- excerpt --> We found the cheap flights a week before the departure date and basically planned our trip as much as we could in that week's time. We went for 5 nights and it was just enough time to get a taste of everything we wanted to see and do. I was going to make this one post, but it turned out the planning portion was kind of long. I did want to include it though, since it might save some people some money!

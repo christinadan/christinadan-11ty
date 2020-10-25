@@ -9,6 +9,7 @@ tags:
   - advice
 image: professional-cat.jpg
 ---
+
 The one thing on almost any college student or post-graduate's mind is finding a job - more specifically, finding a job that relates to their area of study. There are many accounts about the horrors of finding employment after spending four years earning a piece of paper that may or may not help your job prospects.<!-- excerpt --> While I can't speak for everyone, I'm here to say it's not that hard! My personal experience is that of someone seeking a job in IT, more specifically while working on a computer science degree. I'll be frank; the job market for people working in IT or software development is overflowing with opportunities just because of the high demand, but I think these tips could help just about anyone.
 
 You might ask what makes me qualified to give me advice. I'm certainly not an expert and I'll try not to repeat everything you could learn in a professional communications class. At the risk of sounding like I'm bragging, I've had multiple internships and I'm lucky enough to be in a position where I have options on who I want to work for when I graduate. I've even been in the position to decline job offers numerous times. That is all to say, I've been pretty successful when it comes to finding work, so I'd like to share some of the things that helped me so that everyone can have a positive job hunting experience.
@@ -64,6 +65,7 @@ Ultimately, getting that interview is just a matter of spamming the world with y
 
 Continue on to [Part 2, tips for the interview and beyond](/blog/securing-a-job-internship-part-2-interview-success)!
 
+\
 Thanks for reading,
 
 Christina

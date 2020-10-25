@@ -70,6 +70,7 @@ Our flight out of LaGaurdia was at 3:00PM...or so we thought. We ended up being 
 
 All in all, it was an excellent trip, and we got to visit most of the things we had planned for! A month later, my bank account is still recovering from it, but the truth was that the majority of our expenses were on food, so it was worth it. I suppose we could've eaten in and taken advantage of our Airbnb host's great kitchen, but that wouldn't be fun, now would it?
 
+\
 Thanks for looking,
 
 Christina

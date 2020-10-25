@@ -60,7 +60,7 @@ Chances are, nobody notices that you're a nervous wreck on the inside. The best 
 
 The way I see it, you're either qualified for a position, or you're not. If you're not, you don't belong in that position, but you shouldn't beat yourself up over it. It just might not be the right time or place. If you are qualified, it's just a matter of whether or not you'd be a good fit for a company. Being honest, sincere, and genuine - basically, being yourself - will help ensure that both you and the company will be happy with your potential employment there.
 
-
+\
 Thanks for reading,
 
 Christina
