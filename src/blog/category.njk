@@ -11,7 +11,7 @@ permalink: blog/category/{{ category | slug }}/
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
-  <a href="{{ '/blog/category/' | url }}">Explore all categories</a>
+  <a href="{{ '/blog/category/' | url }}" class="button-link">Explore all categories</a>
 </p>
 <div class="post-list">
   {% set postList = collections.categories[ category ] %}

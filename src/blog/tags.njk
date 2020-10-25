@@ -5,6 +5,6 @@ layout: home
 ---
 <h1>{{ title }}</h1>
 <div>
-  {% set tagList = collections.tagList %}
+  {% set tagList = collections.tagList.sort() %}
   {% include "partials/tag-list.njk" %}
 </div>

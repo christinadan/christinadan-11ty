@@ -5,7 +5,7 @@ layout: home
 ---
 <h1>{{ title }}</h1>
 <div>
-  {% set categoryList = collections.categoryList %}
+  {% set categoryList = collections.categoryList.sort() %}
   {% set linkClass = "badge-link" %}
   {% include "partials/category-list.njk" %}
 </div>
