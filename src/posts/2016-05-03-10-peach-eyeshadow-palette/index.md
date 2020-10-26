@@ -15,36 +15,15 @@ Anyway, after not being able to get my hands on that palette, I came across a po
 
 Introducing the [Makeup Revolution New-trals vs. Neutrals](http://www.ulta.com/ulta/browse/productDetail.jsp?productId=xlsImpprod13661069) palette!
 
-<figure>
-  {% responsiveImage 'makeup-revolution-eyeshadow-front.jpg', 'Front of the Makeup Revolution palette' %}
-  <figcaption>
-    Front of the palette
-  </figcaption>
-</figure>
-
-<figure>
-  {% responsiveImage 'makeup-revolution-eyeshadow-inside.jpg', 'Inside of the Makeup Revolution palette' %}
-  <figcaption>
-    Colors!
-  </figcaption>
-</figure>
+{% imageFigure 'makeup-revolution-eyeshadow-front.jpg', 'Front of the Makeup Revolution palette', 'Front of the palette' %}
+{% imageFigure 'makeup-revolution-eyeshadow-inside.jpg', 'Inside of the Makeup Revolution palette', 'Colors!' %}
 
 Makeup Revolution is a fairly new brand to Ulta. I've heard rave reviews of some of their other products from KathleenLights and Tati from GlamLifeGuru on YouTube, so it gave me a little more confidence in buying it. Plus, for $10, I didn't feel that I would be losing that much money if it turned out to be a bust.
 
 Here are the two palettes side-by-side:
 
-<figure>
-  {% responsiveImage 'mr-product.jpg', 'Product photo of the Makeup Revolution Palette' %}
-  <figcaption>
-    Makeup Revolution's New-trals vs. Neutrals palette
-  </figcaption>
-</figure>
-<figure>
-  {% responsiveImage 'web_sweetpeach_open.jpg', 'Product photo of the Too Faced Sweet Peach' %}
-  <figcaption>
-    Too Faced Sweet Peach
-  </figcaption>
-</figure>
+{% imageFigure 'mr-product.jpg', 'Product photo of the Makeup Revolution Palette', "Makeup Revolution's New-trals vs. Neutrals palette" %}
+{% imageFigure 'web_sweetpeach_open.jpg', 'Product photo of the Too Faced Sweet Peach', 'Too Faced Sweet Peach palette' %}
 
 The Makeup Revolution palette has 16 colors, while the Too Faced one has 18. There are the peachy colors, as well as shimmery champagne colors. There are purples, as well! The Too Faced palette has a green shade and a shimmery black, but overall, the two palettes have the same feel.
 

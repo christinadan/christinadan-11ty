@@ -14,13 +14,13 @@ if (process.env.ELEVENTY_ENV === 'dev') {
   Image = mockImage;
 }
 
-async function responsiveImage(src, alt) {
-  if (!alt) {
+async function responsiveImage(src, alt, className, page) {
+  if (alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing "alt" on responsiveImage from: ${src}`);
   }
 
-  const pathToSrc = getPathToSrc(src.includes('/') ? src : this.page.filePathStem);
+  const pathToSrc = getPathToSrc(src.includes('/') ? src : (page || this.page).filePathStem);
   const format = getImageFormat(src);
   const stats = await Image(`./src/${pathToSrc}/${src}`, {
     widths: [320, 640, 960, 1280, 1680],
@@ -30,8 +30,22 @@ async function responsiveImage(src, alt) {
     filenameFormat: imgFilenameFormat,
   });
 
+  let width = 1;
+
+  if (className) {
+    if (className.includes('width-half')) {
+      width = 0.5;
+    } else if (className.includes('width-qtr')) {
+      width = 0.25;
+    }
+  }
+
   const lowestSrc = stats[format][0];
-  const sizes = '(min-width: 1280px) 42rem, (min-width: 1024px) 67vw, (min-width: 748px) 82vw, (min-width: 640px) 87vw, 92vw';
+  const sizes = `(min-width: 1280px) ${42 * width}rem, 
+  (min-width: 1024px) ${67 * width}vw, 
+  (min-width: 748px) ${82 * width}vw, 
+  (min-width: 640px) ${87 * width}vw, 
+  92vw`;
   const source = `<source type="image/webp" srcset="${stats.webp
     .map((entry) => `${entry.url} ${entry.width}w`)
     .join(', ')}" sizes="${sizes}">`;
@@ -39,6 +53,7 @@ async function responsiveImage(src, alt) {
     .map((entry) => `${entry.url} ${entry.width}w`)
     .join(', ')}" 
   sizes="${sizes}"
+  class="${className}"
   width="${lowestSrc.width}"
   height="${lowestSrc.height}"
   loading="lazy"
@@ -53,7 +68,7 @@ async function photoGallery(photos) {
   const photoList = photos.map(async (photo) => {
     const { src, alt } = photo;
 
-    if (!alt) {
+    if (alt === undefined) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing "alt" on photoGallery from: ${src}`);
     }
@@ -103,9 +118,16 @@ async function photoGallery(photos) {
   return `<ol class="photo-gallery">${imgList.join('')}</ol>`;
 }
 
+async function imageFigure(src, alt, caption, width) {
+  const image = await responsiveImage(src, alt, width, this.page);
+
+  return `<figure>${image}<figcaption>${caption}</figcaption></figure>`;
+}
+
 module.exports = {
   configFunction: (eleventyConfig) => {
     eleventyConfig.addNunjucksAsyncShortcode('responsiveImage', responsiveImage);
     eleventyConfig.addNunjucksAsyncShortcode('photoGallery', photoGallery);
+    eleventyConfig.addNunjucksAsyncShortcode('imageFigure', imageFigure);
   },
 };

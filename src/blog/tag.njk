@@ -18,7 +18,7 @@ permalink: /blog/tags/{{ tag | slug }}/
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
-  <a href="{{ '/blog/tags/' | url }}">Explore all tags</a>
+  <a href="{{ '/blog/tags/' | url }}" class="button-link">Explore all tags</a>
 </p>
 <div class="post-list">
   {% set postList = collections[ tag ] %}

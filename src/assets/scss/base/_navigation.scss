@@ -29,7 +29,7 @@ ul.nav-list {
   }
 }
 
-.tag-list {
+.tag-list, .category-list {
   list-style: none;
 
   li {
@@ -41,14 +41,5 @@ ul.nav-list {
   li:before {
     content: '\200B'; /* add zero-width space */
     height: 1px;
-  }
-}
-
-.category-list {
-  list-style-type: none;
-
-  li {
-    margin: 0 .5rem 0 0;
-    display: inherit;
   }
 }

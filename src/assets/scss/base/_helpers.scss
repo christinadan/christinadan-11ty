@@ -40,12 +40,14 @@
   padding: 0;
 }
 
-.width-sm {
-  @include screen-sm {
-    text-align: center;
+.width-half {
+  @include screen-xs {
+    width: 50% !important;
+  }
+}
 
-    img {  
-      width: 22rem !important;
-    }
+.width-qtr {
+  @include screen-xs {
+    width: 25% !important;
   }
 }

@@ -1,7 +1,12 @@
 ---
 title: "Peachy Makeup Look - Products Used"
-date: "2016-09-05"
-coverImage: "peachy-feature-1.jpg"
+excerpt: Stepping out of my comfort zone with a peachy eye makeup look.
+date: 2016-09-05
+image: peachy-feature.jpg
+categories:
+  - beauty
+tags:
+  - makeup
 ---
 
 I consider myself the type of person that wears makeup out of necessity.  I usually stick to neutral eye looks for work, if I even decide to wear eyeshadow at all. I feel like I really have to try if I want to try something more colorful. If you read my [Korea and Japan Beauty Haul](http://christinadan.com/korea-and-japan-beauty-haul/) post, you might've seen that I picked up a couple of colorful shadows in Korea. I finally decided to put them to use this past Friday!
@@ -14,8 +19,7 @@ Following the theme of quick and easy to take on-the-go foundation, I decided to
 
 Anyway, the mini foundation review wasn't intended, but I felt like I really needed to say it anyway. Here are the sources for the products I used in my peachy orange makeup look! Maybe one day I'll feel comfortable or good enough to do a tutorial. In the meantime, you all get a list of products. :P
 
-Face
-
+## Face
 - [Makeup Forever Step 1 Skin Equalizer Hydrating Primer](http://www.sephora.com/step-1-skin-equalizer-primer-P393965)
 - [Hourglass Vanish Seamless Finish Foundation Stick](http://www.sephora.com/vanish-seamless-finish-foundation-stick-P410532?skuId=1827344&icid2=products%20grid:p410532) in Golden
 - [RCMA No Color Powder](https://www.beautylish.com/s/rcma-makeup-no-color-powder-3-oz)
@@ -24,13 +28,11 @@ Face
 - [Missha The Style Defining Blusher](http://www.misshaus.com/makeup/face/blush/the-style-defining-blusher.html) in PK02
 - [The Balm Mary-Loumanizer Highlighter](https://www.amazon.com/Mary-Lou-Manizer-Highlighter-Shimmer/dp/B00SFJJII8/ref=sr_1_1_s_it?s=beauty&ie=UTF8&qid=1473044833&sr=1-1&keywords=the+balm+mary+lou+manizer)
 
-Brows
-
+## Brows
 - [Colourpop Brow Pencil](https://colourpop.com/collections/brow-pencil) in Dope Taupe and Bangin' Brunette
 - [L'Oreal Brow Stylist Plumper Gel](http://www.ulta.com/brow-stylist-plumper-brow-gel-mascara?productId=xlsImpprod11861077) in Medium to Dark
 
-Eyes
-
+## Eyes
 - [Tartelette In Bloom Eyeshadow Palette](http://www.sephora.com/tartelette-in-bloom-clay-eyeshadow-palette-P403812) (Charmer and Flower Child as base)
 - [Etude House Look At My Eyes Cafe](https://www.amazon.com/Etude-House-Look-Shadow-OR202/dp/B00N71QXF0) in OR202
 - [Etude House Look At My Eyes Jewel](https://www.amazon.com/ETUDE-HOUSE-Jewel-Hawaian-Sandbeach/dp/B010UABQK2) in OR204
@@ -39,25 +41,22 @@ Eyes
 - [Colourpop Creme Gel Liner](https://colourpop.com/collections/creme-gel-liner-1/products/call-me-liner) in Call Me
 - Daiso lashes in W404 (my 'holy grail' lashes lol)
 
-Lips
-
+## Lips
 - [Charlotte Tilbury Lip Cheat](http://shop.nordstrom.com/s/charlotte-tilbury-lip-cheat-re-size-re-shape-lip-liner/3866468) in Iconic Nude
 - [3 Concept Eyes Matte Lip Color](http://en.stylenanda.com/product/3CE-MATTE-LIP-COLOR-908/144388/?cate_no=171&display_group=1) in #908 Warm & Sweet
 
 Close up of the eyes - if you think my eyeliner is uneven, you'd be right. Not only are my eyes monolids and hooded, they are also uneven. The left eye is more folded, so you see less lid space when they're open, meaning I have the draw the liner thicker for it to appear even.
 
-![IMG_6355](images/IMG_6355-1024x767.jpg)
-
-![IMG_6354](images/IMG_6354-1024x767.jpg)
+{% responsiveImage 'peachy-eye-look.jpg', 'Monolid makeup look with peach colored eyeshadows' %}
+{% responsiveImage 'peachy-eye-closed.jpg', 'Monolid makeup look with peach colored eyeshadows with eyes closed' %}
 
 And here is the outfit I wore with the look:
 
-![IMG_6331](images/IMG_6331-1-1024x1024.jpg)
+{% responsiveImage 'ootd.jpg', 'Outfit featuring blue off the shoulder top and black floral shorts' %}
 
 The top is from Style Nanda - can we talk about how this was pretty much the only shirt that fit me because their store is one size fits all i.e. it's probably not gonna fit me unless it's stretchy? Shorts are from Target, shoes are Steve Madden!
 
+\
 Thanks for reading!
 
 Christina
-
-SaveSave
