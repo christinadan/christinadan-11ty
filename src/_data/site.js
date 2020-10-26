@@ -17,5 +17,5 @@ module.exports = {
     twitter: '@_christinadan',
     image: `${url}/assets/img/author.jpg`,
   },
-  resume: '/static/Christina_Dan_Resume.pdf',
+  resume: '/assets/static/Christina_Dan_Resume.pdf',
 };
