@@ -1,0 +1,190 @@
+{
+  "photosDay1": [
+    {
+      "src": "cafe-henri-brunch.jpg",
+      "alt": "French toast with strawberries and cream and avocado toast with eggs and green toppings"
+    },
+    {
+      "src": "cafe-henri-doors.jpg",
+      "alt": "Cafe Henri doors"
+    },
+    {
+      "src": "cafe-henri-inside.jpg",
+      "alt": "Inside Cafe Henri behind the bar"
+    }
+  ],
+  "airbnb": [
+    {
+      "src": "airbnb.jpg",
+      "alt": "Exterior of the Airbnb"
+    },
+    {
+      "src": "airbnb-kitchen.jpg",
+      "alt": "Kitchen of the Airbnb"
+    },
+    {
+      "src": "solo-coffee.jpg",
+      "alt": "Solo Coffee under our Airbnb"
+    },
+    {
+      "src": "airbnb-tacos.jpg",
+      "alt": "Tacos they sold outside the Airbnb"
+    }
+  ],
+  "bacchanal": [
+    {
+      "src": "bacchanal-cheese.jpg",
+      "alt": "Cheeseboard from Bacchanal Wine"
+    },
+    {
+      "src": "bacchanal-food.jpg",
+      "alt": "A dish from Bacchanal Wine"
+    },
+    {
+      "src": "bacchanal-duck.jpg",
+      "alt": "Duck confit from Bacchanal Wine"
+    }
+  ],
+  "theCountryClub": [
+    {
+      "src": "the-country-club-brunch.jpg",
+      "alt": "Eggs benedict and crab cakes from The Country Club"
+    },
+    {
+      "src": "the-country-club-interior.jpg",
+      "alt": "The beautiful ceiling inside The Country Club"
+    },
+    {
+      "src": "the-country-club-exterior.jpg",
+      "alt": "The outside of The Country Club"
+    }
+  ],
+  "photosDay2": [
+    {
+      "src": "botanical-garden.jpg",
+      "alt": "The botanical garden"
+    },
+    {
+      "src": "botanical-garden-cactus-greenhouse.jpg",
+      "alt": "Me inside the cactus greenhouse"
+    },
+    {
+      "src": "botanical-garden-cactus-1.jpg",
+      "alt": "Outside the cactus green house"
+    },
+    {
+      "src": "botanical-garden-cactus-2.jpg",
+      "alt": "Inside the cactus green house"
+    },
+    {
+      "src": "new-orleans-museum.jpg",
+      "alt": "Selfie inside the New Orleans Museum"
+    },
+    {
+      "src": "city-park.jpg",
+      "alt": "City Park"
+    }
+  ],
+  "stRoch": [
+    {
+      "src": "angelo-brocato.jpg",
+      "alt": "Gelato and canoli from Angelo Brocato"
+    },
+    {
+      "src": "st-roch.jpg",
+      "alt": "Inside St. Roch Market"
+    },
+    {
+      "src": "st-roch-food.jpg",
+      "alt": "Food from St. Roch Market"
+    }
+  ],
+  "photosDay3": [
+    {
+      "src": "cafe-du-monde.jpg",
+      "alt": "Cafe du Monde"
+    },
+    {
+      "src": "beignets.jpg",
+      "alt": "Beignets"
+    },
+    {
+      "src": "white-lies.jpg",
+      "alt": "White Lies Matter"
+    },
+    {
+      "src": "jackson-square.jpg",
+      "alt": "Food from St. Roch Market"
+    },
+    {
+      "src": "st-louis-cathedral-ceiling.jpg",
+      "alt": "Ceiling inside St. Louis Cathedral"
+    },
+    {
+      "src": "krewe-wall.jpg",
+      "alt": "Plant wall inside of the Krewe store"
+    }
+  ],
+  "day3Food": [
+    {
+      "src": "willie-maes.jpg",
+      "alt": "Willie Mae's Restaurant sign"
+    },
+    {
+      "src": "willie-maes-food.jpg",
+      "alt": "Food from Willie Mae's"
+    },
+    {
+      "src": "acme-oyster-house.jpg",
+      "alt": "Outside Acme Oyster House"
+    },
+    {
+      "src": "acme-inside.jpg",
+      "alt": "Inside Acme Oyster House"
+    },
+    {
+      "src": "acme-charbroiled-oysters.jpg",
+      "alt": "Charbroiled oysters from Acme Oyster House"
+    },
+    {
+      "src": "acme-food.jpg",
+      "alt": "Food order from Acme Oyster House"
+    }
+  ],
+  "photosDay4": [
+    {
+      "src": "french-coffee-truck.jpg",
+      "alt": "Our order from French Truck Coffee"
+    },
+    {
+      "src": "wwii-museum.jpg",
+      "alt": "Outside the National World War II Museum"
+    },
+    {
+      "src": "luke-oysters.jpg",
+      "alt": "Oysters from Lüke"
+    },
+    {
+      "src": "luke-food.jpg",
+      "alt": "Food from Lüke"
+    },
+    {
+      "src": "magazine-st-1.jpg",
+      "alt": "Nice house on Magazine St."
+    },
+    {
+      "src": "magazine-st-2.jpg",
+      "alt": "Another nice house on Magazine St."
+    }
+  ],
+  "jacquesImos": [
+    {
+      "src": "jacques-imos-1.jpg",
+      "alt": "Food from Jacques-Imo's"
+    },
+    {
+      "src": "jacques-imos-2.jpg",
+      "alt": "More food from Jacques-Imo's"
+    }
+  ]
+}
