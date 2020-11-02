@@ -14,14 +14,14 @@ pagination:
   addAllPagesToCollections: true
 eleventyComputed:
   title: Tagged "{{ tag }}"
-permalink: /blog/tags/{{ tag | slug }}/
+permalink: /blog/tags/{{ tag | slugify }}/
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
   <a href="{{ '/blog/tags/' | url }}" class="button-link">Explore all tags</a>
 </p>
-<div class="post-list">
-  {% set postList = collections[ tag ] %}
+<section class="post-list">
+  {% set postList = collections[ tag ] | reverse %}
   {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
-</div>
+</section>

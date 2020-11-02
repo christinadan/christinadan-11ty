@@ -1,6 +1,6 @@
 ---
 title: Resources I Found Helpful While Building My First Static Site with Eleventy
-slug: Helpful Eleventy Resources
+slug: helpful-eleventy-resources
 description: "A list of resources (re: links) I found helpful while building this site using Eleventy"
 lastModifiedDate: 2020-10-16
 categories:
@@ -41,5 +41,5 @@ This is basically an Eleventy bookmarks post. I intend to update this as I go, s
 ## TODO or Look at Later
 * [From Wordpress to Eleventy with Ease](https://heydonworks.com/article/wordpress-to-eleventy/)
 * [The Practicalities of Migrating from WordPress to Eleventy](https://ishambuilds.tech/posts/2020-05-23-journey-to-eleventy-pt-2/)
-* [Migrating rom Wordpress to Eleventy](https://edspencer.me.uk/posts/2019-10-16-migrating-from-wordpress-to-eleventy/)
+* [Migrating from Wordpress to Eleventy](https://edspencer.me.uk/posts/2019-10-16-migrating-from-wordpress-to-eleventy/)
 * [This Github issue](https://github.com/11ty/eleventy/issues/332) with recommendation from Zach Leatherman on how to implement double-layered pagination (for tag and category pages later on)

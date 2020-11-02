@@ -1,0 +1,10 @@
+<nav class="pagination" aria-label="Pagination navigation">
+  <small>
+    <ol class="flex-row">
+      <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">First</a>{% else %}First{% endif %}</li>
+      <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer</a>{% else %}Newer{% endif %}</li>
+      <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older</a>{% else %}Older{% endif %}</li>
+      <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last</a>{% else %}Last{% endif %}</li>
+    </ol>
+  </small>
+</nav>

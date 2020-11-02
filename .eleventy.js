@@ -12,6 +12,7 @@ const {
   readableDate,
   media,
   sitemapDate,
+  slugify,
 } = require('./_eleventy/filters');
 
 module.exports = function (eleventyConfig) {
@@ -41,6 +42,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('sitemapDate', sitemapDate);
   eleventyConfig.addFilter('md', md);
   eleventyConfig.addFilter('media', media);
+  eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
 
   // Transforms

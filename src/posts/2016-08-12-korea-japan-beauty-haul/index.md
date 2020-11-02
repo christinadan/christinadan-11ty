@@ -1,6 +1,5 @@
 ---
 title: Korea and Japan Beauty Haul!
-slug: 'korea-japan-beauty-haul'
 date: 2016-08-12
 image: korea-japan-beauty-haul-title.jpg
 categories:

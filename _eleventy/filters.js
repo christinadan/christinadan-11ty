@@ -1,6 +1,7 @@
 const CleanCSS = require('clean-css');
 const { DateTime } = require('luxon');
 const { minify } = require('terser');
+const slugify = require('slugify');
 const { mdIt } = require('./libraries');
 
 module.exports = {
@@ -37,4 +38,9 @@ module.exports = {
 
     return filename;
   },
+  slugify: (str) => slugify(str, {
+    replacement: '-',
+    remove: /[*+~.()'"!:@]/g,
+    lower: true,
+  }),
 };

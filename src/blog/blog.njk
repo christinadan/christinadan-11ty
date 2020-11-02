@@ -1,15 +1,23 @@
 ---
 layout: home
 title: Blog
-permalink: /blog/index.html
+pagination:
+  data: collections.post
+  reverse: true
+  size: 5
+  alias: post
+permalink: blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 <h1>{{ title }}</h1>
-<div class="post-list">
-  {% if collections.post %}
-    {% set postList = collections.post %}
+<section class="post-list">
+  {% if pagination.items %}
+    {% set postList = pagination.items %}
     {% set headingLevel = "h2" %}
     {% include "partials/post-list.njk" %}
   {% else %}
     <i>There are no blog posts yet. ❤️</i>
   {% endif %}
-</div>
+</section>
+<section class="post-pagination">
+  {% include "partials/pagination-nav.njk" %}
+</section>

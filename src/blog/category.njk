@@ -7,14 +7,14 @@ pagination:
   addAllPagesToCollections: true
 eleventyComputed:
   title: "{{ category | title }}"
-permalink: blog/category/{{ category | slug }}/
+permalink: blog/category/{{ category | slugify }}/
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
   <a href="{{ '/blog/category/' | url }}" class="button-link">Explore all categories</a>
 </p>
-<div class="post-list">
-  {% set postList = collections.categories[ category ] %}
+<section class="post-list">
+  {% set postList = collections.categories[ category ] | reverse %}
   {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
-</div>
+</section>

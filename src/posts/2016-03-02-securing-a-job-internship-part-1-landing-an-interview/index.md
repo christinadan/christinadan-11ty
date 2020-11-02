@@ -1,6 +1,6 @@
 ---
 title: 'Securing a Job or Internship - Part 1: Landing an Interview'
-slug: 'securing-a-job-internship-part-1-landing-an-interview'
+slug: securing-a-job-internship-part-1-landing-an-interview
 date: 2016-03-02
 lastModifiedDate: 2020-10-19
 categories:
