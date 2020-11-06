@@ -89,7 +89,7 @@ function doublePagination(collection, type, paginationSize = 5) {
     const tagItems = type === 'categories' ? categories(collection)[name] : collection.getFilteredByTag(name);
     const pagedItems = _.chunk(tagItems.reverse(), paginationSize);
     const url = type === 'categories' ? `${categoryUrl(name)}` : `${tagUrl(name)}`;
-    const last = `${url}${pagedItems.length}/`;
+    const last = pagedItems.length === 1 ? url : `${url}${pagedItems.length}/`;
 
     for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
       const next = pageNumber < max - 1 ? `${url}${pageNumber + 2}/` : null;

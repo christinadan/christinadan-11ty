@@ -1,11 +1,12 @@
 ---
 layout: home
-title: Blog
 pagination:
   data: collections.post
   reverse: true
   size: 5
   alias: post
+eleventyComputed:
+  title: Blog{% if pagination.pageNumber > 0 %} - Page {{ pagination.pageNumber + 1 }}{% endif %}
 permalink: blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
 ---
 <h1>{{ title }}</h1>

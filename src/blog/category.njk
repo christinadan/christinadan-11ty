@@ -6,7 +6,7 @@ pagination:
   alias: category
   addAllPagesToCollections: true
 eleventyComputed:
-  title: "{{ category.name | title }}"
+  title: "{{ category.name | title }}{% if category.pageNumber > 0 %} - Page {{ category.pageNumber + 1 }}{% endif %}"
 permalink: /categories/{{ category.name | slugify }}/{% if category.pageNumber > 0 %}{{ category.pageNumber + 1 }}/{% endif %}
 ---
 <h1>{{ title }}</h1>
