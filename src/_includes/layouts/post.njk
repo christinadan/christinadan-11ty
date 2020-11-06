@@ -33,7 +33,7 @@ layout: base
           <span class="post-meta-label">
             Previous
           </span>
-          ← <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          <a href="{{ previousPost.url | url }}">← {{ previousPost.data.title }}</a>
         </li>
         {% endif %}
         {%- if nextPost %}
@@ -41,7 +41,7 @@ layout: base
           <span class="post-meta-label">
             Next
           </span>
-          <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a> →
+          <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }} →</a>
         </li>
         {% endif %}
       </ol>

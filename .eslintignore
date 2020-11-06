@@ -2,3 +2,5 @@ node_modules
 dist
 
 src/assets/js/vendor
+
+!.eleventy.js

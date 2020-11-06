@@ -1,4 +1,4 @@
-{% for post in postList | reverse %}
+{% for post in postList %}
   {% set pageTitle = post.data.title if post.data.title else "Untitled" %}
   <article{% if post.url == url %} aria-current="page"{% endif %} class="post">
     <header class="post-header">
@@ -18,7 +18,7 @@
       {{ post.data.excerpt | md | safe }}
       <p class="margin-top">
         <a href="{{ post.url | url }}" title="{{ pageTitle }}" class="button-link read-more">
-          Read more
+          Read post
         </a>
       </p>
     {% endif %}

@@ -1,7 +1,7 @@
 ---
 title: "New York City - January 2016 - Part 1: Planning"
 description: How I planned for a trip to New York City (as a college student)
-slug: nyc-jan-2016-part-1-planning
+slug: nyc-2016-part-1-planning
 date: 2016-02-11
 lastModifiedDate: 2020-10-18
 image: nyc-plane.jpg

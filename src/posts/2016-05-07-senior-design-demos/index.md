@@ -1,6 +1,5 @@
 ---
 title: Senior Design Demos + Plans for Summer!
-slug: 'senior-design-demos-plans-for-summer'
 date: 2016-05-07
 image: senior-design-title.jpg
 categories:

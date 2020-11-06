@@ -1,27 +1,24 @@
 ---
 layout: home
 pagination:
-  data: collections
+  data: collections.tagPagination
   size: 1
   alias: tag
-  filter:
-    - all
-    - nav
-    - post
-    - tagList
-    - categories
-    - categoryList
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Tagged "{{ tag }}"
-permalink: /blog/tags/{{ tag | slug }}/
+  title: Tagged "{{ tag.name }}"{% if tag.pageNumber > 0 %} - Page {{ tag.pageNumber + 1 }}{% endif %}
+permalink: /tags/{{ tag.name | slugify }}/{% if tag.pageNumber > 0 %}{{ tag.pageNumber + 1 }}/{% endif %}
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
-  <a href="{{ '/blog/tags/' | url }}" class="button-link">Explore all tags</a>
+  <a href="{{ '/tags/' | url }}" class="button-link">Explore all tags</a>
 </p>
-<div class="post-list">
-  {% set postList = collections[ tag ] %}
+<section class="post-list">
+  {% set postList = tag.pageData %}
   {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
-</div>
+</section>
+<section class="post-pagination">
+  {% set href = tag.href  %}
+  {% include "partials/pagination-nav.njk" %}
+</section>

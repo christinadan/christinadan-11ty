@@ -1,6 +1,8 @@
 const fs = require('fs');
 const images = require('./_eleventy/plugins/images');
-const { tagList, categoryList, categories } = require('./_eleventy/collections');
+const {
+  tagList, categoryList, categories, doublePagination,
+} = require('./_eleventy/collections');
 const { mdIt } = require('./_eleventy/libraries');
 const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
 const { htmlmin } = require('./_eleventy/transforms');
@@ -12,6 +14,7 @@ const {
   readableDate,
   media,
   sitemapDate,
+  slugify,
 } = require('./_eleventy/filters');
 
 module.exports = function (eleventyConfig) {
@@ -41,6 +44,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('sitemapDate', sitemapDate);
   eleventyConfig.addFilter('md', md);
   eleventyConfig.addFilter('media', media);
+  eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
 
   // Transforms
@@ -54,16 +58,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('tagList', tagList);
   eleventyConfig.addCollection('categoryList', categoryList);
   eleventyConfig.addCollection('categories', categories);
+  eleventyConfig.addCollection('tagPagination', (collection) => doublePagination(collection, 'tags'));
+  eleventyConfig.addCollection('categoryPagination', (collection) => doublePagination(collection, 'categories'));
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: (err, browserSync) => {
-        const content_404 = fs.readFileSync('dist/404.html');
+        const content404 = fs.readFileSync('dist/404.html');
 
         browserSync.addMiddleware('*', (req, res) => {
           // Provides the 404 content without redirect.
-          res.write(content_404);
+          res.write(content404);
           res.end();
         });
       },

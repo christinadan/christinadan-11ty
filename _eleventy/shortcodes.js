@@ -1,7 +1,7 @@
-const slugify = require('slugify');
+const { slugify } = require('./filters');
 
-const tagUrl = (tag) => `/blog/tags/${slugify(tag)}/`;
-const categoryUrl = (cat) => `/blog/category/${slugify(cat)}/`;
+const tagUrl = (tag) => `/tags/${slugify(tag)}/`;
+const categoryUrl = (cat) => `/categories/${slugify(cat)}/`;
 
 module.exports = {
   tagUrl,

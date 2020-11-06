@@ -1,20 +1,24 @@
 ---
 layout: home
 pagination:
-  data: collections.categoryList
+  data: collections.categoryPagination
   size: 1
   alias: category
   addAllPagesToCollections: true
 eleventyComputed:
-  title: "{{ category | title }}"
-permalink: blog/category/{{ category | slug }}/
+  title: "{{ category.name | title }}{% if category.pageNumber > 0 %} - Page {{ category.pageNumber + 1 }}{% endif %}"
+permalink: /categories/{{ category.name | slugify }}/{% if category.pageNumber > 0 %}{{ category.pageNumber + 1 }}/{% endif %}
 ---
 <h1>{{ title }}</h1>
 <p class="padding-bottom">
-  <a href="{{ '/blog/category/' | url }}" class="button-link">Explore all categories</a>
+  <a href="{{ '/categories/' | url }}" class="button-link">Explore all categories</a>
 </p>
-<div class="post-list">
-  {% set postList = collections.categories[ category ] %}
+<section class="post-list">
+  {% set postList = category.pageData %}
   {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
-</div>
+</section>
+<section class="post-pagination">
+  {% set href = category.href  %}
+  {% include "partials/pagination-nav.njk" %}
+</section>

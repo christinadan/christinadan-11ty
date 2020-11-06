@@ -8,13 +8,14 @@
       text-transform: uppercase;
       font-size: .75rem;
       letter-spacing: .1em;
-      margin-bottom: .375rem;
+      margin-bottom: .5rem;
 
       li {
         margin-right: 0;
         display: list-item;
 
         a {
+          padding: .375em .375em .375em 0;
           text-decoration: none;
         }
         
@@ -147,4 +148,9 @@
       padding-top: 2rem;
     }
   }
+}
+
+.post-pagination {
+  border-top: 1px solid var(--background-4);
+  padding-top: 1rem;
 }

@@ -1,6 +1,6 @@
 ---
 title: "Post-Grad Life (mainly, What's in My Carry-On?)"
-slug: 'post-grad-life-whats-in-my-carry-on'
+slug: post-grad-life-whats-in-my-carry-on
 excerpt: A small life update and what I'm packing in my carry-on backpack on our trip to Seoul and Tokyo.
 date: 2016-07-10
 lastModifiedDate: 2020-10-24

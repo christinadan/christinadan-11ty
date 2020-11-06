@@ -1,6 +1,6 @@
 ---
 title: "Simple Mid-Century Inspired Furniture Personalization ft. World Market Furniture"
-slug: 'simple-furniture-personalization'
+slug: simple-furniture-personalization
 date: 2016-08-29
 lastModified: 2020-10-25
 image: furniture-personalization-title.jpg
