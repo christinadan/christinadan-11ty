@@ -40,7 +40,7 @@ module.exports = {
   },
   slugify: (str) => slugify(str, {
     replacement: '-',
-    remove: /[*+~.()'"!:@]/g,
+    remove: /[*+~.()'"!:@?#]/g,
     lower: true,
   }),
 };
