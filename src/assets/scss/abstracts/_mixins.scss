@@ -86,11 +86,11 @@
 
 @mixin fontless {
   @if is-superselector('html', &) {
-    &:not(.wf-active) {
+    &:not(.font-loaded) {
       @content;
     }
   } @else {
-    html:not(.wf-active) & {
+    html:not(.font-loaded) & {
       @content;
     }
   }

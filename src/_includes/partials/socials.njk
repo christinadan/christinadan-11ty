@@ -2,7 +2,10 @@
   {% set navItems = navigation.social %}
   {% for item in navItems %}
     <li class="nav-item">
-      <a href="{{ item.url }}" {{ 'rel="noopener noreferrer"' if item.external }} aria-label="{{ item.text }}">
+      {% if item.external %}
+        {% set rel = ' rel="noopener noreferrer"' %}
+      {% endif %}
+      <a href="{{ item.url }}" aria-label="{{ item.text }}" {{ rel | safe }} class="social-link">
         {% include item.icon %}
       </a>
     </li>

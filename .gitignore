@@ -2,3 +2,4 @@ node_modules
 dist
 
 src/_includes/global/css/*
+src/_includes/global/js/*

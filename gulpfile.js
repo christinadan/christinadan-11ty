@@ -11,6 +11,10 @@ const header = require('gulp-header');
 const concat = require('gulp-concat');
 const uglify = require('gulp-terser');
 const svgmin = require('gulp-svgmin');
+const rollup = require('gulp-better-rollup');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 const packageJson = require('./package.json');
 
 // Paths to project folders ///////////////////////////////////////////////////
@@ -18,10 +22,14 @@ const paths = {
   input: 'src/',
   output: 'dist/',
   scripts: {
-    input: 'src/assets/js/**/*.js',
+    input: 'src/assets/js/*.js',
     watch: 'src/assets/js/**/*.js',
     polyfills: '.polyfill.js',
     output: 'dist/assets/js/',
+    inline: {
+      input: 'src/assets/js/inline.js',
+      output: 'src/_includes/global/js',
+    },
   },
   styles: {
     input: 'src/assets/scss/main.scss',
@@ -60,12 +68,17 @@ const cleanDest = (done) => {
 };
 
 // Repeated JavaScript tasks
-const jsTasks = lazypipe()
-  .pipe(dest, paths.scripts.output)
+const jsTasks = (file) => lazypipe()
+  .pipe(rollup, { plugins: [babel(), resolve(), commonjs()] }, 'umd')
   .pipe(rename, { suffix: '.min' })
   .pipe(uglify)
   .pipe(header, banner.main, { package: packageJson })
-  .pipe(dest, paths.scripts.output);
+  .pipe(
+    dest,
+    file.path.includes(paths.scripts.inline.input)
+      ? paths.scripts.inline.output
+      : paths.scripts.output,
+  );
 
 // Lint, minify, and concatenate scripts
 const buildScripts = () =>
@@ -82,13 +95,13 @@ const buildScripts = () =>
         // If separate polyfills enabled, this will have .polyfills in the filename
         src(`${file.path}/*.js`)
           .pipe(concat(`${file.relative + suffix}.js`))
-          .pipe(jsTasks());
+          .pipe(jsTasks(file)());
 
         return stream;
       }
 
       // Otherwise, process the file
-      return stream.pipe(jsTasks());
+      return stream.pipe(jsTasks(file)());
     }),
   );
 

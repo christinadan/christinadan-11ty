@@ -2,7 +2,7 @@
   {% set pageTitle %}{{ title + " | " if title }}Christina Dan{% endset %}
   {% set pageDescription %}{{ description or excerpt or site.description }}{% endset %}
   {% set css %}{% include "global/css/main.css" %}{% endset %}
-  {% set js %}{% include "global/js/inline.js" %}{% endset %}
+  {% set js %}{% include "global/js/inline.min.js" %}{% endset %}
   {% set fonts %}{% include "./fonts.njk" %}{% endset %}
   {% set url %}{{ site.url + page.url }}{% endset %}
   {% set pageImage %}{{(site.url + (image | media(page)) if type == 'post' and image else image) or site.author.image }}{% endset %}
@@ -48,7 +48,7 @@
   <style type="text/css">
     {{ css | cssmin | safe }}
   </style>
-  <script src="/assets/js/vendor/fontfaceobserver.min.js"></script>
+  <script src="/assets/js/font.min.js" async></script>
   <script>
     {{ js | jsmin | safe }}
   </script>
