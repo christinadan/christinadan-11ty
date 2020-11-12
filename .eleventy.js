@@ -1,4 +1,5 @@
 const fs = require('fs');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const images = require('./_eleventy/plugins/images');
 const {
   tagList, categoryList, categories, doublePagination,
@@ -19,6 +20,7 @@ const {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(images);
+  eleventyConfig.addPlugin(pluginRss);
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('src/assets/img');

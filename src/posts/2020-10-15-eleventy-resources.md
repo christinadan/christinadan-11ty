@@ -1,5 +1,5 @@
 ---
-title: Resources I Found Helpful While Building My First Static Site with Eleventy
+title: Building My First Static Site with Eleventy
 slug: helpful-eleventy-resources
 description: "A list of resources (re: links) I found helpful while building this site using Eleventy"
 lastModifiedDate: 2020-10-16
@@ -38,8 +38,19 @@ This is basically an Eleventy bookmarks post. I intend to update this as I go, s
 * [Implementing Categories on pborenstein.com](https://www.pborenstein.com/posts/categories/)
 * [Basic custom taxonomies with Eleventy on webstoemp.com](https://www.webstoemp.com/blog/basic-custom-taxonomies-with-eleventy/)
 
-## TODO or Look at Later
-* [From Wordpress to Eleventy with Ease](https://heydonworks.com/article/wordpress-to-eleventy/)
-* [The Practicalities of Migrating from WordPress to Eleventy](https://ishambuilds.tech/posts/2020-05-23-journey-to-eleventy-pt-2/)
+### Wordpress to Eleventy
+* [the wordpress-export-markdown npm package](https://github.com/lonekorean/wordpress-export-to-markdown)
 * [Migrating from Wordpress to Eleventy](https://edspencer.me.uk/posts/2019-10-16-migrating-from-wordpress-to-eleventy/)
-* [This Github issue](https://github.com/11ty/eleventy/issues/332) with recommendation from Zach Leatherman on how to implement double-layered pagination (for tag and category pages later on)
+
+### Pagination
+* [This Github issue](https://github.com/11ty/eleventy/issues/332) with recommendation from Zach Leatherman on how to implement double-layered pagination for tag and category pages
+
+## Things I want to play around with and add
+- ~~Pagination~~
+- ~~Responsive images~~
+- ~~Image minification~~
+- Structured data
+- Fetch Instagram posts
+- Webmentions
+- Social sharing images
+- Social sharing

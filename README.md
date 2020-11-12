@@ -9,7 +9,7 @@ Personal website for Christina Dan and figuring out static site generators.
 * [Netlify](https://netlify.com)
 
 ## To Do
-- [ ] Pagination
+- [x] Pagination
 - [x] Responsive images
 - [x] Image minification
 - [ ] Structured data
