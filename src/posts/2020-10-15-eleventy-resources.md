@@ -45,7 +45,7 @@ This is basically an Eleventy bookmarks post. I intend to update this as I go, s
 ### Pagination
 * [This Github issue](https://github.com/11ty/eleventy/issues/332) with recommendation from Zach Leatherman on how to implement double-layered pagination for tag and category pages
 
-## Things I want to play around with and add
+## Things I want to add
 - ~~Pagination~~
 - ~~Responsive images~~
 - ~~Image minification~~
@@ -53,4 +53,4 @@ This is basically an Eleventy bookmarks post. I intend to update this as I go, s
 - Fetch Instagram posts
 - Webmentions
 - Social sharing images
-- Social sharing
+- Social sharing links
