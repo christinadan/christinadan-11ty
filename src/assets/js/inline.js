@@ -7,10 +7,6 @@ if (chosenTheme === 'dark') {
   document.documentElement.classList.remove('dark');
 }
 
-let fontLoaded = false;
-
-fontLoaded = JSON.parse(sessionStorage.getItem('font-loaded'));
-
-if (fontLoaded) {
+if (sessionStorage.fontLoaded) {
   document.documentElement.classList.add('font-loaded');
 }
