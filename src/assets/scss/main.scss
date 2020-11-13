@@ -12,15 +12,14 @@
 @import 'base/typography';
 
 // Components
-@import 'components/logo';
+@import 'components/logo-initial';
 @import 'components/theme-toggle';
 
 // Layout
-@import 'layout/footer';
 @import 'layout/main';
 @import 'layout/header';
 @import 'layout/photo-gallery';
 
 // Pages
-@import 'pages/post';
+@import 'pages/post-initial';
 @import 'pages/home';

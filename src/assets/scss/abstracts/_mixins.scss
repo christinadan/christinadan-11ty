@@ -78,8 +78,8 @@
   }
 }
 
-@mixin hover-none() {
-  @media (hover: none) {
+@mixin hover() {
+  @media (hover: hover) {
     @content;
   }
 }

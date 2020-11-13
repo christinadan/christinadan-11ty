@@ -8,14 +8,9 @@ input[type=checkbox]#theme-toggle + label {
   background: transparent;
 
   &:hover {
-    cursor: pointer;
-    background-color: var(--background-2);
-  }
-
-  @include hover-none {
-    &:hover {
-      cursor: initial;
-      background-color: initial;
+    @include hover {
+      cursor: pointer;
+      background-color: var(--background-2);
     }
   }
 

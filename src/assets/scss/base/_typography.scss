@@ -82,24 +82,15 @@ a {
 
   &:not([class]):hover,
   &:not([class]):focus {
-    color: var(--background-1);
-    text-decoration: none;
-    background-color: var(--text-color);
-    box-shadow: 2px 0 0 2px var(--text-color), -2px 0 0 2px var(--text-color);
-
-    svg {
-      stroke: var(--background-1);
-    }
-  }
-
-  // Check for hover: none so IE gets the default hover behavior
-  @include hover-none {
-    &:not([class]):hover,
-    &:not([class]):focus {
-      color: var(--text-color);
+    @include hover {
+      color: var(--background-1);
       text-decoration: none;
-      background-color: unset;
-      box-shadow: none;
+      background-color: var(--text-color);
+      box-shadow: 2px 0 0 2px var(--text-color), -2px 0 0 2px var(--text-color);
+
+      svg {
+        stroke: var(--background-1);
+      }
     }
   }
 }

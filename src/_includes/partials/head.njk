@@ -45,6 +45,10 @@
   <link rel="icon" type="image/png" href="{{ site.favicon.small }}" sizes="16x16" />
   <link rel="preload" href="/assets/img/contrast-line.svg" as="image" type="image/svg+xml" />
   {{ fonts | safe }}
+  <link rel="stylesheet" href="/assets/css/defer.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="/assets/css/defer.css" rel="stylesheet">
+  </noscript>
   <style type="text/css">
     {{ css | cssmin | safe }}
   </style>

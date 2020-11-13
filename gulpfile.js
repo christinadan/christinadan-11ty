@@ -32,9 +32,13 @@ const paths = {
     },
   },
   styles: {
-    input: 'src/assets/scss/main.scss',
+    input: 'src/assets/scss/*.scss',
     watch: 'src/assets/scss/**/*.scss',
     output: 'src/_includes/global/css',
+    defer: {
+      input: 'src/assets/scss/defer.scss',
+      output: 'dist/assets/css',
+    },
   },
   svgs: {
     input: 'src/assets/img/*.svg',
@@ -106,14 +110,21 @@ const buildScripts = () =>
   );
 
 const buildStyles = (done) => {
-  src(paths.styles.input)
-    .pipe(
-      sass({
-        outputStyle: 'compressed',
-      }).on('error', sass.logError),
-    )
-    .pipe(dest(paths.styles.output));
-
+  src(paths.styles.input).pipe(
+    flatmap((stream, file) => stream
+      .pipe(
+        sass({
+          outputStyle: 'compressed',
+        }).on('error', sass.logError),
+      )
+      .pipe(
+        dest(
+          file.path.includes(paths.styles.defer.input)
+            ? paths.styles.defer.output
+            : paths.styles.output,
+        ),
+      )),
+  );
   done();
 };
 

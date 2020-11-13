@@ -5,7 +5,7 @@
       {% if item.external %}
         {% set rel = ' rel="noopener noreferrer"' %}
       {% endif %}
-      <a href="{{ item.url }}" aria-label="{{ item.text }}" {{ rel | safe }} class="social-link">
+      <a href="{{ item.url }}" aria-label="{{ item.text }}" {{ rel | safe }}>
         {% include item.icon %}
       </a>
     </li>
