@@ -32,12 +32,12 @@
     },
     {
       "text": "GitHub",
-      "url": "https://christinadan.com/",
+      "url": "https://github.com/christinadan",
       "external": true,
       "icon": "global/icons/github.svg"
     },
     {
-      "text": "RSS",
+      "text": "RSS feed",
       "url": "https://christinadan.com/feed.xml",
       "external": false,
       "icon": "global/icons/rss.svg"
