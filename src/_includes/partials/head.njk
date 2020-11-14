@@ -1,27 +1,26 @@
+{% set pageTitle %}{{ title + " | " if title }}Christina Dan{% endset %}
+{% set pageDescription %}{{ description or excerpt or site.description }}{% endset %}
+{% set css %}{% include "global/css/main.css" %}{% endset %}
+{% set js %}{% include "global/js/inline.min.js" %}{% endset %}
+{% set url %}{{ site.url + page.url }}{% endset %}
+{% set pageImage %}{{(site.url + (image | media(page)) if type == 'post' and image else image) or site.author.image }}{% endset %}
 <head>
-  {% set pageTitle %}{{ title + " | " if title }}Christina Dan{% endset %}
-  {% set pageDescription %}{{ description or excerpt or site.description }}{% endset %}
-  {% set css %}{% include "global/css/main.css" %}{% endset %}
-  {% set js %}{% include "global/js/inline.min.js" %}{% endset %}
-  {% set fonts %}{% include "./fonts.njk" %}{% endset %}
-  {% set url %}{{ site.url + page.url }}{% endset %}
-  {% set pageImage %}{{(site.url + (image | media(page)) if type == 'post' and image else image) or site.author.image }}{% endset %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
     {{ pageTitle | safe }}
   </title>
-  <meta name="description" content="{{ pageDescription | safe }}">
 
-  {# Open Graph #}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <meta property="og:title" content="{{ pageTitle | safe }}">
   <meta property="og:description" content="{{ pageDescription | safe }}">
   <meta property="og:image" content="{{ pageImage | safe }}">
   <meta property="og:url" content="{{ url | safe }}" />
   <meta property="og:site_name" content="{{ site.name | safe }}" />
   <meta property="og:type" content="{{ 'article' if type == 'post' else 'website' }}" />
-
+  <meta name="description" content="{{ pageDescription | safe }}">
   {% if type == 'post' %}
     <meta name="author" content="{{ site.author.name }}">
     {% if date %}
@@ -41,19 +40,19 @@
   <meta name="twitter:url" content="{{ url | safe }}">
   <meta name="twitter:image" content="{{ pageImage | safe }}">
 
-  <link rel="icon" type="image/png" href="{{ site.favicon.large }}" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.favicon.small }}" sizes="16x16" />
-  <link rel="prefetch" href="/assets/img/contrast-line.svg" as="image" type="image/svg+xml" />
-  {{ fonts | safe }}
-  <link rel="stylesheet" href="/assets/css/defer.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="/assets/css/defer.css" rel="stylesheet">
-  </noscript>
-  <style type="text/css">
+  <style>
     {{ css | cssmin | safe }}
   </style>
-  <script src="/assets/js/font.min.js" async></script>
+  <link rel="stylesheet" href="/assets/css/defer.css" media="print" onload="this.media='all';this.onload=null;">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;500;600;700&display=swap" />
+    <link href="/assets/css/defer.css" rel="stylesheet">
+  </noscript>
+
   <script>
     {{ js | jsmin | safe }}
   </script>
+  <script src="/assets/js/font.min.js" async></script>
+  <script src="/assets/js/main.min.js" defer></script>
+  <link rel="feed" href="https://christinadan.com/feed.xml">
 </head>

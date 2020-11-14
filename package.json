@@ -38,6 +38,7 @@
     "slugify": "^1.4.6",
     "smartcrop": "^2.0.3",
     "smartcrop-sharp": "^2.0.3",
+    "store-css": "^1.0.2",
     "terser": "^5.3.8"
   },
   "devDependencies": {

@@ -1,12 +1,18 @@
-// Inline this check so it stops flashing initial theme on Firefox when deployed
-const chosenTheme = localStorage.getItem('color-scheme');
+import { css } from 'store-css';
 
-if (chosenTheme === 'dark') {
+const url = 'https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;500;600;700&display=swap';
+const storage = 'session';
+const crossOrigin = 'anonymous';
+const config = { url, storage, crossOrigin };
+
+css(config);
+
+if (localStorage.getItem('color-scheme') === 'dark') {
   document.documentElement.classList.add('dark');
 } else {
   document.documentElement.classList.remove('dark');
 }
 
-if (sessionStorage.fontLoaded) {
+if (sessionStorage.getItem('font-loaded')) {
   document.documentElement.classList.add('font-loaded');
 }
