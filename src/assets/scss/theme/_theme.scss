@@ -1,0 +1,19 @@
+:root {
+  --background-1: #{$greige};
+  --background-2: #{$greige-shade-7-5};
+  --background-4: #{$greige-shade-33};
+  --text-color: #{$black};
+  --text-color-2: #{$dark-grey};
+  --text-color-muted: #{$black-tint-7-5};
+  --link-color: #{$black};
+
+  &.dark {
+    // Temp colors; need to come up with an actual theme...
+    --background-1: #{$black};
+    --background-2: #{$black-tint-7-5};
+    --background-4: #{$black-tint-25};
+    --text-color: #{$greige};
+    --text-color-2: #{$greige-shade-33};
+    --link-color: #{$greige};
+  }
+}

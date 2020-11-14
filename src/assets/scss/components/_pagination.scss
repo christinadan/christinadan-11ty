@@ -1,0 +1,45 @@
+.pagination {
+  ol {
+    list-style: none;
+    margin-top: .75rem;
+
+    li {
+      margin: 0.5em 0;
+
+      &:first-of-type,
+      &:last-of-type {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:nth-of-type(2) {
+        text-align: right;
+        margin-left: 1em;
+        flex: 1;
+  
+        &:after {
+          content: '/';
+          padding-left: .5em;
+        }
+      }
+  
+      &:nth-of-type(3) {
+        margin-right: .5em;
+        flex: 1;
+  
+        &:before {
+          content: '';
+          padding-left: .5em;
+        }
+      }
+    }
+
+    @include screen-xx {
+      li:first-of-type,
+      li:last-of-type {
+        width: initial;
+        text-align: left;
+      }
+    }
+  }
+}

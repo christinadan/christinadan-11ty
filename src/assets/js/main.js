@@ -2,10 +2,9 @@
 const darkClass = 'dark';
 const lightClass = 'light';
 const colorSchemeKey = 'color-scheme';
-const isDarkColorScheme = document.documentElement.classList.contains('dark');
 const toggle = document.getElementById('theme-toggle');
 
-toggle.checked = isDarkColorScheme;
+toggle.checked = localStorage.getItem('color-scheme') === 'dark';
 
 toggle.addEventListener('change', (event) => {
   const { checked } = event.target;

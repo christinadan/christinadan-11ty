@@ -75,48 +75,6 @@
   }
 }
 
-.post-meta-label {
-  display: block;
-  text-transform: uppercase;
-  font-size: .75rem;
-  letter-spacing: .075em;
-  margin-right: 1em;
-  font-weight: 600;
-}
-
-.next-previous {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid var(--background-4);
-
-  .post-nav-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    
-    li {
-      margin-top: 1.25rem;
-    }
-
-    @include screen-sm {
-      justify-content: space-between;
-
-      li {
-        width: calc(48% - 1rem);
-
-        &.previous-post {
-          margin-right: 2rem;
-        }
-  
-        &.next-post {
-          text-align: right;
-          margin-left: auto;
-        }
-      }
-    }
-  }
-}
-
 .post-list {
   margin-top: 2rem;
 
@@ -148,9 +106,4 @@
       padding-top: 2rem;
     }
   }
-}
-
-.post-pagination {
-  border-top: 1px solid var(--background-4);
-  padding-top: 1rem;
 }
