@@ -9,8 +9,7 @@
   
     @include screen-xs {
       justify-content: space-between;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding: 1.5rem 0;
 
       .social-links {
         margin-right: 2rem;
