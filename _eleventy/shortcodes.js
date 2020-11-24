@@ -1,4 +1,4 @@
-const { slugify } = require('./filters');
+const { slugify } = require('./filters').filters;
 
 const tagUrl = (tag) => `/tags/${slugify(tag)}/`;
 const categoryUrl = (cat) => `/categories/${slugify(cat)}/`;

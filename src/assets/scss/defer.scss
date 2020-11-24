@@ -2,7 +2,8 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 
-@import 'components/logo';
+@import 'components/logo-defer';
 @import 'components/pagination';
+@import 'components/webmentions';
 
-@import 'pages/post';
+@import 'pages/post-defer';

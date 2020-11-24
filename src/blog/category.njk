@@ -13,12 +13,12 @@ permalink: /categories/{{ category.name | slugify }}/{% if category.pageNumber >
 <p class="padding-bottom">
   <a href="{{ '/categories/' | url }}" class="button-link">Explore all categories</a>
 </p>
-<section class="post-list">
+<section class="post-list h-feed">
   {% set postList = category.pageData %}
   {% set headingLevel = "h2" %}
   {% include "partials/post-list.njk" %}
 </section>
-<section class="post-pagination">
+<section class="page-section">
   {% set href = category.href  %}
   {% include "partials/pagination-nav.njk" %}
 </section>

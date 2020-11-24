@@ -1,5 +1,8 @@
 node_modules
 dist
+_cache
 
 src/_includes/global/css/*
 src/_includes/global/js/*
+
+.env

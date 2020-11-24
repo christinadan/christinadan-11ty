@@ -10,7 +10,7 @@ eleventyComputed:
 permalink: blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
 ---
 <h1>{{ title }}</h1>
-<section class="post-list">
+<section class="post-list h-feed">
   {% if pagination.items %}
     {% set postList = pagination.items %}
     {% set headingLevel = "h2" %}
@@ -19,7 +19,7 @@ permalink: blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }
     <i>There are no blog posts yet. ❤️</i>
   {% endif %}
 </section>
-<section class="post-pagination">
+<section class="page-section">
   {% set href = pagination.href  %}
   {% include "partials/pagination-nav.njk" %}
 </section>

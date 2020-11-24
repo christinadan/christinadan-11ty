@@ -1,6 +1,7 @@
 :root {
   --background-1: #{$greige};
   --background-2: #{$greige-shade-7-5};
+  --background-3: #{$greige-shade-20};
   --background-4: #{$greige-shade-33};
   --text-color: #{$black};
   --text-color-2: #{$dark-grey};
@@ -11,7 +12,8 @@
     // Temp colors; need to come up with an actual theme...
     --background-1: #{$black};
     --background-2: #{$black-tint-7-5};
-    --background-4: #{$black-tint-25};
+    --background-3: #{$black-tint-20};
+    --background-4: #{$black-tint-33};
     --text-color: #{$greige};
     --text-color-2: #{$greige-shade-33};
     --link-color: #{$greige};

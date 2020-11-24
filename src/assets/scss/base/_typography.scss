@@ -51,7 +51,7 @@ time {
 
 small {
   font-size: .825rem;
-  line-height: 1.25;
+  line-height: 1;
 }
 
 p, ul {
@@ -76,21 +76,38 @@ figcaption {
 a {
   color: var(--link-color);
 
-  svg {
-    stroke: var(--text-color);
+  svg {    
+    &[stroke]:not([stroke="none"]) {
+      stroke: var(--text-color);
+    }
+
+    &[fill]:not([fill="none"]) {
+      fill: var(--text-color);
+    }
   }
 
-  &:not([class]):hover,
-  &:not([class]):focus {
+  &:hover,
+  &:focus {
+    @include hover {
+      svg {
+        &[stroke]:not([stroke="none"]) {
+          stroke: var(--background-1);
+        }
+
+        &[fill]:not([fill="none"]) {
+          fill: var(--background-1);
+        }
+      }
+    }
+  }
+
+  &:not(.no-hover):hover,
+  &:not(.no-hover):focus {
     @include hover {
       color: var(--background-1);
       text-decoration: none;
       background-color: var(--text-color);
       box-shadow: 2px 0 0 2px var(--text-color), -2px 0 0 2px var(--text-color);
-
-      svg {
-        stroke: var(--background-1);
-      }
     }
   }
 }
@@ -121,14 +138,20 @@ h3:focus .heading-anchor {
 }
 
 .button-link {
-  display: inline-block;
+  display: flex;
+  width: fit-content;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: .5rem 1rem .4rem;
+  padding: .4em 1em .35em;
   border: 1px solid var(--text-color);
   font-weight: inherit;
   text-decoration: none;
   background: 0 0;
+
+  svg {
+    width: 1.33rem;
+    margin-right: .5rem;
+  }
 
   &[download] {
     padding-left: .9rem;
@@ -161,4 +184,8 @@ h3:focus .heading-anchor {
     background-color: var(--text-color);
     color: var(--background-1);
   }
+}
+
+.x-small {
+  font-size: .75rem;
 }

@@ -7,6 +7,7 @@ module.exports = {
   name: 'Christina Dan',
   description: 'A little corner of the web for Christina Dan, a software engineer in Dallas, TX.',
   url,
+  domain: 'christinadan.com',
   feedUrl: `${url}/feed.xml`,
   favicon: {
     small: '/assets/img/favicon-16x16.png',

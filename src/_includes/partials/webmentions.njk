@@ -1,0 +1,20 @@
+<!-- Filter the cached mentions to only include ones matching the post's url -->
+{% set pageMentions = webmentions | getWebmentionsForUrl(site.url + webmentionUrl) %}
+{% set reposts = pageMentions | webmentionsByType('repost-of') %}
+{% set repostsSize = reposts | size %}
+{% set likes = pageMentions | webmentionsByType('like-of') %}
+{% set likesSize = likes | size %}
+{% set replies = pageMentions | webmentionsByType('in-reply-to')  %}
+{% set repliesSize = replies | size  %}
+{% set mentions = pageMentions | webmentionsByType('mention-of')  %}
+{% set mentionsSize = mentions | size  %}
+
+{% if likesSize > 0 %}
+{% elif repostsSize > 0 %}
+{% elif mentionsSize > 0 %}
+{% elif repliesSize > 0 %}
+{% else %}
+  <p>
+    <i>There are no mentions yet.</i>
+  </p>
+{% endif %}
