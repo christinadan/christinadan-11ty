@@ -1,46 +1,115 @@
-.post-meta-label {
-  display: block;
-  text-transform: uppercase;
-  font-size: .75rem;
-  letter-spacing: .075em;
-  margin-right: 1em;
-  font-weight: 600;
-}
+.post {
+  padding-bottom: 2rem;
 
-.next-previous {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid var(--background-4);
-
-  .post-nav-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-    
-    li {
+  .post-header {    
+    .category-list {
       margin-top: 1.25rem;
-    }
-
-    @include screen-sm {
-      justify-content: space-between;
+      margin-bottom: .75rem;
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      margin-bottom: .5rem;
 
       li {
-        width: calc(48% - 1rem);
+        margin-right: 0;
+        display: list-item;
 
-        &.previous-post {
-          margin-right: 2rem;
+        a {
+          padding-top: .375em;
+          padding-bottom: .375em;
+          text-decoration: none;
         }
-  
-        &.next-post {
-          text-align: right;
-          margin-left: auto;
+        
+        &:not(:last-of-type):after {
+          content: '/';
+          padding: 0 .5em;
+        }
+
+        // https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+        &:before {
+          content: '\200B'; /* add zero-width space */
         }
       }
     }
+
+    *+.post-title {
+      margin: 0;
+    }
+
+    .post-title {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .post-content {
+    margin-top: 2.5rem;
+    padding-bottom: 1rem;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .tag-section {
+    align-items: center;
+    margin-top: 1.5rem;
+    
+    .tag-list {
+      margin: 0;
+
+      a {
+        font-size: .75rem;
+      }
+    }
+  }
+
+  .post-description {
+    margin: .5rem 0;
+  
+    time {
+      color: var(--text-color-2);
+   }
+  }
+
+  figure {
+    margin: 2rem auto;
   }
 }
 
-.post-pagination {
-  border-top: 1px solid var(--background-4);
-  padding-top: 1rem;
+.post-list {
+  margin-top: 2rem;
+
+  .post {
+    .post-header {
+      .category-list {
+        margin-top: 0;
+      }
+
+      .post-title {
+        margin: 0;
+      }
+    }
+
+    a.read-more {
+      font-size: .875rem;
+      padding-bottom: .4rem;
+
+      &.read-more:after {
+        content: '→';
+        margin-left: .25rem;
+      }
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--background-4);
+      padding-bottom: 1rem;
+    }
+  
+    &:not(:first-of-type) {
+      padding-top: 2rem;
+    }
+  }
 }

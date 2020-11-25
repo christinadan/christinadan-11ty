@@ -122,5 +122,6 @@ module.exports = {
   tagList,
   categoryList,
   categories,
-  doublePagination,
+  tagPagination: (collection) => doublePagination(collection, 'tags'),
+  categoryPagination: (collection) => doublePagination(collection, 'categories'),
 };

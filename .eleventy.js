@@ -1,24 +1,34 @@
 const fs = require('fs');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const images = require('./_eleventy/plugins/images');
-const {
-  tagList, categoryList, categories, doublePagination,
-} = require('./_eleventy/collections');
+const collections = require('./_eleventy/collections');
+const transforms = require('./_eleventy/transforms');
+const shortcodes = require('./_eleventy/shortcodes');
 const { mdIt } = require('./_eleventy/libraries');
-const { tagUrl, categoryUrl } = require('./_eleventy/shortcodes');
-const { htmlmin } = require('./_eleventy/transforms');
-const {
-  cssmin,
-  htmlDateString,
-  md,
-  jsmin,
-  readableDate,
-  media,
-  sitemapDate,
-  slugify,
-} = require('./_eleventy/filters');
+const { filters, nunjunksAsyncFilters } = require('./_eleventy/filters');
 
 module.exports = function (eleventyConfig) {
+  // Filters
+  Object.keys(filters).forEach((filterName) => {
+    eleventyConfig.addFilter(filterName, filters[filterName]);
+  });
+  Object.keys(nunjunksAsyncFilters).forEach((filterName) => {
+    eleventyConfig.addNunjucksAsyncFilter(filterName, nunjunksAsyncFilters[filterName]);
+  });
+  // Collections
+  Object.keys(collections).forEach((collectionName) => {
+    eleventyConfig.addCollection(collectionName, collections[collectionName]);
+  });
+  // Transforms
+  Object.keys(transforms).forEach((transformName) => {
+    eleventyConfig.addTransform(transformName, transforms[transformName]);
+  });
+  // Shortcodes
+  Object.keys(shortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  });
+
+  // Plugins
   eleventyConfig.addPlugin(images);
   eleventyConfig.addPlugin(pluginRss);
 
@@ -39,30 +49,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
-
-  // Filters
-  eleventyConfig.addFilter('cssmin', cssmin);
-  eleventyConfig.addFilter('readableDate', readableDate);
-  eleventyConfig.addFilter('htmlDateString', htmlDateString);
-  eleventyConfig.addFilter('sitemapDate', sitemapDate);
-  eleventyConfig.addFilter('md', md);
-  eleventyConfig.addFilter('media', media);
-  eleventyConfig.addFilter('slugify', slugify);
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin);
-
-  // Transforms
-  eleventyConfig.addTransform('htmlmin', htmlmin);
-
-  // Shortcodes
-  eleventyConfig.addShortcode('tagUrl', tagUrl);
-  eleventyConfig.addShortcode('categoryUrl', categoryUrl);
-
-  // Collections
-  eleventyConfig.addCollection('tagList', tagList);
-  eleventyConfig.addCollection('categoryList', categoryList);
-  eleventyConfig.addCollection('categories', categories);
-  eleventyConfig.addCollection('tagPagination', (collection) => doublePagination(collection, 'tags'));
-  eleventyConfig.addCollection('categoryPagination', (collection) => doublePagination(collection, 'categories'));
 
   // 404
   eleventyConfig.setBrowserSyncConfig({
@@ -91,7 +77,6 @@ module.exports = function (eleventyConfig) {
   // Use .eleventyignore for files you don't want eleventy to track
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setDataDeepMerge(true);
-
   eleventyConfig.setWatchThrottleWaitTime(300); // in milliseconds
 
   // Libraries

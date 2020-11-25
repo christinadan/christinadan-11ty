@@ -1,0 +1,21 @@
+
+<nav>
+  <ol class="post-nav-list flex-row">
+    {%- if previousPost %}
+    <li class="previous-post">
+      <span class="post-meta-label">
+        Previous
+      </span>
+      <a href="{{ previousPost.url | url }}">← {{ previousPost.data.title }}</a>
+    </li>
+    {% endif %}
+    {%- if nextPost %}
+    <li class="next-post">
+      <span class="post-meta-label">
+        Next
+      </span>
+      <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }} →</a>
+    </li>
+    {% endif %}
+  </ol>
+</nav>

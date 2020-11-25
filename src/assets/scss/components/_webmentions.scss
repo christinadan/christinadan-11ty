@@ -1,0 +1,15 @@
+.share {
+  margin: 1.25rem 0 2.5rem;
+  align-items: center;
+
+  span {
+    color: var(--text-color-2);
+    max-width: 19rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-link {
+    margin: 0 2rem 1.5rem 0;
+    height: fit-content;
+  }
+}
