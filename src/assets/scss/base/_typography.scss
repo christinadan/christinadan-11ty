@@ -125,7 +125,9 @@ a {
 
 .heading-anchor:hover,
 .heading-anchor:focus {
-  text-decoration: underline;
+  @include hover {
+    text-decoration: underline;
+  }
 }
 
 h2:hover .heading-anchor,
@@ -163,8 +165,10 @@ h3:focus .heading-anchor {
 
   &:hover,
   &:focus {
-    background-color: var(--text-color);
-    color: var(--background-1);
+    @include hover {
+      background-color: var(--text-color);
+      color: var(--background-1);
+    }
   }
 }
 
@@ -181,8 +185,10 @@ h3:focus .heading-anchor {
 
   &:hover,
   &:focus {
-    background-color: var(--text-color);
-    color: var(--background-1);
+    @include hover {
+      background-color: var(--text-color);
+      color: var(--background-1);
+    }
   }
 }
 
