@@ -25,7 +25,7 @@ Anyone who knows me knows I'm not good at DIYs AT ALL. With that being said, I d
 
 {% imageFigure 'bed-with-world-market-nightstands.jpg', 'Our bed with nightstands and pendant lamps flanking either side', 'The current state of our bedroom - in dire need of art! Bedframe is originally Overstock via Craigslist. Wall mounted lights are DIY, with the new nightstands from World Market!' %}
 
-The other purchase we made from World Market was this [Gold Rolling Bar Cart](http://www.worldmarket.com/product/gold+cole+3-tier+rolling+bar+cart.do). I have to shamefully say we are not big drinkers and aside from some beer in the fridge, we don't really buy liquor or alcohol. So why would we need a bar cart? While browsing [Pinterest](https://www.pinterest.com/_christinadan/) (shameless plug, I mostly use it for ideas for the apartment), I saw this great idea to make a coffee cart! Stephen is a huge coffee aficionado and we needed more room in our cabinets for our mug collection. So we decided to move most of his coffee gear to the cart. It turned out pretty cool, if I do say so myself!
+The other purchase we made from World Market was this [Gold Rolling Bar Cart](http://www.worldmarket.com/product/gold+cole+3-tier+rolling+bar+cart.do). I have to shamefully say we are not big drinkers and aside from some beer in the fridge, we don't really buy liquor or alcohol. So why would we need a bar cart? While browsing [Pinterest](https://www.pinterest.com/christinadannn/) (shameless plug, I mostly use it for ideas for the apartment), I saw this great idea to make a coffee cart! Stephen is a huge coffee aficionado and we needed more room in our cabinets for our mug collection. So we decided to move most of his coffee gear to the cart. It turned out pretty cool, if I do say so myself!
 
 {% imageFigure 'world-market-barcart.jpg', 'Gold bar cart from World Market', 'Gold Bar Cart from World Market. Photo by World Market' %}
 
@@ -35,7 +35,7 @@ The petite size was perfect for the little wall in our galley kitchen.
 
 Our coffee cart featuring the gold bar cart from World Market - this is only half our mug collection! Also included: Hario v60, Bodum French Press, Aeropress, initial mug from Anthropologie, coffee beans from Addison Coffee Roasters, and gooseneck kettle from Japan.
 
-What are some sources of inspiration for your home? Be sure to follow me on [Pinterest](https://www.pinterest.com/_christinadan/) to see mine. :)
+What are some sources of inspiration for your home? Be sure to follow me on [Pinterest](https://www.pinterest.com/christinadannn/) to see mine. :)
 
 \
 Thanks for reading,

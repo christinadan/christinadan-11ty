@@ -39,7 +39,7 @@ As for checked luggage, we have one large suitcase that we're sharing for the re
 
 If you're interested in following along with our trip at all, I will be sharing on Instagram, so feel free to follow me!
 
-Instagram: [@_christinadan](https://instagram.com/_christinadan)
+Instagram: [@christinadannn](https://instagram.com/christinadannn)
 
 \
 Thanks for reading,
