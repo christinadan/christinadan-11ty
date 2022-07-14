@@ -15,7 +15,7 @@ tags:
 
 I'm still recovering from what was an incredible (and very tiring) 3 weeks, but I thought I'd quickly share some of the goodies I picked up while we were away.<!-- excerpt --> I spent the last week recovering from an upper respiratory infection that I somehow got afflicted with when we got home and I'm still taking antibiotics for it. No worries though, I'm feeling pretty much 100% again and I'm spending my last few weeks before work helping my mom out at her store.
 
-I shared a lot of the trip on my [Instagram](http://instagram.com/_christinadan), so I don't think I'm going to make a whole post about it because I took a LOT of photos. You can see the album if we're friends on Facebook though. :) I'd like to think I had some self-control when it came to beauty products, only really buying things I had already been meaning to try. And SHEETMASKS! I stocked up on those, along with a few other essentials, because the prices overseas were amazing (plus, who doesn't love duty-free?).
+I shared a lot of the trip on my [Instagram](http://instagram.com/christinadannn), so I don't think I'm going to make a whole post about it because I took a LOT of photos. You can see the album if we're friends on Facebook though. :) I'd like to think I had some self-control when it came to beauty products, only really buying things I had already been meaning to try. And SHEETMASKS! I stocked up on those, along with a few other essentials, because the prices overseas were amazing (plus, who doesn't love duty-free?).
 
 I'm sure you all know Korea is known for their roadshop brands. Although I went to literally every store, I managec to resist buying a lot of things I didn't need in cute packaging.
 

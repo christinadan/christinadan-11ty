@@ -16,7 +16,7 @@ module.exports = {
   author: {
     name: 'Christina Dan',
     email: 'hello@christinadan.com',
-    twitter: '@_christinadan',
+    twitter: '@christinadannn',
     image: `${url}/assets/img/author.jpg`,
   },
   resume: '/assets/static/Christina_Dan_Resume.pdf',
