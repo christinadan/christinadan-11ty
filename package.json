@@ -34,7 +34,7 @@
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-link-attributes": "^3.0.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.2.10",
     "path": "^0.12.7",
     "sanitize-html": "^2.1.2",
     "sharp": "^0.26.2",
