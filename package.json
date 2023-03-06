@@ -29,7 +29,7 @@
     "html-minifier": "^4.0.0",
     "image-size": "^0.9.3",
     "lodash": "^4.17.20",
-    "luxon": "^1.25.0",
+    "luxon": "^3.3.0",
     "markdown-it": "^11.0.1",
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
