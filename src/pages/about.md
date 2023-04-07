@@ -6,7 +6,7 @@ Christina is a software engineer living in Dallas, Texas working at a Fortune 10
 
 She graduated with honors from the University of Texas at Arlington with a Bachelor of Science in Computer Science in 2016.
 
-[Download résumé]({{ site.resume }}){.button-link download="Christina_Dan_Resume.pdf"} {.margin-top .margin-bottom}
+[Download résumé]({{ site.resume }}){.button-link download="christina-dan-resume-2023.pdf"} {.margin-top .margin-bottom}
 
 ## Offline
 
