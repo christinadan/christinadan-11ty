@@ -20,4 +20,5 @@ module.exports = {
     image: `${url}/assets/img/author.jpg`,
   },
   resume: '/assets/static/Christina_Dan_Resume.pdf',
+  currentYear: new Date().getFullYear(),
 };
