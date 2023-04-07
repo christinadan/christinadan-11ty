@@ -19,5 +19,6 @@ module.exports = {
     twitter: '@christinadannn',
     image: `${url}/assets/img/author.jpg`,
   },
-  resume: '/assets/static/Christina_Dan_Resume.pdf',
+  resume: '/assets/static/christina-dan-resume-2023.pdf',
+  currentYear: new Date().getFullYear(),
 };
